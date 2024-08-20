@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            border: 2px solid;
+            background-color: bisque;
+            height: 40vw;
+            display: grid;
+            grid-template-columns: repeat(2,auto);
+        }
+
+        .item1 {
+            width: 100%;
+        }
+
+        .item2 {
+            display: flex;
+            justify-content: end;
+            width: 100%;
+        }
+       
+
+        .box1 {
+            background-color: red;
+            height: 100px;
+            width: 100px;
+            justify-content: start;
+            position: relative;
+            animation-name: leftside;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-delay: 1s;
+            /* animation-direction: alternate; */
+            /* animation-direction: alternate-reverse; */
+            /* animation-direction:reverse; */ 
+            animation-direction: normal;
+            /* animation-fill-mode: backwards; */
+            animation-fill-mode: forwards;
+        }
+
+        .box2 {
+            background-color: red;
+            height: 100px;
+            width: 100px;
+            position: relative;
+            animation-name: rightside;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-delay: 1s;
+            /* animation-direction: alternate; */
+            /* animation-direction: alternate-reverse; */
+            /* animation-direction:reverse; */
+            animation-direction: normal;
+            /* animation-fill-mode: backwards; */
+            animation-fill-mode: forwards;
+        }
+
+        .box3 {
+            background-color: red;
+            height: 100px;
+            width: 100px;
+            position: relative;
+            animation-name: bottomleft;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-delay: 1s;
+            /* animation-direction: alternate; */
+            /* animation-direction: alternate-reverse; */
+            /* animation-direction:reverse; */
+            animation-direction: normal;
+            /* animation-fill-mode: backwards; */
+            animation-fill-mode: forwards;
+        }
+
+        .box4 {
+            background-color: red;
+            height: 100px;
+            width: 100px;
+            position: relative;
+            animation-name: bottomright;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-delay: 1s;
+            /* animation-direction: alternate; */
+            /* animation-direction: alternate-reverse; */
+            /* animation-direction:reverse; */
+            animation-direction: normal;
+            /* animation-fill-mode: backwards; */
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes leftside {
+            from {
+                top: 0;
+                left: 0;
+            }
+
+            to {
+                top: 50%;
+                left: 93%;
+            }
+        }
+
+        @keyframes rightside {
+            from {
+                top: 0;
+                right: 0;
+            }
+
+            to {
+                top: 50%;
+                right: 93%;
+            }
+        }
+        @keyframes bottomleft {
+            from {
+                bottom: 0;
+                left: 0;
+            }
+
+            to {
+                bottom:50%;
+                left: 93%;
+            }
+        }
+        @keyframes bottomright {
+            from {
+                bottom:  0;
+                right: 0;
+            }
+
+            to {
+                top: 50%;
+                right: 93%;
+            }
+        }
+
+        
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="item1">
+            <div class="box1">box1</div>
+        </div>
+        <div class="item2">
+            <div class="box2">box2</div>
+        </div>
+        <div class="item3">
+            <div class="box3">box1</div>
+        </div>
+        <div class="item4">
+            <div class="box4">box2</div>
+        </div>
+    </div>
+</body>
+
+</html>

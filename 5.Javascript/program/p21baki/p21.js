@@ -1,0 +1,1 @@
+/* getElementsByClassName() method in JavaScript */

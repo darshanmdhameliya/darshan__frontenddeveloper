@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* .demo1{
+            height: 200px;
+            width: 200px;
+            background-color: yellow;
+            border: 2px solid black;
+            border-radius: 50%;
+
+            background-image: conic-gradient(yellow var(--p),black 10%);
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .demo1::before{
+            content: '90%';
+            color: white;
+            height: 170px;
+            width: 170px;
+            border: 2px solid red;
+            background-color: black;
+            border-radius: 50%;
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }  */
+
+      .demo2 {
+        height: 200px;
+        width: 150px;
+        border: 2px solid black;
+        position: relative;
+        overflow: hidden;
+        background-color: gray;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+      }
+      .demo2:before {
+        content: "Thank You For Hover Me";
+        right:0;
+        transition-duration: 1s;
+        height: 200px;
+        background-color: yellow;
+        width: 150px;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .demo2:hover:before {
+        transform: translateX(-100%); 
+        
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <div class="demo1" style="--p:90%"></div> -->
+
+    <div class="demo2">Hover ME</div>
+  </body>
+</html>

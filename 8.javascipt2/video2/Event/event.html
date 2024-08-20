@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul id="images">
+        <li><img width="100px" id="dwarkadhish" src="dwarkadhish.jpg" alt=""></li>
+        <li><img width="100px" id="krishna" src="dwarkadhish.jpg" alt=""></li>
+        <li><img width="100px" id="radhe" src="dwarkadhish.jpg" alt=""></li>
+        <li><img width="100px" id="kano" src="dwarkadhish.jpg" alt=""></li>
+        <li><img width="100px" id="shyamji" src="dwarkadhish.jpg" alt=""></li>
+        <li><a href="https://www.google.com/" id="google">Google</a></li>
+    </ul>
+    <script>
+        // document.getElementById('radhe').onclick = function () {
+        //     alert('radheee radheee!!!')
+        // }
+
+        // true kro to pela bar nu print thay pachi under nu print thay and false kro to pela under nu print thay pachi bar nu print thay
+        // document.getElementById('images').addEventListener('click', function () {
+        //     alert("click insdie the ul")
+        // }, false)
+        // document.getElementById('radhe').addEventListener('click', function (e) {
+        //     alert("radheeeeeeeeeeeee!!!!!!!")
+        //     e.stopPropagation() // menas inner alert j print thay 
+        // }, false)
+
+        // document.getElementById('google').addEventListener('click', function (e) {
+        //     e.preventDefault();
+        //     e.stopPropagation();
+        //     console.log("goggle clicked!!!");
+        // }, false)
+
+        document.querySelector('#images').addEventListener('click', function (e) {
+            console.log(e.target.tagName);
+
+            if (e.target.tagName == 'IMG') {
+                let remoeit = e.target.parentNode
+                remoeit.remove() //method1:remove
+                console.log(e.target.id);
+            }
+
+
+            // let remoeit = e.target.parentNode
+            // remoeit.remove() //method1:remove
+            // remoeit.parentNode.removeChild(remoeit) //method2:remove
+        })
+    </script>
+</body>
+
+</html>

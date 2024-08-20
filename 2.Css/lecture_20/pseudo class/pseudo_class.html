@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a:link {
+            color: red;
+        }
+
+        a:hover {
+            background-color: rgb(207, 98, 98);
+            color: white;
+        }
+
+        a:visited {
+            color: lightcoral;
+            background-color: yellow;
+        }
+
+        a:active {
+            color: black;
+            background-color: aqua;
+        }
+
+        /* :root{
+            background-color: green;
+            font-size: 20px;
+        } */
+        p:first-child {
+            background-color: aqua;
+        }
+
+        p:last-child {
+            background-color: rgb(174, 159, 226);
+        }
+
+        p:nth-child(2) {
+            background-color: red;
+            color: white;
+        }
+
+        /*         
+        p:nth-child(2n){
+            background-color: rgb(228, 157, 157);
+            color: white;
+        } */
+        /* p:nth-child(2n+1){
+            background-color: rgb(157, 194, 58);
+            color: white;
+        } */
+        /* p:nth-child(even) {
+            color: green;
+        } */
+
+        p:nth-child(odd) {
+            color: green;
+        }
+
+        /*  pseudo elements */
+
+        /*  apply when i select any portion */
+        ::selection {
+            color: black;
+            background-color: lightcoral;
+        }
+
+        p::first-line {
+            color: rgb(55, 209, 50);
+            font-size: 20px;
+        }
+
+        p::first-letter {
+            color: red;
+            font-size: 20px;
+        }
+
+        h1::before {
+            content: "-> ";
+        }
+
+        h1::after {
+            content: "<- ";
+        }
+
+        /*  apply on list marker */
+        li::marker {
+            color: rgb(46, 43, 226);
+            font-size: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <!--      
+        formula - (an +b)
+    - :nth-child(n)
+    - :nth-child(2n)
+    - :nth-child(2n+1)
+    - :nth-child(even)
+    - :nth-child(odd)
+
+    - :link         (unvisited link)
+    - :visited      (visited link)
+    - :hover        (on hover)
+    - :active       (apply on clik)
+    
+    - :root      (appy on all html element) -->
+
+
+    <!--  elements:
+        - ::selection    (when select perticular portion )
+        - ::first-letter    (apply on first latter)
+        - ::first-line    (apply on first line)
+        - ::before
+        - ::after
+
+     -->
+
+
+    <h1 style="text-align: center;">pseudo classes</h1>
+    <a href="">Click me</a>
+
+    <div class="main">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, officiis quam vitae, corrupti magnam, facilis
+            expedita voluptates cumque quae vero illum nisi fugit sint molestiae totam quas deleniti tenetur adipisci
+            autem inventore tempora quaerat dolor. Nemo consequatur error quae necessitatibus atque corrupti hic
+            molestias nulla distinctio eveniet dolores culpa, non, temporibus labore, possimus ab ipsum quod. Tempore
+            officia consequatur similique.</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+    </div>
+    <ul>
+        <li>item</li>
+        <li>item</li>
+        <li>item</li>
+        <li>item</li>
+        <li>item</li>
+        <li>item</li>
+    </ul>
+</body>
+
+</html>

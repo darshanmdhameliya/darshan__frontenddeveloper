@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            text-decoration: none;
+        }
+        .navbar {
+            border-radius:5px;
+            margin: 20px;
+            background-color: #000000;
+            flex-wrap: wrap;
+        }
+        .navdiv{
+            display: flex;
+            justify-content: space-between;
+        }
+        .logo img{
+            font-size: 35px;
+            font-weight: 600;
+            color: white;
+            padding:10px;
+            background: none;
+        }
+        li{
+            list-style: none;
+            display: inline-block;
+        }
+        li a{
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            margin-right: 25px;
+        }
+        .active{
+            background-color: rgb(99, 159, 14);
+            border-radius: 20px;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="navdiv">
+            <div class="logo">
+                <img src="logo.png" alt="bakery logo" height="50px" width="50px">
+            </div>
+            <ul>
+                <li><a href="#" class="Services">Services</a></li>
+                <li><a href="#" class="Projects">Projects</a></li>
+                <li><a href="#" class="About">About</a></li>
+                <li><a href="#" class="active">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

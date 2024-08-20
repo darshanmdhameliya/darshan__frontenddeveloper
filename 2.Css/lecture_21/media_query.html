@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            border: 2px solid;
+            background-color: aqua;
+            height: 700px;
+            width: 700px;
+        }
+        .box1{
+            height: 100px;;
+            width: 100px;
+            background-color: black;
+            margin: 20px;
+        }
+        .box2{
+            height: 100px;;
+            width: 100px;
+            background-color:green;
+            margin: 20px;
+        }
+        @media (max-width:600px){
+            .box1{
+                background-color: yellow;
+            }
+        }
+        @media (min-width:600px){
+            .box2{
+                background-color: yellow;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box1"></div>
+        <div class="box2"></div>
+    </div>
+</body>
+</html>

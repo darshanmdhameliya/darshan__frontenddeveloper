@@ -1,0 +1,42 @@
+.row {
+    display: flex;
+    background-color: orangered;
+    color: $color;
+    height: 10%;
+    align-items: center;
+
+    .row-left {
+        width: 30%;
+
+        .logo {
+            padding: 0.5rem 1rem;
+            width: 50%;
+        }
+
+        .logo img {
+            border-radius: 50%;
+            width: 50%;
+        }
+    }
+
+    .row-right {
+        display: flex;
+        justify-content: flex-end;
+        width: 70%;
+
+        .menu a {
+            text-decoration: none;
+            color: $color;
+            padding: 20px;
+        }
+
+        .menu a:nth-child(1) {
+            color: black;
+        }
+
+        .haeder-icon {
+            padding: 0 20px;
+            font-size: 1.2rem;
+        }
+    }
+}

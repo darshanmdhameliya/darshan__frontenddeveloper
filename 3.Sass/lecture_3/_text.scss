@@ -1,0 +1,34 @@
+.text {
+    background-image: url(img/background\ image.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 520px;
+    color: $color;
+
+    .width {
+        @include flex;
+        margin: auto;
+        width: 50%;
+        text-align: center;
+
+
+        .heading {
+            margin-top: 25%;
+            margin-bottom: 3%;
+        }
+    }
+
+    .para {
+        margin-bottom: 3%;
+        text-transform: uppercase;
+    }
+
+
+    button {
+        background-color: rgb(177, 60, 17);
+        color: $color;
+        border: none;
+        padding: 1rem 3rem;
+        font-size: 1rem;
+    }
+}

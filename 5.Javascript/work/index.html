@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .main {
+        background-color: black;
+        height: 100svh;
+        border: 2px solid black;
+      }
+      #text {
+        height: 100px;
+        background-color: white;
+        color: black;
+      }
+      .button {
+        display: flex;
+        gap: 30px;
+        margin: 5px;
+      }
+      button{
+        height: 30px;
+        width: 80px;
+      }
+      button:hover{
+        background-color: yellow;
+        color: black;
+        box-shadow: 5px  5px 20px  rgb(243, 243, 218);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div id="text"></div>
+      <div class="button">
+        <button onclick="push_()">Push</button>
+        <button onclick="pop_()">Pop</button>
+        <button onclick="firstadd()">Firstadd</button>
+        <button onclick="firstdelete()">FirstDetele</button>
+        <button onclick="sort()">Sort</button>
+      </div>
+    </div>
+
+    <script src="push.js"></script>
+  </body>
+</html>

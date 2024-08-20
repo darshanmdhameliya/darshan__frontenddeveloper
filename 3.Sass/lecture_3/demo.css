@@ -1,0 +1,168 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  height: 100%;
+}
+.container .row {
+  display: flex;
+  background-color: orangered;
+  color: white;
+  height: 10%;
+  align-items: center;
+}
+.container .row .row-left {
+  width: 30%;
+}
+.container .row .row-left .logo {
+  padding: 0.5rem 1rem;
+  width: 50%;
+}
+.container .row .row-left .logo img {
+  border-radius: 50%;
+  width: 50%;
+}
+.container .row .row-right {
+  display: flex;
+  justify-content: flex-end;
+  width: 70%;
+}
+.container .row .row-right .menu a {
+  text-decoration: none;
+  color: white;
+  padding: 20px;
+}
+.container .row .row-right .menu a:nth-child(1) {
+  color: black;
+}
+.container .row .row-right .haeder-icon {
+  padding: 0 20px;
+  font-size: 1.2rem;
+}
+.container .text {
+  background-image: url(img/background\ image.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 520px;
+  color: white;
+}
+.container .text .width {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: auto;
+  width: 50%;
+  text-align: center;
+}
+.container .text .width .heading {
+  margin-top: 25%;
+  margin-bottom: 3%;
+}
+.container .text .para {
+  margin-bottom: 3%;
+  text-transform: uppercase;
+}
+.container .text button {
+  background-color: rgb(177, 60, 17);
+  color: white;
+  border: none;
+  padding: 1rem 3rem;
+  font-size: 1rem;
+}
+.container .contact {
+  height: 350px;
+  width: 100%;
+  display: flex;
+  gap: 1.5rem;
+  font-size: 1.5rem;
+}
+.container .contact .contact-left {
+  margin-top: 8rem;
+  margin-left: 8rem;
+  width: 25%;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+.container .contact .contact-left .first-div {
+  display: flex;
+  font-weight: 1000;
+}
+.container .contact .contact-left .first-div .ecommerce-heading {
+  margin-left: 1rem;
+}
+.container .contact .contact-left .second-div {
+  color: rgb(86, 83, 80);
+}
+.container .contact .contact-left .third-div {
+  display: flex;
+  gap: 1rem;
+  font-size: 1.5rem;
+}
+.container .contact .contact-center {
+  margin-right: 1rem;
+  margin-top: 5.5rem;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: flex;
+  gap: 5rem;
+}
+.container .contact .contact-center .grid-column {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  color: rgb(100, 100, 99);
+}
+.container .contact .contact-center .grid-column .grid-heading {
+  font-weight: 1000;
+}
+.container .contact .contact-center .grid-column ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.container .contact .contact-center .grid-column ul li {
+  list-style-type: none;
+  text-decoration: none;
+}
+.container .contact .contact-center .grid-column ul li a {
+  text-decoration: none;
+  color: rgb(100, 100, 99);
+}
+.container .contact .contact-right {
+  margin-top: 8rem;
+  width: 20%;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.container .contact .contact-right .first-div {
+  color: rgb(100, 100, 99);
+}
+.container .contact .contact-right .second-div {
+  display: flex;
+  gap: 2rem;
+  font-size: 1.5rem;
+}
+.container .hr {
+  margin: auto;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  width: 70%;
+}
+.container .footer {
+  color: rgb(86, 83, 80);
+  display: flex;
+  justify-content: center;
+  font-size: 1.5rem;
+}/*# sourceMappingURL=demo.css.map */

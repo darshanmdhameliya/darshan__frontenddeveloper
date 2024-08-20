@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+        .main * {
+            display: block;
+            border: 2px solid lightgrey;
+            color: lightgrey;
+            padding: 5px;
+            margin: 15px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Traversing - Ancestors -->
+
+    <!-- parent()
+         parents()
+         parentsUntil() -->
+
+    <!-- parent() -->
+
+    <!-- <div class="main">main
+        <div class="insidemain" >insidemain
+            <div class="h1">h1
+                <p>paragrapgh
+                    <span>darshan</span>
+                </p>
+            </div>
+        </div>
+    </div> -->
+
+    <!-- parents() -->
+    <!-- <div class="main">main
+        <div class="insidemain" >insidemain
+            <div class="h1">h1
+                <p>paragrapgh
+                    <span>darshan</span>
+                </p>
+            </div>
+        </div>
+    </div> -->
+
+    <!-- parentsUntil() -->
+    <!-- <div class="main">main
+        <div class="insidemain">insidemain
+            <div class="h1">h1
+                <h1>h1
+                    <p>paragrapgh
+                        <span>darshan</span>
+                    </p>
+                </h1>
+            </div>
+        </div>
+    </div> -->
+
+
+    <!-- raversing - Descendants -->
+
+    <!-- children()
+         find() -->
+
+    <!-- children() method -->
+
+    <!-- <div class="main">main div
+        <p class="first">p (child)
+            <span>span(grandchild)</span>
+        </p>
+        <p class="second">p (child)
+            <span>span(grandchild)</span>
+        </p>
+    </div> -->
+
+
+    <!-- Traversing - Siblings -->
+
+    <!-- siblings()
+         next()
+         nextAll()
+         nextUntil()
+         prev()
+         prevAll()
+         prevUntil()  -->
+
+    <div class="main">div (parent)
+        <p>p</p>
+        <span>span</span>
+        <h2>h2</h2>
+        <h3>h3</h3>
+        <p>p</p>
+        <h4>h4</h4>
+        <h5>h5</h5>
+    </div>
+
+    <script src="lecture3_Traversing.js"></script>
+</body>
+
+</html>

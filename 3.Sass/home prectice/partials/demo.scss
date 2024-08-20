@@ -1,0 +1,19 @@
+@import "variable";
+
+@mixin flex($bg-color,$color){
+    background-color: $bg-color;
+    color: $color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+.heading1{
+    @include flex($bg-color,$color);
+}
+
+.heading2{
+    @include flex(black,white);
+}

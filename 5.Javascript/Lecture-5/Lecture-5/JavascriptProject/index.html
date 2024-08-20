@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <!-- navbar -->
+  <header>
+    <h1>Javascript CRUD Operation App</h1>
+  </header>
+  <main class="mainback">
+    <section>
+      <div class="crud-form">
+        <div class="main-add">
+          <h2>Student Add Data Form</h2>
+          <form class="addform" action="" id="AddForm">
+            <div class="addinputs">
+              <label for="">StudentName</label>
+              <input class="inputs" type="text" placeholder="Student Name" id="studentAddName" name="studentAddName"
+                value="">
+            </div>
+            <div class="addinputs">
+              <label for="">StudentAge</label>
+              <input class="inputs" type="text" placeholder="Student Age" id="studentAddAge" name="studentAddAge"
+                value="">
+            </div>
+            <div class="addinputs">
+              <label for="">StudentEmail</label>
+              <input class="inputs" type="email" name="studentAddEmail" id="studentAddEmail" placeholder="Student Email"
+                value="">
+            </div>
+            <div class="addinputs">
+              <label for="">StudentMobileNo</label>
+              <input class="inputs" type="tel" name="studentAddMobileNo" id="studentAddMobileNo"
+                placeholder="Student MobileNo" value="">
+            </div>
+            <div class="addinputs">
+              <label for="">StudentAddress</label>
+              <textarea class="inputs text-area" cols=10" rows="5" name="studentAddAddress" placeholder="Address"
+                id="studentAddAddress" value=""></textarea>
+            </div>
+            <div>
+              <input type="submit" value="Submit">
+            </div>
+          </form>
+        </div>
+        <div class="main-edit">
+          <h2>Student Edit Data Form</h2>
+          <form class="addform" action="" id="EditForm">
+            <div class="addinputs">
+              <label for="">StudentName</label>
+              <input class="inputs" type="text" placeholder="Student Name" id="studentEditName" name="studentEditName"
+                value="">
+            </div>
+            <div class="addinputs">
+              <label for="">StudentAge</label>
+              <input class="inputs" type="text" placeholder="Student Age" id="studentEditAge" name="studentEditAge"
+                value="">
+            </div>
+            <div class="addinputs">
+              <label for="">StudentEmail</label>
+              <input class="inputs" type="email" name="studentEditEmail" placeholder="Student Email"
+                id="studentEditEmail" value="">
+            </div>
+            <div class="addinputs">
+              <label for="">StudentMobileNo</label>
+              <input class="inputs" type="tel" name="studentEditMobileNo" id="studentEditMobileNo"
+                placeholder="Student MobileNo" value="">
+            </div>
+            <div class="addinputs">
+              <label for="">StudentAddress</label>
+              <textarea class="inputs text-area" cols="10" rows="5" name="studentEditAddress" id="studentEditAddress"
+                placeholder="Address" value=""></textarea>
+            </div>
+            <div>
+              <input type="submit" value="Submit">
+            </div>
+          </form>
+        </div>
+        <div>
+          <h2>Student Data View Table</h2>
+          <div class="student-table"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+
+</html>

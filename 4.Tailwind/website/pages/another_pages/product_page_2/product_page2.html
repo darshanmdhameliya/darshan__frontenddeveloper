@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="h-svh">
+        <div id="main" class=" bg-gray-200 flex justify-center ">
+            <div class=" grid md:grid-cols-2 px-[10%] py-16 gap-8 ">
+                <div class="flex flex-col">
+                    <img src="img/product_page_2.png" class="flex-1" alt="">
+                    <div class="grid grid-cols-2 my-4 gap-2   ">
+                        <button
+                            class="bg-black flex-1 text-white hover:bg-gray-400  hover:text-black py-1 rounded-full ml-2">Add
+                            to Cart</button>
+                        <button class="bg-gray-300 flex-1 hover:bg-black hover:text-gray-400 py-1 rounded-full">Add to
+                            Wishlist</button>
+                    </div>
+                </div>
+                <div class="grid gap-2">
+                    <h1 class="font-bold text-xl">Product Name</h1>
+                    <p class="text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus alias
+                        deleniti possimus porro quia doloremque ipsa!</p>
+                    <div class="flex gap-3">
+                        <h1 class="font-bold">Price: <span class="text-gray-400">$29.99</span></h1>
+                        <h1 class="font-bold">Availability <span class="text-gray-400">In Stock</span></h1>
+                    </div>
+                    <h1 class="font-bold">Select Color:</h1>
+                    <div class="flex gap-2">
+                        <div class="bg-black h-7 w-7 rounded-full " id="group"></div>
+                        <div class="bg-orange-400 h-7 w-7 rounded-full"></div>
+                        <div class="bg-blue-600 h-7 w-7 rounded-full"></div>
+                        <div class="bg-yellow-400 h-7 w-7 rounded-full"
+                        ></div>
+                    </div>
+                    <h1 class="font-bold">Select Size:</h1>
+                    <div class="flex gap-2">
+                        <div class="bg-gray-300 font-bold rounded-full px-4 py-2 text-center">S</div>
+                        <div class="bg-gray-300 font-bold rounded-full p-3 px-4 py-2 text-center">M</div>
+                        <div class="bg-gray-300 font-bold rounded-full p-3 px-4 py-2 text-center">L</div>
+                        <div class="bg-gray-300 font-bold rounded-full p-3 px-4 py-2 text-center">XL</div>
+                        <div class="bg-gray-300 font-bold rounded-full p-3 px-4 py-2 text-center">XXL</div>
+                    </div>
+                    <h1 class="font-bold ">Product Description:</h1>
+                    <p class="text-gray-400 text-sm ">Lorem, ipsum dolor sit amet consectetur adipisicing elit. At odit incidunt
+                        cumque accusantium, illo dignissimos? Voluptatibus nostrum doloribus blanditiis assumenda, ea
+                        adipisci, omnis minima consequatur quo repellat numquam a quaerat natus hic necessitatibus
+                        labore tempora explicabo placeat cumque quidem consequuntur beatae maxime! Minus totam quibusdam
+                        sed libero ullam magnam, quisquam provident unde consectetur eos magni a amet nesciunt ratione
+                        ad aut saepe. Repudiandae non soluta ipsum dolorem recusandae saepe consequatur esse. Iure
+                        molestiae facilis eaque neque dolore labore magni maiores numquam odio alias veniam, officia
+                        voluptatibus voluptate animi nemo eos omnis quaerat est, et dolorem exercitationem ipsum tempore
+                        aliquid. Animi?</p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        let black = document.getElementById("group");
+        let main = document.getElementById("main");
+        black.addEventListener("mouseover", () => {
+            main.classList = " bg-red-200 flex justify-center";
+                });
+                // main.onmouseout
+
+        black.addEventListener("mouseout", () => {
+                    main.classList = " bg-gray-200 flex justify-center";
+                });
+    </script>
+</body>
+
+</html>

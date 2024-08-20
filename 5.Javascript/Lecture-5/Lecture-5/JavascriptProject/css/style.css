@@ -1,0 +1,102 @@
+* {
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+h1,
+h2 {
+  margin: 0;
+  color: white;
+}
+
+.main-add h2 {
+  margin: 10px 0px;
+}
+
+.main-edit h2 {
+  margin: 10px 0px;
+}
+
+.student-table {
+  margin: 10px 0px;
+}
+
+header {
+  background-color: purple;
+}
+
+header h1 {
+  text-align: center;
+  color: white;
+  padding: 20px;
+  border-bottom: 5px solid black;
+}
+
+/*  Crud Operation   */
+
+.crud-form {
+  display: flex;
+  justify-content: space-around
+}
+
+label {
+  display: block;
+  color: white;
+}
+
+.addform {
+  background-color: purple;
+  padding: 10px;
+  max-width: 500px;
+  box-shadow: 10px 10px 20px black;
+  border-radius: 5px;
+}
+
+.addinputs {
+  margin: 10px 0px;
+  width: 100%;
+}
+
+.inputs {
+  padding: 10px;
+  width: 100%;
+}
+
+.inputs:focus {
+  outline: 0;
+}
+
+input[type='submit'] {
+  width: 100%;
+  border: 0;
+  padding: 10px;
+  background-color: gray;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+input[type='submit']:hover {
+  background-color: black;
+}
+
+.text-area {
+  resize: none;
+}
+
+.text-area:focus {
+  outline: 0;
+}
+
+.addinputs label {
+  margin: 5px 0px;
+}
+
+.mainback {
+  background-color: gray;
+  padding: 20px;
+}

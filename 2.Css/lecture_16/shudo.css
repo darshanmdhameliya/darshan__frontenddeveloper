@@ -1,0 +1,32 @@
+h1:only-of-type{
+    color: red;
+    background-color: yellow;
+}
+p:last-child{
+    color: red;
+    background-color: yellow;
+}
+h1:{
+    color: red;
+    background-color: yellow;
+}
+a:nth-last-of-type(5){
+    color: red; 
+    background-color: yellow;
+}
+a:nth-of-type(4){
+    color: red;
+    background-color: yellow;
+}
+.h1{
+    color: red;
+    background-color: yellow;
+}
+input{
+    color: red;
+    background-color: yellow;
+}
+h1:nth-child(6){
+    color: red;
+    background-color: yellow;
+}

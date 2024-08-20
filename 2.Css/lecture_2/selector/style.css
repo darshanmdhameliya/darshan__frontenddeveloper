@@ -1,0 +1,22 @@
+p{
+    color: red;
+}
+
+#h1{
+    background-color: aqua;
+}
+
+.h2{
+    color: blue;
+}
+
+ins,del{
+    background-color: brown;
+    color: white;
+    font-size: large;
+}
+
+*{
+    background-color: yellowgreen;
+    font-size: 30px;
+}

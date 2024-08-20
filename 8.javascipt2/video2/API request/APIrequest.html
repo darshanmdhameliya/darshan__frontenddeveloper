@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="">
+        <button id="btn">click</button>
+    </div>
+    <script>
+        const btn1 = document.getElementById('btn')
+        const body = document.querySelector('body')
+        const div = document.createElement('div');
+
+        btn.addEventListener('click', function () {
+
+
+            const APIrequest = function () {
+                const requestUrl = 'http://127.0.0.1:5500/video2/API%20request/api.json';
+                const xhr = new XMLHttpRequest();
+                xhr.open('GET', requestUrl)
+                xhr.onreadystatechange = function () {
+                    console.log(xhr.readyState);
+                    if (xhr.readyState === 4) {
+                        const data = JSON.parse(this.responseText)
+                        console.log(typeof data);
+                        console.log(data.img);
+                    }
+                }
+                xhr.send();
+            }
+
+            div.innerHTML = APIrequest;
+            console.log(div);
+
+            div.style.backgroundColor = 'black';
+            div.style.width = '100px';
+            div.style.border = '1px solid black'
+
+        })
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+    <div class="h-svh flex justify-center">
+        <div class=" h-[600px] w-[400px]">
+            <p class="font-bold mt-2">Send files to this email:</p>
+            <input type="email" placeholder="example@domain.com" required
+                class="w-full border-2 border-gray-200 rounded-sm pl-5 p-2 mt-2 ">
+            <h1 class="text-lg font-medium my-5">Upload File</h1>
+
+            <label for="file-label" class="h-[200px] w-full flex justify-center items-center flex-col border-2 border-dotted border-gray-300 rounded">
+                <p class="text-2xl font-semibold">Drop files here</p>
+                <p class="py-2 font-light text-md">or</p>
+                <input class="ml-16" type="file" id="file-label">
+            </label>
+
+            <div class="px-10  py-10 pb-5 flex flex-col gap-3">
+                <div class="flex justify-between bg-gray-200  rounded px-3 py-1">
+                    <h1>banner-design.png</h1>
+                    <div class="">
+                        <i class="fa-solid fa-xmark"></i>
+                    </div>
+                </div>
+                <div class=" bg-gray-200 rounded px-3 py-1">
+                    <div class="flex justify-between ">
+                        <h1>banner-design.png</h1>
+                        <i class="fa-solid fa-xmark"></i>
+                    </div>
+                    <div class="bg-gray-400 rounded-full mt-2">
+                        <div class="bg-blue-700 h-2 w-[75%] rounded-full"></div>
+                    </div>
+                </div>
+            </div>
+            <a href="welcome.html"><button
+                    class="bg-blue-600 cursor-pointer text-white rounded px-5 py-2 mt-2 w-full">Send File</button></a>
+        </div>
+    </div>
+</body>
+
+</html>

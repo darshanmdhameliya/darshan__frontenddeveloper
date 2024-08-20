@@ -1,0 +1,1 @@
+confirm("this is a confirm box");

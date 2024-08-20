@@ -1,0 +1,1 @@
+/* get current url javascript */

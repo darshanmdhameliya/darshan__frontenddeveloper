@@ -1,0 +1,1 @@
+/* JavaScript Open a page using window.open() method */

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            border: 2px solid;
+            height: 200px;
+            display: flex;
+            flex-wrap: wrap;
+            
+        }
+        p{
+            font-size:50px;
+            order: 6;
+        }
+        .box {
+            height: 100px;
+            width: 100px;
+            margin: 1px;
+        
+        }
+
+        #box1 {
+            background-color: aqua;
+            order: 5;
+        }
+
+        #box2 {
+            background-color: palevioletred;
+        }
+
+        #box3 {
+            background-color: beige;
+            order:-1;
+        }
+
+        #box4 {
+            background-color: brown;
+        }
+
+        #box11 {
+            background-color: aqua;
+
+        }
+
+        #box21 {
+            background-color: palevioletred;
+        }
+
+        #box31{
+            background-color: beige;
+
+        }
+
+        #box41 {
+            background-color: brown;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        
+        <div class="box" id="box1"></div>
+        <div class="box" id="box2"></div>
+        <div class="box" id="box3"></div>
+        <div class="box" id="box4"></div>
+        <P>GIVE A ORDER PROPERTY</P>
+        
+    </div>
+    <div class="container">
+        <P>NOT GIVE A ORDER</P>
+        <div class="box" id="box11"></div>
+        <div class="box" id="box21"></div>
+        <div class="box" id="box31"></div>
+        <div class="box" id="box41"></div>
+      
+    </div>
+</body>
+</html>
