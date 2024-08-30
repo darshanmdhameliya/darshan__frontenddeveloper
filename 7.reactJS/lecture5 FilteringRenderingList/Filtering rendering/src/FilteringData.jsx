@@ -40,7 +40,7 @@ const profile = [
 const FilteringData = () => {
 
   const [profiledata , setProfileData] =useState('')
-  console.log(profiledata);
+  // console.log(profiledata);
   
 
   //  const filterdata = profile.filter((item) => item.name.length < 6)
