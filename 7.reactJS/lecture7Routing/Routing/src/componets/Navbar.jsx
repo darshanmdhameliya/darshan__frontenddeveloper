@@ -1,6 +1,9 @@
 import React from "react";
-import {Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenuToggle, NavbarMenu, NavbarMenuItem, Link, Button} from "@nextui-org/react";
-import {AcmeLogo} from "./AcmeLogo.jsx";
+import { Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenuToggle, NavbarMenu, NavbarMenuItem } from "@nextui-org/react";
+import { Link } from 'react-router-dom'
+import Logo from "./Logo";
+
+
 
 export default function Navbar1() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
@@ -26,38 +29,48 @@ export default function Navbar1() {
           className="sm:hidden"
         />
         <NavbarBrand>
-          <AcmeLogo />
-          <p className="font-bold text-inherit">ACME</p>
+          <Link  to="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5h7bJMmireQDcZYmO-uNrBu9iCOyWImLCJQ&s">
+            <Logo />
+          </Link>
+
+          <p className="font-bold text-inherit m-5 ">FoodyZone</p>
         </NavbarBrand>
       </NavbarContent>
 
-      <NavbarContent className="hidden sm:flex gap-4 " justify="center">
+      <NavbarContent className="hidden sm:flex gap-4" >
         <NavbarItem>
-          <Link color="foreground" href="#" className="hover:bg-slate-700  p-1 px-4 hover:rounded-full hover:text-white">
-            Features
+          <Link to="/">
+            Home
           </Link>
         </NavbarItem>
         <NavbarItem isActive>
-          <Link href="#" aria-current="page" >
-            Customers
+          <Link to="/AboutUs" >
+            AboutUs
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link color="foreground" href="#">
-            Integrations
+          <Link to="/ContactUs">
+            ContactUs
+          </Link>
+        </NavbarItem>
+        <NavbarItem>
+          <Link to="/Cart">
+            Cart
+          </Link>
+        </NavbarItem>
+        <NavbarItem>
+          <Link to="/Order">
+            Order
+          </Link>
+        </NavbarItem>
+        <NavbarItem>
+          <Link to="/SignUp">
+            SignUp
           </Link>
         </NavbarItem>
       </NavbarContent>
-      <NavbarContent justify="end">
-        <NavbarItem className="hidden lg:flex">
-          <Link href="#">Login</Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Button as={Link} color="primary" href="#" variant="flat" className="hover:bg-red-400 hover:text-black hover:font-bold">
-            Sign Up
-          </Button>
-        </NavbarItem>
-      </NavbarContent>
+
+
       <NavbarMenu>
         {menuItems.map((item, index) => (
           <NavbarMenuItem key={`${item}-${index}`}>

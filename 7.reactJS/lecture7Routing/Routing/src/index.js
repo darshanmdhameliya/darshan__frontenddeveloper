@@ -6,9 +6,12 @@ import { NextUIProvider } from '@nextui-org/react';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-    <NextUIProvider>
-        <App/>
-    </NextUIProvider>
+    <React.StrictMode>
+        <NextUIProvider>
+            <App />
+        </NextUIProvider>
+    </React.StrictMode>
 );
+
 
 
