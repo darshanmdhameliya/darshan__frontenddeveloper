@@ -38,7 +38,7 @@ export default function Navbar1() {
           </Link>
         </NavbarItem>
         <NavbarItem isActive>
-          <Link href="#" aria-current="page">
+          <Link href="#" aria-current="page" >
             Customers
           </Link>
         </NavbarItem>
@@ -53,7 +53,7 @@ export default function Navbar1() {
           <Link href="#">Login</Link>
         </NavbarItem>
         <NavbarItem>
-          <Button as={Link} color="primary" href="#" variant="flat">
+          <Button as={Link} color="primary" href="#" variant="flat" className="hover:bg-red-400 hover:text-black hover:font-bold">
             Sign Up
           </Button>
         </NavbarItem>
