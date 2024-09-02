@@ -1,14 +1,30 @@
 import React from 'react';
 import './App.css';
-// import Layout from './componets/Layout';
-import RouterLayout from './componets/RouterLayout';
-
+import Home from './componets/Home';
+import AboutUs from './componets/AboutUs';
+import { ContactUs } from './componets/ContactUs';
+import Cart from './componets/Cart';
+import Order from './componets/Order';
+import SignUp from './componets/SignUp';
+import Navbar1 from './componets/Navbar';
+import Error from './componets/Error'
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
     <div>
-      {/* <Layout /> */}
-      <RouterLayout/>
+      <BrowserRouter>
+        <Navbar1 />
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/aboutus' element={<AboutUs />} />
+          <Route path='/contactus' element={<ContactUs />} />
+          <Route path='/Cart' element={<Cart />} />
+          <Route path='/order' element={<Order />} />
+          <Route path='/signup' element={<SignUp />} />
+          <Route path='*' element={<Error />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }

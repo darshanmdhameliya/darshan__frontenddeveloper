@@ -1,6 +1,5 @@
 import React from 'react'
 import { ArrowRight } from 'lucide-react'
-import UseNevigateHook from './UseNevigateHook'
 
 export function SignUp() {
   return (
@@ -111,7 +110,6 @@ export function SignUp() {
           </div>
         </div>
       </section>
-      <UseNevigateHook />
     </>
   )
 }

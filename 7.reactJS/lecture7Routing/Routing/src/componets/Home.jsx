@@ -2,7 +2,6 @@
 
 import React from 'react'
 import { CheckCircle, ChevronDown, ChevronUp, Menu, Star, X } from 'lucide-react'
-import UseNevigateHook from './UseNevigateHook'
 
 const menuItems = [
   {
@@ -559,7 +558,6 @@ export function Home() {
           </footer>
         </div>
       </div>
-      <UseNevigateHook />
     </>
   )
 }

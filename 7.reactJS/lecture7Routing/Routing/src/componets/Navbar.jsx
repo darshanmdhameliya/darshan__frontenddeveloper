@@ -1,9 +1,7 @@
 import React from "react";
 import { Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenuToggle, NavbarMenu, NavbarMenuItem } from "@nextui-org/react";
-import { Link, NavLink, Outlet } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import Logo from "./Logo";
-
-
 
 export default function Navbar1() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
@@ -71,7 +69,6 @@ export default function Navbar1() {
           </NavbarItem>
         </NavbarContent>
 
-
         <NavbarMenu>
           {menuItems.map((item, index) => (
             <NavbarMenuItem key={`${item}-${index}`}>
@@ -89,7 +86,7 @@ export default function Navbar1() {
           ))}
         </NavbarMenu>
       </Navbar>
-      <Outlet />
+
     </>
   );
 }
