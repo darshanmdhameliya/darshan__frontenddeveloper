@@ -30,8 +30,6 @@ const Usestate3 = () => {
         }
     }
 
-
-
     return (
         <div>
             <h1 className="bg-purple-500 text-blue-950 p-2 font-bold text-center text-2xl">This is Hook in react</h1>
