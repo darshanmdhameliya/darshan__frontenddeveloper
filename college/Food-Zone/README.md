@@ -1,112 +1,70 @@
-# Food Zone
+# Getting Started with Create React App
 
-Food Zone UI is a user interface project aimed at providing a visually appealing and user-friendly front end for a food-related application. It incorporates various technologies such as React.js, Tailwind CSS, and Redux Toolkit to create a seamless and interactive experience for users.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## 📸 Screenshots
-- **full view**
-  
-![full website](https://github.com/mohitmaithanii/Food-Zone/assets/126086791/55c50dfe-ac31-4de7-9ce3-f40f1db57862)
+## Available Scripts
 
-- **About**
-  
-![about us](https://github.com/mohitmaithanii/Food-Zone/assets/126086791/7d19d299-cb95-49d0-900e-4466e1d62871)
+In the project directory, you can run:
 
-- **menu**
+### `npm start`
 
-![menu](https://github.com/mohitmaithanii/Food-Zone/assets/126086791/9648cde1-1ad5-4bee-8881-8d3fbc61b550)
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-- **Cart**
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-![cart](https://github.com/mohitmaithanii/Food-Zone/assets/126086791/5689ea4b-5579-4a64-b27f-c38e9e3f4f8a)
+### `npm test`
 
-- **Sign in**
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-![sign in](https://github.com/mohitmaithanii/Food-Zone/assets/126086791/ffd3d7b0-6e0d-470f-b2b3-6079e10e70a7)
+### `npm run build`
 
-## 🛠️ Tech Stack
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-- **React.js:** A popular JavaScript library for building user interfaces.
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-- **Tailwind CSS:** A utility-first CSS framework for quickly styling web applications.
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-- **Redux Toolkit:** A Redux library that simplifies the process of managing state in React applications.
+### `npm run eject`
 
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-## 🌟 Features
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-- **Modern Design:** Utilizes Tailwind CSS for modern and responsive design elements.
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-- **Interactive UI:** Incorporates React.js to create dynamic and interactive user interfaces.
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-- **State Management:** Implements Redux Toolkit for efficient state management, enabling seamless data flow throughout the application.
+## Learn More
 
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-## 🚀 Getting Started
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-Clone the project
+### Code Splitting
 
-```bash
-  git clone https://github.com/mohitmaithanii/Food-Zone.git
-```
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-Go to the project directory
+### Analyzing the Bundle Size
 
-```bash
-  cd Food-Zone
-```
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-Install dependencies
+### Making a Progressive Web App
 
-```bash
-  npm install
-```
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-Start the server
+### Advanced Configuration
 
-```bash
-  npm run dev
-```
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
+### Deployment
 
-## 📚 Documentation
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-- [React](https://react.dev/)
+### `npm run build` fails to minify
 
-- [Tailwind CSS](https://tailwindcss.com/)
-
-- [Redux tool kit](https://redux-toolkit.js.org/)
-
-## 📖 Additional Resources
-
-- [Chai aur react - Hitesh Chaudhary](https://youtube.com/playlist?list=PLu71SKxNbfoDqgPchmvIsL4hTnJIrtige&si=bF-B2eoL5jBrcAeW)
-## 💼 Contributing
-
-Contributions are welcome! If you'd like to contribute to this project, please follow these steps:
-
-1. Fork the repository.
-
-2. Create a new branch 
-```bash
-  git checkout -b feature/your-feature-name
-```
-3. Make your changes.
-
-4. Commit your changes 
-```bash
-  git commit -am 'Add some feature'
-```
-
-5. Push to the branch
-
-```bash
-  git push origin feature/your-feature-name
-```
-6. Create a new Pull Request. 
-## 🙏 Acknowledgements
-
-Special thanks to the creators and contributors of React.js, Tailwind CSS, and Redux Toolkit for providing the tools necessary to build this project. Also, gratitude to Hitesh Chaudhary for his valuable tutorials on React.js.
-## 📌 Related 
-
-- [javascript Learning](https://github.com/mohitmaithanii/JavaScript-Learning)
-- [javascript Beginner Projects](https://github.com/mohitmaithanii/Beginner-Javascript-Projects)
-- [react Learning](https://github.com/mohitmaithanii/React-Learning)
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

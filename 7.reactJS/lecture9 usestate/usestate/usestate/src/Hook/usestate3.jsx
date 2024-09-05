@@ -21,13 +21,11 @@ const Usestate3 = () => {
         return setTimeout(() => setcount(count => count + 1), 2000);
     }
     const handleDecrement = () => {
-        if (count > 0) {
-            return count > 0 ? setTimeout(() => setcount(count => count - 1), 2000) : count;
-            // return count > 0 ? setTimeout(() => setcount( count - 1), 2000) : count;
-        }
-        else {
-            return count
-        }
+
+        return count > 0 ? setTimeout(() => setcount(count => count - 1), 2000) : count;
+        // return count > 0 ? setTimeout(() => setcount( count - 1), 2000) : count;
+
+
     }
 
     return (
