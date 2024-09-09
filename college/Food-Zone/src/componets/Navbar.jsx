@@ -1,9 +1,9 @@
 import React from "react";
 import { Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenuToggle, NavbarMenu, NavbarMenuItem } from "@nextui-org/react";
 import { Link, NavLink } from 'react-router-dom'
-import Logo from "./Logo";
+import Logo from './Logo.jsx'
 
-export  function Navbar1() {
+export function Navbar1() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
   const menuItems = [
@@ -27,22 +27,30 @@ export  function Navbar1() {
             aria-label={isMenuOpen ? "Close menu" : "Open menu"}
             className="sm:hidden"
           />
-          <NavbarBrand>
-            <Link to="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5h7bJMmireQDcZYmO-uNrBu9iCOyWImLCJQ&s">
-              <Logo />
-            </Link>
 
+          <NavbarBrand>
+
+            <Link to="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5h7bJMmireQDcZYmO-uNrBu9iCOyWImLCJQ&s">
+              <div className="">
+                <Logo />
+              </div>
+            </Link>
             <p className="font-bold text-inherit m-5 ">FoodyZone</p>
           </NavbarBrand>
         </NavbarContent>
 
         <NavbarContent className="hidden sm:flex gap-4" >
           <NavbarItem>
-            <NavLink to="/">
+            <NavLink to="/" >
               Home
             </NavLink>
           </NavbarItem>
-          <NavbarItem isActive>
+          <NavbarItem>
+            <NavLink to="/OurMenus" >
+              Our Menus
+            </NavLink>
+          </NavbarItem>
+          <NavbarItem >
             <NavLink to="/AboutUs" >
               AboutUs
             </NavLink>

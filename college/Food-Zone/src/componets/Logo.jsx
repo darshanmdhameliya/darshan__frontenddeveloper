@@ -1,13 +1,14 @@
 import React from "react";
 import { Image } from "@nextui-org/react";
+import logo from '../assets/logo.png'
 
 export default function Logo() {
   return (
     <Image
      
-      width={60}
-      height={50}
-      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5h7bJMmireQDcZYmO-uNrBu9iCOyWImLCJQ&s"
+      width={200}
+      height={180}
+      src={logo}
       alt="NextUI Album Cover"
       className="mt-5"
     />

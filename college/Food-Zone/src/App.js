@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import Home from './componets/Home';
+import Ouemenus from './componets/OurMenus'
 import AboutUs from './componets/AboutUs';
 import { ContactUs } from './componets/ContactUs';
 import Cart from './componets/Cart';
@@ -17,6 +18,7 @@ function App() {
         <Navbar1 />
         <Routes>
           <Route path='/' element={<Home />} />
+          <Route path='/OurMenus' element={<Ouemenus />} />
           <Route path='/aboutus' element={<AboutUs />} />
           <Route path='/contactus' element={<ContactUs />} />
           <Route path='/Cart' element={<Cart />} />
