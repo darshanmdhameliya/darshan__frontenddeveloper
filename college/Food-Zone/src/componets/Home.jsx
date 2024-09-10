@@ -58,6 +58,9 @@ export function Home() {
   ];
 
 
+
+
+
   return (
     <>
 
@@ -68,7 +71,10 @@ export function Home() {
           <div className="flex-col space-y-4 ms-10 mb-5 ">
             <h1 className='text-white'>Highlights</h1>
             <h1 className='font-bold text-4xl text-white '>Where every <br /> <span>ingredient tells</span><br /> <span>a story</span></h1>
-            <button className='bg-[#E6FF55] text-[#00473C] rounded-full sm:py-3 sm:px-9 p-4'>View Our Menus</button>
+            <NavLink to={'/OurMenus'}>
+              <button className='bg-[#E6FF55] mt-3 text-[#00473C] rounded-full sm:py-3 sm:px-9 p-4'>View Our Menus</button>
+            </NavLink>
+
           </div>
         </div>
 
@@ -77,10 +83,12 @@ export function Home() {
         <div className="flex justify-between mb-5 ">
           <div className="">
             <h1>New Menu</h1>
-            <h1 className='font-semibold  text-4xl'>View Our <br /> <span>Menus</span> </h1>
+            <h1 className='font-semibold text-2xl sm:text-4xl'>View Our <br /> <span>Menus</span> </h1>
           </div>
           <div className=" ">
-            <button className='border rounded-full py-10  p-6 bg-[#E6FF55] text-[#00473C]'>View All</button>
+            <NavLink to={'/OurMenus'}>
+              <button className='hover:bg-yellow-10000 hover:border-[1.5px]   hover:border-black  border rounded-full py-8  px-4 sm:py-10  sm:px-6 bg-[#E6FF55] text-[#00473C]'>View All</button>
+            </NavLink>
           </div>
         </div>
 
@@ -108,11 +116,13 @@ export function Home() {
 
 
         {/* Learn More */}
-        <div className=" h-screen mt-10 bg-[url(./assets/asset_4.jpeg)] bg-gray-600 rounded-2xl mb-5 ">
+        <div className=" h-screen object-cover mt-10 bg-[url(./assets/asset_4.jpeg)] bg-gray-600 rounded-2xl mb-5 ">
           <div className="flex-col space-y-4 ms-10 mb-5  ">
             <h1 className='text-white'>Our Restaurant</h1>
             <h1 className='font-bold text-5xl text-white '> A culinary  <br /> <span>adventure for all</span><br /> <span>the senses</span></h1>
-            <button className='bg-[#E6FF55] text-[#00473C] rounded-full py-3 px-9'>Learn More</button>
+            <NavLink to={'/AboutUs'}>
+              <button className='bg-[#E6FF55] mt-5 text-[#00473C] rounded-full py-3 px-9'>Learn More</button>
+            </NavLink>
           </div>
         </div>
 
@@ -126,7 +136,7 @@ export function Home() {
 
         <div className="mb-10 mt-5 grid sm:grid-cols-2  lg:grid-cols-3 gap-5">
           <div className="">
-            <div className="bg-cover sm:bg-cover relative h-64 w-full border runded-2xl bg-[url('./assets/Blog_1.jpg')]">
+            <div className="bg-cover sm:bg-cover relative h-64 w-full border rounded-2xl bg-[url('./assets/Blog_1.jpg')]">
               <div className="absolute bg-[#E6FF55] px-3 py rounded-xl m-5">
                 <h1 className='font-bold'>29</h1>
                 <p>SEP</p>
@@ -138,7 +148,7 @@ export function Home() {
           </div>
 
           <div className="">
-            <div className="bg-cover relative h-64 w-full border rounded-2xl bg-[url('./assets/Blog_2.jpg')]">
+            <div className="bg-cover sm:bg-cover relative h-64 w-full border rounded-2xl bg-[url('./assets/Blog_2.jpg')]">
               <div className="absolute bg-[#E6FF55] px-3 py-3 rounded-xl m-5">
                 <h1 className='font-bold'>29</h1>
                 <p>SEP</p>
@@ -150,7 +160,7 @@ export function Home() {
           </div>
 
           <div className="">
-            <div className="bg-cover relative h-64 w-full border rounded-2xl bg-[url('./assets/Blog_3.jpg')]">
+            <div className="bg-cover sm:bg-cover relative h-64 w-full border rounded-2xl bg-[url('./assets/Blog_3.jpg')]">
               <div className="absolute bg-[#E6FF55] px-3 py-3 rounded-xl m-5">
                 <h1 className='font-bold'>29</h1>
                 <p>SEP</p>
@@ -162,7 +172,7 @@ export function Home() {
           </div>
 
           <div className="">
-            <div className="bg-cover relative h-64 w-full border rounded-2xl bg-[url('./assets/Blog_4.jpg')]">
+            <div className="bg-cover sm:bg-cover relative h-64 w-full border rounded-2xl bg-[url('./assets/Blog_4.jpg')]">
               <div className="absolute bg-[#E6FF55] px-3 py-3 rounded-xl m-5">
                 <h1 className='font-bold'>29</h1>
                 <p>SEP</p>
@@ -174,7 +184,7 @@ export function Home() {
           </div>
 
           <div className="">
-            <div className="bg-cover relative h-64 w-full border rounded-2xl bg-[url('./assets/Blog_5.jpg')]">
+            <div className="bg-cover sm:bg-cover relative h-64 w-full border rounded-2xl bg-[url('./assets/Blog_5.jpg')]">
               <div className="absolute bg-[#E6FF55] px-3 py-3 rounded-xl m-5">
                 <h1 className='font-bold'>29</h1>
                 <p>SEP</p>
@@ -188,9 +198,9 @@ export function Home() {
 
         {/* The magic of the Kitchen */}
 
-        <div className="flex flex-wrap items-center bg-[#f7f7e8] p-8 rounded-lg gap-8">
+        <div className="md:flex flex-wrap  items-center bg-[#f7f7e8] p-8 rounded-lg gap-8">
           {/* Text Section */}
-          <div className="flex-1 min-w-[300px]">
+          <div className="flex-1 ">
             <h3 className="text-lg text-gray-500 mb-2">Highlight</h3>
             <h1 className="text-4xl font-bold text-gray-800 mb-4">The magic of the kitchen</h1>
             <p className="text-lg text-gray-600">
@@ -200,7 +210,7 @@ export function Home() {
           </div>
 
           {/* Images Section */}
-          <div className="flex-1 grid sm:grid-cols-1 md:grid-cols-2 gap-4 min-w-[250px]">
+          <div className="flex-1 grid sm:grid-cols-1 md:grid-cols-2 gap-4 ">
             {/* Main Image */}
             <div className="col-span-1">
               <img
@@ -210,19 +220,21 @@ export function Home() {
               />
             </div>
             {/* Side Images */}
-            <div>
-              <img
-                className="w-full rounded-lg object-cover"
-                src={Blog_4}
-                alt="Salad 1"
-              />
-            </div>
-            <div>
-              <img
-                className="w-full rounded-lg object-cover"
-                src={Blog_5}
-                alt="Salad 2"
-              />
+            <div className="flex flex-col justify-between gap-5">
+              <div>
+                <img
+                  className="w-full rounded-lg object-cover"
+                  src={Blog_4}
+                  alt="Salad 1"
+                />
+              </div>
+              <div>
+                <img
+                  className="w-full rounded-lg object-cover"
+                  src={Blog_5}
+                  alt="Salad 2"
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -251,17 +263,17 @@ export function Home() {
 
         {/* signUp */}
 
-        <div className="grid lg:grid-cols-2 gap-5 my-10">
+        <div className="grid lg:grid-cols-2 gap-5 my-10 p-5">
           <div className="">
             <h1 className='font-bold text-3xl'>Keep up to date with us</h1>
             <p>Sign up to be the first to receive special news and event updates from us.</p>
           </div>
-          <div className="w-fit grid sm:grid-cols-2 sm:gap-2 md:gap-2 lg:gap-24 ">
+          <div className="w-fit grid sm:grid-cols-2 sm:gap-x-12  md:gap-x-4 lg:gap-x-28 ">
             <form action="">
               <input className=' border border-black sm:text-xl rounded-xl p-4' type="email" placeholder='Your email address' />
             </form>
             <NavLink to={'/SignUp'}>
-              <button className='px-5 mt-2 py-3 rounded-large bg-green-900 text-[#E6FF55]'>Sign up</button>
+              <button className='hover:bg-[#E6FF55] hover:text-green-950 px-5 mt-2 py-3 rounded-large bg-green-900 text-[#E6FF55]'>Sign up</button>
             </NavLink>
           </div>
         </div>
@@ -274,7 +286,7 @@ export function Home() {
 
           <div className="sm:flex justify-center mb-10 gap-5">
             <h3 className="text-xl font-semibold my-2">Call us on +45 453 3432</h3>
-            <button className="bg-[#08361B] text-[#EEFF00] px-8 py-2 rounded-full">
+            <button className="hover:bg-[#E6FF55] hover:text-green-950 bg-[#08361B] text-[#EEFF00] px-8 py-2 rounded-full">
               Make a Reservation
             </button>
           </div>
@@ -284,7 +296,7 @@ export function Home() {
             <div className="sm:flex items-center sm:space-x-6">
               {/* Logo */}
               <div className="  ">
-                 <Logo/>             
+                <Logo />
               </div>
 
               {/* Contact Information */}
@@ -324,7 +336,7 @@ export function Home() {
                 <i className="fab fa-yelp"></i>
               </a>
               <a href="#" className="text-[#08361B]">
-                <FaTripadvisor className='mt-1'/>
+                <FaTripadvisor className='mt-1' />
               </a>
               <a href="#" className="text-[#08361B]">
                 <i className="fab fa-instagram"></i>

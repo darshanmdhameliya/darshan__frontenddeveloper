@@ -121,7 +121,9 @@ export function Ourmenus() {
           <div className="md:flex  justify-between gap-5 sm:gap-40 w-full  ">
             <div className=" mt-5">
               <h1 className='text-wrap font-bold text-3xl sm:text-4xl md:5xl'>A place where food, design, and ambiance come together to create a memorable experience.</h1>
-              <button className='px-8 py-3 mt-5 border border-black rounded-full'>Learn More</button>
+              <NavLink to={'/AboutUs'}>
+                <button className='hover:bg-[#E6FF55] hover:text-green-950 hover:border-none px-8 py-3 mt-5 border border-black rounded-full'>Learn More</button>
+              </NavLink>
             </div>
             <div className="mt-5  ">
               <p className='tetx-2xl'>Whether you want to add more plant-based meals to your diet or are simply looking to change up your salad game, you’ll find tons of inspiration in the salad recipes below. </p>
@@ -190,17 +192,18 @@ export function Ourmenus() {
 
         {/* signUp */}
 
-        <div className="grid lg:grid-cols-2 gap-5 my-10">
+
+        <div className="grid lg:grid-cols-2 gap-5 my-10 p-5">
           <div className="">
             <h1 className='font-bold text-3xl'>Keep up to date with us</h1>
             <p>Sign up to be the first to receive special news and event updates from us.</p>
           </div>
-          <div className="w-fit grid sm:grid-cols-2 sm:gap-2 md:gap-2 lg:gap-24 ">
+          <div className="w-fit grid sm:grid-cols-2 sm:gap-x-12  md:gap-x-4 lg:gap-x-28 ">
             <form action="">
               <input className=' border border-black sm:text-xl rounded-xl p-4' type="email" placeholder='Your email address' />
             </form>
             <NavLink to={'/SignUp'}>
-              <button className='px-5 mt-2 py-3 rounded-large bg-green-900 text-[#E6FF55]'>Sign up</button>
+              <button className='hover:bg-[#E6FF55] hover:text-green-950 px-5 mt-2 py-3 rounded-large bg-green-900 text-[#E6FF55]'>Sign up</button>
             </NavLink>
           </div>
         </div>
@@ -212,7 +215,7 @@ export function Ourmenus() {
 
           <div className="sm:flex justify-center mb-10 gap-5">
             <h3 className="text-xl font-semibold my-2">Call us on +45 453 3432</h3>
-            <button className="bg-[#08361B] text-[#EEFF00] px-8 py-2 rounded-full">
+            <button className="hover:bg-[#E6FF55] hover:text-green-950 bg-[#08361B] text-[#EEFF00] px-8 py-2 rounded-full">
               Make a Reservation
             </button>
           </div>

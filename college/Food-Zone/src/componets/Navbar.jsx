@@ -7,12 +7,12 @@ export function Navbar1() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
   const menuItems = [
-    "Profile",
-    "Dashboard",
-    "Activity",
-    "Analytics",
-    "System",
-    "Deployments",
+    "Home",
+    "OurMenus",
+    "AboutUs",
+    "ContectUS",
+    "SignUp",
+    "Make a Reservation",
     "My Settings",
     "Team Settings",
     "Help & Feedback",
@@ -84,7 +84,7 @@ export function Navbar1() {
                 color={
                   index === 2 ? "primary" : index === menuItems.length - 1 ? "danger" : "foreground"
                 }
-                className="w-full"
+                className="w-full "
                 href="#"
                 size="lg"
               >
