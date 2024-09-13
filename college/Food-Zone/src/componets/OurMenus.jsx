@@ -108,7 +108,7 @@ export function Ourmenus() {
 
   return (
     <>
-      <div className="w-full sm:container sm:m-auto sm:px-14">
+      <div className="w-full sm:container p-5 sm:m-auto sm:px-14">
 
         {/* Learn More */}
         <div className=" mb-10 ">

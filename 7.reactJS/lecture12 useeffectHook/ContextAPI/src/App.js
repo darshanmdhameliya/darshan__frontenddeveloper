@@ -2,15 +2,15 @@ import React from 'react'
 import UseEffect1 from './Hook/UseEffect1'
 import UseEffect2 from './Hook/UseEffect2'
 import UseEffect3 from './Hook/UseEffect3'
-import { useState } from 'react'
+// import { useState } from 'react'
 
 const App = () => {
 
-  const [toggle, settoggle] = useState(false)
+  // const [toggle, settoggle] = useState(false)
 
-  const handleclick = () => {
-    settoggle(!toggle)
-  }
+  // const handleclick = () => {
+  //   settoggle(!toggle)
+  // }
 
 
   return (

@@ -135,7 +135,6 @@ const Click1 = () => {
           </div>
         </div>
 
-
         {/* what hurt */}
 
         <div className=" p-6 sm:p-8 md:p-12 lg:p-16">
@@ -169,6 +168,73 @@ const Click1 = () => {
           <div class="card">
           </div>
         </div>
+
+        <div className="max-w-2xl mx-auto p-4 bg-[#FAF9F6]">
+          <h2 className="text-xl font-semibold mb-2">Leave a Reply</h2>
+          <p className="text-sm mb-4">Your email address will not be published. Required fields are marked <span className="text-red-500">*</span></p>
+          <form className="space-y-4">
+            <div>
+              <label htmlFor="comment" className="block text-sm font-medium">
+                COMMENT<span className="text-red-500">*</span>
+              </label>
+              <textarea
+                id="comment"
+                rows="5"
+                className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+                placeholder="Your Comment"
+              ></textarea>
+            </div>
+            <div className="md:flex md:space-x-4">
+              <div className="w-full md:w-1/3">
+                <label htmlFor="name" className="block text-sm font-medium">
+                  NAME<span className="text-red-500">*</span>
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+                  placeholder="Name"
+                />
+              </div>
+              <div className="w-full md:w-1/3">
+                <label htmlFor="email" className="block text-sm font-medium">
+                  EMAIL<span className="text-red-500">*</span>
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+                  placeholder="Email"
+                />
+              </div>
+              <div className="w-full md:w-1/3">
+                <label htmlFor="website" className="block text-sm font-medium">
+                  WEBSITE
+                </label>
+                <input
+                  type="url"
+                  id="website"
+                  className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+                  placeholder="Website"
+                />
+              </div>
+            </div>
+            <div>
+              <label className="inline-flex items-center">
+                <input type="checkbox" className="form-checkbox h-4 w-4 text-green-500 border-gray-300 rounded focus:ring-green-500" />
+                <span className="ml-2 text-sm">Save my name, email, and website in this browser for the next time I comment.</span>
+              </label>
+            </div>
+            <button
+              type="submit"
+              className="px-6 py-3 bg-green-900 text-yellow-400 font-bold rounded-md hover:bg-green-700 transition duration-200"
+            >
+              Post Comment
+            </button>
+          </form>
+
+
+
 
         {/* signUp */}
 
