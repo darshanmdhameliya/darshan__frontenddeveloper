@@ -234,7 +234,7 @@ const Click1 = () => {
           </form>
 
 
-
+        </div>
 
         {/* signUp */}
 
@@ -252,7 +252,6 @@ const Click1 = () => {
             </NavLink>
           </div>
         </div>
-
 
 
         {/* Footer */}
@@ -319,13 +318,11 @@ const Click1 = () => {
             </div>
           </div>
 
-
         </footer>
-
 
       </div>
 
-    </div>
+    </div >
   )
 }
 
