@@ -71,6 +71,11 @@ export function Navbar1() {
             </NavLink>
           </NavbarItem>
           <NavbarItem>
+            <NavLink to="/Login">
+              Login
+            </NavLink>
+          </NavbarItem>
+          <NavbarItem>
             <NavLink to="/SignUp">
               SignUp
             </NavLink>

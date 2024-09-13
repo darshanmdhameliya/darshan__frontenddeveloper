@@ -7,6 +7,9 @@ import Blog_5 from '../assets/Blog_5.jpg'
 import experiancefood from '../assets/experiancefood.jpg'
 import Logo from './Logo.jsx'
 
+// button 
+import Button from './Button.jsx';
+
 // icons
 import { FaTripadvisor } from "react-icons/fa";
 
@@ -64,13 +67,13 @@ export function Home() {
   return (
     <>
 
-      <div className="w-full sm:container sm:m-auto sm:px-14">
+      <div className="w-full sm:container p-5 sm:m-auto sm:px-14 ">
 
         {/* story */}
-        <div className="bg-cover  text-wrap sm:bg-cover  h-screen mt-3 bg-[url(./assets/asset_0.jpeg)]   flex items-end bg-gray-600 rounded-2xl mb-5 ">
+        <div className="bg-cover  text-wrap sm:bg-cover  h-screen mt-3 bg-[url(./assets/main_image.jpg)]   flex items-end bg-gray-600 rounded-2xl mb-5 ">
           <div className="flex-col space-y-4 ms-10 mb-5 ">
-            <h1 className='text-white'>Highlights</h1>
-            <h1 className='font-bold text-4xl text-white '>Where every <br /> <span>ingredient tells</span><br /> <span>a story</span></h1>
+            <h1 className='text-white text-2xl'>Highlights</h1>
+            <h1 className='font-bold text-3xl sm:text-6xl text-white '>Where every <br /> <span>ingredient tells</span><br /> <span>a story</span></h1>
             <NavLink to={'/OurMenus'}>
               <button className='bg-[#E6FF55] mt-3 text-[#00473C] rounded-full sm:py-3 sm:px-9 p-4'>View Our Menus</button>
             </NavLink>
@@ -80,6 +83,8 @@ export function Home() {
 
 
         {/* view all menus */}   {/* card */}
+
+
         <div className="flex justify-between mb-5 ">
           <div className="">
             <h1>New Menu</h1>
@@ -108,6 +113,7 @@ export function Home() {
               </CardBody>
               <CardFooter className="text-small justify-between">
                 <b>{item.title}</b>
+                <Button />
                 <p className="text-default-500">{item.price}</p>
               </CardFooter>
             </Card>
@@ -135,65 +141,92 @@ export function Home() {
 
 
         <div className="mb-10 mt-5 grid sm:grid-cols-2  lg:grid-cols-3 gap-5">
-          <div className="">
-            <div className="bg-cover sm:bg-cover relative h-64 w-full border rounded-2xl bg-[url('./assets/Blog_1.jpg')]">
-              <div className="absolute bg-[#E6FF55] px-3 py rounded-xl m-5">
-                <h1 className='font-bold'>29</h1>
-                <p>SEP</p>
+          <NavLink to={'/Click1'}>
+            <div className="">
+              <div className="bg-cover sm:bg-cover relative h-64 w-full border rounded-2xl bg-[url('./assets/Blog_1.jpg')]">
+                <div className="absolute bg-[#E6FF55] px-3 py rounded-xl m-5">
+                  <h1 className='font-bold'>29</h1>
+                  <p>SEP</p>
+                </div>
+              </div>
+              <div className="">
+                <h1 className='font-bold text-xl'>How a Restaurant Pre-Shift <br /> Meeting Improves Expereience</h1>
               </div>
             </div>
-            <div className="">
-              <h1 className='font-bold text-xl'>How a Restaurant Pre-Shift <br /> Meeting Improves Expereience</h1>
-            </div>
-          </div>
+          </NavLink>
 
-          <div className="">
-            <div className="bg-cover sm:bg-cover relative h-64 w-full border rounded-2xl bg-[url('./assets/Blog_2.jpg')]">
-              <div className="absolute bg-[#E6FF55] px-3 py-3 rounded-xl m-5">
-                <h1 className='font-bold'>29</h1>
-                <p>SEP</p>
+          <NavLink to={'/Click2'} >
+            <div className="">
+              <div className="bg-cover sm:bg-cover relative h-64 w-full border rounded-2xl bg-[url('./assets/Blog_2.jpg')]">
+                <div className="absolute bg-[#E6FF55] px-3 py-3 rounded-xl m-5">
+                  <h1 className='font-bold'>29</h1>
+                  <p>SEP</p>
+                </div>
+              </div>
+              <div className="">
+                <h1 className='font-bold text-xl'>9 Things to Offer to Attract All <br /> Restaurant Positions</h1>
               </div>
             </div>
-            <div className="">
-              <h1 className='font-bold text-xl'>9 Things to Offer to Attract All <br /> Restaurant Positions</h1>
-            </div>
-          </div>
+          </NavLink>
 
-          <div className="">
-            <div className="bg-cover sm:bg-cover relative h-64 w-full border rounded-2xl bg-[url('./assets/Blog_3.jpg')]">
-              <div className="absolute bg-[#E6FF55] px-3 py-3 rounded-xl m-5">
-                <h1 className='font-bold'>29</h1>
-                <p>SEP</p>
+          <NavLink to={'/Click3'} >
+            <div className="">
+              <div className="bg-cover sm:bg-cover relative h-64 w-full border rounded-2xl bg-[url('./assets/Blog_3.jpg')]">
+                <div className="absolute bg-[#E6FF55] px-3 py-3 rounded-xl m-5">
+                  <h1 className='font-bold'>29</h1>
+                  <p>SEP</p>
+                </div>
+              </div>
+              <div className="">
+                <h1 className='font-bold text-xl'>When Restaurant Menu Design <br /> Can Help Lower Food Cost</h1>
               </div>
             </div>
-            <div className="">
-              <h1 className='font-bold text-xl'>When Restaurant Menu Design <br /> Can Help Lower Food Cost</h1>
-            </div>
-          </div>
 
-          <div className="">
-            <div className="bg-cover sm:bg-cover relative h-64 w-full border rounded-2xl bg-[url('./assets/Blog_4.jpg')]">
-              <div className="absolute bg-[#E6FF55] px-3 py-3 rounded-xl m-5">
-                <h1 className='font-bold'>29</h1>
-                <p>SEP</p>
-              </div>
-            </div>
-            <div className="">
-              <h1 className='font-bold text-xl'>A farm-to-table restaurant that <br /> uses all-natural ingredients</h1>
-            </div>
-          </div>
+          </NavLink>
 
-          <div className="">
-            <div className="bg-cover sm:bg-cover relative h-64 w-full border rounded-2xl bg-[url('./assets/Blog_5.jpg')]">
-              <div className="absolute bg-[#E6FF55] px-3 py-3 rounded-xl m-5">
-                <h1 className='font-bold'>29</h1>
-                <p>SEP</p>
+          <NavLink to={'/Click4'} >
+            <div className="">
+              <div className="bg-cover sm:bg-cover relative h-64 w-full border rounded-2xl bg-[url('./assets/Blog_4.jpg')]">
+                <div className="absolute bg-[#E6FF55] px-3 py-3 rounded-xl m-5">
+                  <h1 className='font-bold'>29</h1>
+                  <p>SEP</p>
+                </div>
+              </div>
+              <div className="">
+                <h1 className='font-bold text-xl'>A farm-to-table restaurant that <br /> uses all-natural ingredients</h1>
               </div>
             </div>
+          </NavLink>
+
+          <NavLink to={'/Click5'} >
             <div className="">
-              <h1 className='font-bold text-xl'>Flavour so good you’ll try to eat <br /> with your eyes</h1>
+              <div className="bg-cover sm:bg-cover relative h-64 w-full border rounded-2xl bg-[url('./assets/Blog_5.jpg')]">
+                <div className="absolute bg-[#E6FF55] px-3 py-3 rounded-xl m-5">
+                  <h1 className='font-bold'>29</h1>
+                  <p>SEP</p>
+                </div>
+              </div>
+              <div className="">
+                <h1 className='font-bold text-xl'>Flavour so good you’ll try to eat <br /> with your eyes</h1>
+              </div>
             </div>
-          </div>
+          </NavLink>
+
+          <NavLink to={'/Click6'} >
+
+            <div className="">
+              <div className="bg-cover sm:bg-cover relative h-64 w-full border rounded-2xl bg-[url('./assets/Blog_6.jpg')]">
+                <div className="absolute bg-[#E6FF55] px-3 py-3 rounded-xl m-5">
+                  <h1 className='font-bold'>29</h1>
+                  <p>SEP</p>
+                </div>
+              </div>
+              <div className="">
+                <h1 className='font-bold text-xl'>Flavour so good you’ll try to eat <br /> with your eyes</h1>
+              </div>
+            </div>
+          </NavLink>
+
         </div>
 
         {/* The magic of the Kitchen */}

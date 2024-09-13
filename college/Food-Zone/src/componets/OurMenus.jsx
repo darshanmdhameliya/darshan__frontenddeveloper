@@ -5,6 +5,11 @@ import asset_2 from '../assets/asset_2.jpeg'
 import Blog_6 from '../assets/Blog_6.jpg'
 import Blog_7 from '../assets/Blog_7.jpg'
 import magic_1 from '../assets/magic_1.jpg'
+import miso_salmon from '../assets/miso_salmon.jpg'
+import crunchy_taco  from '../assets/crunchy_taco.jpg'
+import italian_pasta from '../assets/italian_pasta.jpg'
+import garlic_chili from '../assets/garlic_chili.jpg'
+
 
 import experiancefood from '../assets/experiancefood.jpg'
 import Logo from './Logo.jsx'
@@ -35,7 +40,7 @@ const SaladCard = ({ image, name, description, smallPrice, largePrice }) => {
 export function Ourmenus() {
   const salads = [
     {
-      image: { asset_2 },
+      image:  asset_2 ,
       name: "Guacamole Greens",
       description:
         "Roasted , avocado, tomatoes, red onions, shredded cabbage",
@@ -43,7 +48,7 @@ export function Ourmenus() {
       largePrice: 12.0,
     },
     {
-      image: { magic_1 },
+      image: magic_1 ,
       name: "Harvest Bowl",
       description:
         "Roasted , roasted sweet potatoes, apples, goat cheese",
@@ -51,7 +56,7 @@ export function Ourmenus() {
       largePrice: 10.0,
     },
     {
-      image: { Blog_6 },
+      image: Blog_6 ,
       name: "Summer Asian Slaw",
       description:
         "Pickled carrots, celery, tomatoes, cilantro, blue cheese, za’atar",
@@ -59,7 +64,7 @@ export function Ourmenus() {
       largePrice: 14.0,
     },
     {
-      image: { Blog_7 },
+      image:  Blog_7 ,
       name: "Shredded Brussels Sprout",
       description:
         "Raw beets, cucumbers, basil, sunflower seeds, warm wild rice, shredded kale",
@@ -75,28 +80,28 @@ export function Ourmenus() {
       description: "Roasted steelhead, hot roasted sweet potatoes, kale cabbage slaw",
       smallPrice: "$29.0",
       largePrice: "$39.0",
-      imageUrl: "https://your-image-source/miso-salmon.jpg", // Replace with your actual image link
+      imageUrl: miso_salmon
     },
     {
-      name: "Fish Taco",
+      name: "Crunchy Taco",
       description: "Salmon, avocado, shredded cabbage, cilantro, tortilla chips, warm quinoa, arugula",
       smallPrice: "$24.0",
       largePrice: "$34.0",
-      imageUrl: "https://your-image-source/fish-taco.jpg", // Replace with your actual image link
+      imageUrl:crunchy_taco
     },
     {
       name: "Italian Pasta Soup",
       description: "Red onions, basil, za’atar breadcrumbs, chopped romaine, shredded kale, pesto vinaigrette",
       smallPrice: "$21.0",
       largePrice: "$31.0",
-      imageUrl: "https://your-image-source/italian-pasta-soup.jpg", // Replace with your actual image link
-    },
+      imageUrl: italian_pasta
+    },  
     {
-      name: "Blackened Fish Bowl",
+      name: "Garlic Chili Bowl",
       description: "Shredded cabbage, raw carrots, red onions, basil, sunflower seeds, warm wild rice, baby spinach",
       smallPrice: "$19.0",
       largePrice: "$29.0",
-      imageUrl: "https://your-image-source/blackened-fish-bowl.jpg", // Replace with your actual image link
+      imageUrl:garlic_chili
     },
   ];
 
@@ -135,7 +140,7 @@ export function Ourmenus() {
 
         <div className="bg-gradient-to-tr bg-pink-100  p-6">
           <h2 className="text-3xl font-bold  mb-8">Salads</h2>
-          <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 ">
             {salads.map((salad, index) => (
               <SaladCard key={index} {...salad} />
             ))}
