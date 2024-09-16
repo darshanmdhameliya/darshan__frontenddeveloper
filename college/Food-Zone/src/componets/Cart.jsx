@@ -1,60 +1,102 @@
-import React from 'react'
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import Blog_3 from '../assets/Blog_3.jpg'
+
+// icon 
+import { IoMdHeart } from "react-icons/io";
 
 export function Cart() {
+  const navigate = useNavigate();
+  const [cartItems] = useState(
+    Array.from({ length: 15 }).map((_, i) => ({
+      id: i,
+      name: `Food Item ${i + 1}`,
+      description: 'Delicious vegetarian food item with amazing taste and quality.',
+      tags: ['#Veg', '#Delicious', '#Healthy'],
+      colors: ['bg-green-400', 'bg-yellow-400', 'bg-red-400'],
+      sizes: ['Small', 'Medium', 'Large'],
+      image:[Blog_3]
+    }))
+  );
+
+  const [likedItems, setLikedItems] = useState(
+    JSON.parse(localStorage.getItem('likedItems')) || []
+  );
+  
+  const handleLike = (item) => {
+    if (!likedItems.some((likedItem) => likedItem.id === item.id)) {
+      const updatedLikes = [...likedItems, item];
+      setLikedItems(updatedLikes);
+      localStorage.setItem('likedItems', JSON.stringify(updatedLikes));
+    }
+  };
+
+
+
+  const goToLikedItems = () => {
+    navigate('/liked-items');
+  };
+
   return (
-    <div className="mx-auto grid w-full max-w-7xl items-center space-y-4 px-2 py-10 md:grid-cols-2 md:gap-6 md:space-y-0 lg:grid-cols-4">
-      {Array.from({ length: 4 }).map((_, i) => (
-        <div key={i} className="rounded-md border">
-          <img
-            src="https://images.unsplash.com/photo-1588099768523-f4e6a5679d88?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8NHwxMTM4MTU1NXx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=800&q=60"
-            alt="Laptop"
-            className="aspect-[16/9] w-full rounded-md md:aspect-auto md:h-[300px] lg:h-[200px]"
-          />
-          <div className="p-4">
-            <h1 className="inline-flex items-center text-lg font-semibold">Nike Airmax v2</h1>
-            <p className="mt-3 text-sm text-gray-600">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, debitis?
-            </p>
-            <div className="mt-4">
-              <span className="mb-2 mr-2 inline-block rounded-full bg-gray-100 px-3 py-1 text-[10px] font-semibold text-gray-900">
-                #Sneakers
-              </span>
-              <span className="mb-2 mr-2 inline-block rounded-full bg-gray-100 px-3 py-1 text-[10px] font-semibold text-gray-900">
-                #Nike
-              </span>
-              <span className="mb-2 mr-2 inline-block rounded-full bg-gray-100 px-3 py-1 text-[10px] font-semibold text-gray-900">
-                #Airmax
-              </span>
+    <div className="mx-auto grid w-full max-w-7xl grid-cols-1 gap-6 px-2 py-10 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 ">
+      {cartItems.map((item) => (
+        <div
+          key={item.id}
+          className="overflow-hidden rounded-lg border border-gray-200 bg-white shadow-lg transition-transform transform hover:scale-105 hover:shadow-2xl"
+        >
+
+          <div className="l">
+            <img src={item.image} alt="" />
+
+            <IoMdHeart className='absolute size-10 rounded-bl-2xl  p-2 bg-slate-100 bg-opacity-70 top-0 right-0 hover:text-pink-600  text-black' onClick={goToLikedItems} />
+
+          </div>
+          <div className="p-4 ">
+            <h1 className="text-lg font-semibold text-gray-800">{item.name}</h1>
+            <p className="mt-2 text-sm text-gray-600">{item.description}</p>
+            <div className="mt-3 flex flex-wrap gap-2">
+              {item.tags.map((tag, index) => (
+                <span
+                  key={index}
+                  className="inline-block rounded-full bg-gray-100 px-3 py-1 text-xs font-semibold text-gray-700 transition-transform transform hover:scale-105"
+                >
+                  {tag}
+                </span>
+              ))}
             </div>
-            <div className="mt-3 flex items-center space-x-2">
-              <span className="block text-sm font-semibold">Colors : </span>
-              <span className="block h-4 w-4 rounded-full border-2 border-gray-300 bg-red-400"></span>
-              <span className="block h-4 w-4 rounded-full border-2 border-gray-300 bg-purple-400"></span>
-              <span className="block h-4 w-4 rounded-full border-2 border-gray-300 bg-orange-400"></span>
+            <div className="mt-3 flex space-x-2">
+              <span className="block text-sm font-semibold">Colors:</span>
+              {item.colors.map((color, index) => (
+                <span
+                  key={index}
+                  className={`block h-5 w-5 rounded-full border-2 border-gray-300 ${color} transition-transform transform hover:scale-125`}
+                ></span>
+              ))}
             </div>
-            <div className="mt-5 flex items-center space-x-2">
-              <span className="block text-sm font-semibold">Size : </span>
-              <span className="block cursor-pointer rounded-md border border-gray-300 p-1 px-2 text-xs font-medium">
-                8 UK
-              </span>
-              <span className="block cursor-pointer rounded-md border border-gray-300 p-1 px-2 text-xs font-medium">
-                9 UK
-              </span>
-              <span className="block cursor-pointer rounded-md border border-gray-300 p-1 px-2 text-xs font-medium">
-                10 UK
-              </span>
+            <div className="mt-3 flex flex-wrap gap-2">
+              <span className="block text-sm font-semibold">Sizes:</span>
+              {item.sizes.map((size, index) => (
+                <span
+                  key={index}
+                  className="block cursor-pointer rounded-md border border-gray-300 p-1 px-2 text-xs font-medium hover:bg-gray-100 transition-transform transform hover:scale-105"
+                >
+                  {size}
+                </span>
+              ))}
             </div>
             <button
               type="button"
-              className="mt-4 w-full rounded-sm bg-black px-2 py-1.5 text-sm font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+              className="mt-4 w-full rounded-md bg-orange-500 px-3 py-2 text-sm font-semibold text-white shadow-md hover:bg-orange-600 transition-transform transform hover:scale-105 focus:outline-none focus-visible:ring focus-visible:ring-opacity-75"
+              onClick={() => handleLike(item)}
             >
               Add to Cart
             </button>
+
           </div>
         </div>
       ))}
     </div>
-  )
+  );
 }
 
-export default Cart
+export default Cart;

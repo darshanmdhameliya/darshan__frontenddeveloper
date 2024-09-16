@@ -6,6 +6,8 @@ import AboutUs from './componets/AboutUs';
 import { ContactUs } from './componets/ContactUs';
 import Cart from './componets/Cart';
 import Order from './componets/Order';
+import FAQ from './componets/FAQ';
+import LikedItems from './componets/LikedItems.jsx';
 import Login from './componets/Login';
 import SignUp from './componets/SignUp';
 import Navbar1 from './componets/Navbar';
@@ -19,6 +21,9 @@ import Click6 from './componets/Click6'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 function App() {
+
+
+
   return (
     <div>
       <BrowserRouter>
@@ -30,6 +35,8 @@ function App() {
           <Route path='/contactus' element={<ContactUs />} />
           <Route path='/Cart' element={<Cart />} />
           <Route path='/order' element={<Order />} />
+          <Route path='/FAQ' element={<FAQ />} />
+          <Route path="/liked-items" element={<LikedItems />} />
           <Route path='/Login' element={<Login />} />
           <Route path='/signup' element={<SignUp />} />
           <Route path='*' element={<Error />} />

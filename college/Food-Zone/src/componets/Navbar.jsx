@@ -2,24 +2,33 @@ import React from "react";
 import { Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenuToggle, NavbarMenu, NavbarMenuItem } from "@nextui-org/react";
 import { Link, NavLink } from 'react-router-dom'
 import Logo from './Logo.jsx'
+import { PageObj } from "./PageObj.jsx";
+import { useNavigate } from 'react-router-dom';
+// icon 
+import { IoMdHeart } from "react-icons/io";
 
-export function Navbar1() {
+
+export function Navbar1({ likedItemsCount }) {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
   const menuItems = [
-    "Home",
-    "OurMenus",
-    "AboutUs",
-    "ContectUS",
-    "SignUp",
-    "Make a Reservation",
-    "My Settings",
-    "Team Settings",
-    "Help & Feedback",
-    "Log Out",
+
+    PageObj.Home,
+    PageObj.OurMenus,
+    PageObj.AboutUs,
+    PageObj.ContactUs,
+    PageObj.FAQ,
+    PageObj.Login,
+    PageObj.SignUp,
   ];
 
+  const navigate = useNavigate();
+  const goToLikedItems = () => {
+    navigate('/liked-items');
+  };
+
   return (
+
     <>
       <Navbar onMenuOpenChange={setIsMenuOpen} className=" bg-orange-300">
         <NavbarContent>
@@ -68,6 +77,17 @@ export function Navbar1() {
           <NavbarItem>
             <NavLink to="/Order">
               Order
+            </NavLink>
+          </NavbarItem>
+          <NavbarItem>
+            <NavLink to="/FAQ">
+              FAQ
+            </NavLink>
+          </NavbarItem>
+
+          <NavbarItem>
+            <NavLink to="/liked-items">
+              <IoMdHeart className=' size-10 rounded-bl-2xl  p-2 bg-slate-100 bg-opacity-70 hover:text-pink-600  text-black' onClick={goToLikedItems} />
             </NavLink>
           </NavbarItem>
           <NavbarItem>
