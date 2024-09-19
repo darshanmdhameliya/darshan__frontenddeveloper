@@ -13,7 +13,6 @@ export function Cart() {
       name: `Food Item ${i + 1}`,
       description: 'Delicious vegetarian food item with amazing taste and quality.',
       tags: ['#Veg', '#Delicious', '#Healthy'],
-      colors: ['bg-green-400', 'bg-yellow-400', 'bg-red-400'],
       sizes: ['Small', 'Medium', 'Large'],
       image: [Blog_3]
     }))
@@ -76,15 +75,7 @@ export function Cart() {
                 </span>
               ))}
             </div>
-            <div className="mt-3 flex space-x-2">
-              <span className="block text-sm font-semibold">Colors:</span>
-              {item.colors.map((color, index) => (
-                <span
-                  key={index}
-                  className={`block h-5 w-5 rounded-full border-2 border-gray-300 ${color} transition-transform transform hover:scale-125`}
-                ></span>
-              ))}
-            </div>
+           
             <div className="mt-3 flex flex-wrap gap-2">
               <span className="block text-sm font-semibold">Sizes:</span>
               {item.sizes.map((size, index) => (

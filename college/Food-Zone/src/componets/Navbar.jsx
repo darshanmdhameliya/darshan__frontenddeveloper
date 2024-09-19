@@ -12,14 +12,13 @@ export function Navbar1({ likedItemsCount }) {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
   const menuItems = [
-
-    PageObj.Home,
-    PageObj.OurMenus,
-    PageObj.AboutUs,
-    PageObj.ContactUs,
-    PageObj.FAQ,
-    PageObj.Login,
-    PageObj.SignUp,
+    "Home",
+    "OurMenus",
+    "AboutUs",
+    "ContactUs",
+    "FAQ",
+    "Login",
+    "SignUp"
   ];
 
   const navigate = useNavigate();
@@ -30,7 +29,7 @@ export function Navbar1({ likedItemsCount }) {
   return (
 
     <>
-      <Navbar onMenuOpenChange={setIsMenuOpen} className=" bg-orange-300">
+      <Navbar onMenuOpenChange={setIsMenuOpen} className=" bg-orange-300 md:p-0">
         <NavbarContent>
           <NavbarMenuToggle
             aria-label={isMenuOpen ? "Close menu" : "Open menu"}
@@ -38,9 +37,8 @@ export function Navbar1({ likedItemsCount }) {
           />
 
           <NavbarBrand>
-
-            <Link to="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5h7bJMmireQDcZYmO-uNrBu9iCOyWImLCJQ&s">
-              <div className="">
+            <Link>
+              <div className=" -mt-4">
                 <Logo />
               </div>
             </Link>
@@ -109,7 +107,7 @@ export function Navbar1({ likedItemsCount }) {
                 color={
                   index === 2 ? "primary" : index === menuItems.length - 1 ? "danger" : "foreground"
                 }
-                className="w-full "
+                className="w-fit "
                 href="#"
                 size="lg"
               >

@@ -6,8 +6,8 @@ export default function Logo() {
   return (
     <Image
      
-      width={200}
-      height={180}
+      width={50}
+      height={50}
       src={logo}
       alt="NextUI Album Cover"
       className="mt-5"
