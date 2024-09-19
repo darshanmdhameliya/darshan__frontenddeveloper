@@ -87,7 +87,7 @@ export function Navbar1({ likedItemsCount }) {
 
           <NavbarItem>
             <NavLink to="/liked-items">
-              <IoMdHeart className=' size-10 rounded-bl-2xl  p-2 bg-slate-100 bg-opacity-70 hover:text-pink-600  text-black' onClick={goToLikedItems} />
+              <IoMdHeart className=' size-10 rounded-bl-2xl  p-2' onClick={goToLikedItems} />
             </NavLink>
           </NavbarItem>
           <NavbarItem>

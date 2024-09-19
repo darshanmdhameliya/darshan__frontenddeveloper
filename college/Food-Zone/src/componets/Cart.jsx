@@ -15,14 +15,15 @@ export function Cart() {
       tags: ['#Veg', '#Delicious', '#Healthy'],
       colors: ['bg-green-400', 'bg-yellow-400', 'bg-red-400'],
       sizes: ['Small', 'Medium', 'Large'],
-      image:[Blog_3]
+      image: [Blog_3]
     }))
   );
 
+  // likedItem 
   const [likedItems, setLikedItems] = useState(
     JSON.parse(localStorage.getItem('likedItems')) || []
   );
-  
+
   const handleLike = (item) => {
     if (!likedItems.some((likedItem) => likedItem.id === item.id)) {
       const updatedLikes = [...likedItems, item];
@@ -31,6 +32,20 @@ export function Cart() {
     }
   };
 
+  // Order Now 
+  const [orderItems, setOrderItems] = useState(
+    JSON.parse(localStorage.getItem('orderItems')) || []
+  );
+
+  const handleOrder = (item) => {
+    const currentOrderItems = JSON.parse(localStorage.getItem('orderItems')) || [];
+    if (!currentOrderItems.some((orderItem) => orderItem.id === item.id)) {
+      const updatedOrders = [...currentOrderItems, item];
+      setOrderItems(updatedOrders);
+      localStorage.setItem('orderItems', JSON.stringify(updatedOrders));
+    }
+    navigate('/order');
+  };
 
 
   const goToLikedItems = () => {
@@ -44,14 +59,11 @@ export function Cart() {
           key={item.id}
           className="overflow-hidden rounded-lg border border-gray-200 bg-white shadow-lg transition-transform transform hover:scale-105 hover:shadow-2xl"
         >
-
           <div className="l">
             <img src={item.image} alt="" />
-
-            <IoMdHeart className='absolute size-10 rounded-bl-2xl  p-2 bg-slate-100 bg-opacity-70 top-0 right-0 hover:text-pink-600  text-black' onClick={goToLikedItems} />
-
+            <IoMdHeart className='absolute size-10 rounded-bl-2xl p-2 bg-slate-100 bg-opacity-70 top-0 right-0 hover:text-pink-600 text-black' onClick={goToLikedItems} />
           </div>
-          <div className="p-4 ">
+          <div className="p-4">
             <h1 className="text-lg font-semibold text-gray-800">{item.name}</h1>
             <p className="mt-2 text-sm text-gray-600">{item.description}</p>
             <div className="mt-3 flex flex-wrap gap-2">
@@ -89,9 +101,15 @@ export function Cart() {
               className="mt-4 w-full rounded-md bg-orange-500 px-3 py-2 text-sm font-semibold text-white shadow-md hover:bg-orange-600 transition-transform transform hover:scale-105 focus:outline-none focus-visible:ring focus-visible:ring-opacity-75"
               onClick={() => handleLike(item)}
             >
-              Add to Cart
+              Add to Liked
             </button>
-
+            <button
+              type="button"
+              className="mt-4 w-full rounded-md bg-orange-500 px-3 py-2 text-sm font-semibold text-white shadow-md hover:bg-orange-600 transition-transform transform hover:scale-105 focus:outline-none focus-visible:ring focus-visible:ring-opacity-75"
+              onClick={() => handleOrder(item)}
+            >
+              Order Now
+            </button>
           </div>
         </div>
       ))}

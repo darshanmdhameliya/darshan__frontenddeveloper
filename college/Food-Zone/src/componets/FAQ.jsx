@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 
+
 const FAQ = () => {
   const [openQuestion, setOpenQuestion] = useState(null);
 
@@ -38,10 +39,10 @@ const FAQ = () => {
     <div className="min-h-screen flex flex-col items-center justify-center bg-cover bg-center py-12 px-4 sm:px-6 lg:px-8" style={{ backgroundImage: 'url(https://source.unsplash.com/1600x900/?food)' }}>
       <div className="max-w-3xl w-full space-y-6 bg-white bg-opacity-80 rounded-lg shadow-lg p-6">
         <h1 className="text-4xl font-extrabold text-center text-gray-900 mb-8">Frequently Asked Questions</h1>
-        
+
         {faqData.map((faq, index) => (
           <div key={index} className="bg-white border border-gray-300 rounded-lg overflow-hidden shadow-lg transition-transform transform hover:scale-105">
-            <button 
+            <button
               className="w-full flex justify-between items-center bg-gradient-to-r from-blue-400 via-green-400 to-yellow-400 px-4 py-5 text-left text-lg font-semibold text-white hover:bg-gradient-to-r hover:from-blue-500 hover:to-yellow-500 focus:outline-none focus-visible:ring focus-visible:ring-opacity-75"
               onClick={() => toggleQuestion(index)}
             >
@@ -64,6 +65,7 @@ const FAQ = () => {
           </div>
         ))}
       </div>
+
     </div>
   );
 };
