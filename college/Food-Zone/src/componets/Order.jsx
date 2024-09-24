@@ -46,9 +46,6 @@ export function Order() {
               >
                 &times;
               </button>
-
-
-
             </div>
           ))}
         </div>
