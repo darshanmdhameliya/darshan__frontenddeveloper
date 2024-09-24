@@ -258,8 +258,8 @@ export function Cart() {
 
   return (
     <>
-      {/* Message Box */}
-      {showMessage && (
+     {/* Message Box */}
+     {showMessage && (
         <div className="fixed top-5 right-5 z-50 bg-green-500 text-white px-4 py-2 rounded-lg shadow-lg transition-transform transform animate-slide-down">
           <p>Your item has been added to Liked Items!</p>
         </div>
