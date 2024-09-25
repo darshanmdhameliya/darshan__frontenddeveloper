@@ -20,6 +20,9 @@ import Click5 from './componets/Click5'
 import Click6 from './componets/Click6'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Logout from './componets/logout.jsx';
+import ScrollToTop1 from './componets/ScrollToTop1.jsx';
+import ScrollToTop from 'react-scroll-to-top';
+
 
 function App() {
 
@@ -28,6 +31,8 @@ function App() {
   return (
     <div>
       <BrowserRouter>
+        <ScrollToTop1 />
+        <ScrollToTop smooth color='black' viewBox='0 0 250 250' className=' flex p-2' />
         <Navbar1 />
         <Routes>
           <Route path='/' element={<Home />} />
@@ -40,7 +45,7 @@ function App() {
           <Route path="/liked-items" element={<LikedItems />} />
           <Route path='/Login' element={<Login />} />
           <Route path='/signup' element={<SignUp />} />
-          <Route path='/logout' element={<Logout />}/>
+          <Route path='/logout' element={<Logout />} />
           <Route path='*' element={<Error />} />
           <Route path='/Click1' element={<Click1 />} />
           <Route path='/Click2' element={<Click2 />} />

@@ -59,23 +59,23 @@ export function SignUp() {
 
       <section>
         <div className="flex items-center justify-center bg-white px-4 py-10 sm:px-6 sm:py-16 lg:px-8">
-          <div className="xl:mx-auto xl:w-full xl:max-w-sm 2xl:max-w-md border-4 border-black rounded-lg p-6 shadow-2xl">
+          <div className="xl:mx-auto xl:w-full xl:max-w-sm 2xl:max-w-md border-4 hover:border-indigo-200 bg-[#171717] hover:bg-[black] text-white rounded-lg p-6 shadow-2xl">
             <h2 className="text-3xl font-bold leading-tight  ">
               Sign up to create account
             </h2>
-            <p className="mt-2 text-base text-gray-600 ">
+            <p className="mt-2 text-base">
               Already have an account?{' '}
               <NavLink
                 to="/Login"
                 className="font-bold transition-all duration-200 hover:underline"
               >
-                Sign In
+                Login
               </NavLink>
             </p>
             <form onSubmit={handleSubmit} className="mt-8 ">
               <div className="space-y-5">
                 <div>
-                  <label htmlFor="name" className="text-base font-medium text-gray-900">
+                  <label htmlFor="name" className="text-base font-medium">
                     Full Name
                   </label>
                   <div className="mt-2">

@@ -237,7 +237,6 @@ export function Cart() {
   };
 
   
-
   // Order Now 
   const [OrderItem, setOrderItems] = useState(
     JSON.parse(localStorage.getItem('orderItems')) || []

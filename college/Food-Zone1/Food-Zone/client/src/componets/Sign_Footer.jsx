@@ -27,7 +27,7 @@ const Sign_Footer = () => {
             </div>
 
             {/* Footer */}
-            <footer className="bg-green-500 text-white pt-10 pb-8 px-4">
+            <footer className="bg-green-500 text-white pt-10 pb-8 px-4 rounded-2xl">
                 {/* Container */}
                 <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
                     {/* Column 1 - Logo and Description */}
@@ -46,16 +46,16 @@ const Sign_Footer = () => {
                                 <a href="/" className="hover:underline">Home</a>
                             </li>
                             <li>
-                                <a href="/menu" className="hover:underline">Menu</a>
+                                <a href="/OurMenus" className="hover:underline">Our Menus</a>
                             </li>
                             <li>
                                 <a href="/about" className="hover:underline">About Us</a>
                             </li>
                             <li>
-                                <a href="/contact" className="hover:underline">Contact</a>
+                                <a href="/ContactUs" className="hover:underline">Contact</a>
                             </li>
                             <li>
-                                <a href="/cart" className="hover:underline">Cart</a>
+                                <a href="/Cart" className="hover:underline">Cart</a>
                             </li>
                         </ul>
                     </div>
@@ -72,9 +72,11 @@ const Sign_Footer = () => {
                                 placeholder="Enter your email"
                                 className="w-full px-4 py-2 rounded-l-lg focus:outline-none text-gray-700"
                             />
-                            <button className="bg-white text-green-500 px-4 py-2 rounded-r-lg hover:bg-gray-100">
-                                Subscribe
-                            </button>
+                            <NavLink to={'/SignUp'}>
+                                <button className="bg-white text-green-500 px-4 py-2 rounded-r-lg hover:bg-gray-100">
+                                    Subscribe
+                                </button>
+                            </NavLink>
                         </form>
                     </div>
                 </div>
