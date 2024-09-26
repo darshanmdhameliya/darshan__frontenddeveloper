@@ -6,7 +6,7 @@ import Blog_4 from '../assets/Blog_4.jpg'
 import Blog_5 from '../assets/Blog_5.jpg'
 import experiancefood from '../assets/experiancefood.jpg'
 import Logo from './Logo.jsx'
-// import Slider1 from './Slider.jsx';
+import Slider1 from './Slider.jsx';
 
 
 
@@ -73,17 +73,8 @@ export function Home() {
 
       <div className="w-full sm:container p-5 sm:m-auto sm:px-14 ">
 
-        {/* story */}
 
-        <div className="flex rounded-xl items-end h-screen bg-cover sm:bg-cover bg-center bg-[url(./assets/main_image.jpg)] ">
-          <div className="flex-col space-y-4 ms-10 mb-5 ">
-            <h1 className='text-white text-2xl'>Highlights</h1>
-            <h1 className='font-bold text-3xl sm:text-6xl text-white '>Where every <br /> <span>ingredient tells</span><br /> <span>a story</span></h1>
-            <NavLink to={'/OurMenus'}>
-              <button className='bg-[#E6FF55] mt-3 text-[#00473C] rounded-full sm:py-3 sm:px-9 p-4'>View Our Menus</button>
-            </NavLink>
-          </div>
-        </div>
+        <Slider1 />
 
         {/* view all menus */}   {/* card */}
 
@@ -116,7 +107,9 @@ export function Home() {
               </CardBody>
               <CardFooter className="text-small flex md:gap-2 md:flex-col lg:flex-row justify-between">
                 <b>{item.title}</b>
-                <Button />
+                <NavLink to={'/Cart'}>
+                  <Button />
+                </NavLink>
                 <p className="text-default-500">{item.price}</p>
               </CardFooter>
             </Card>
