@@ -5,9 +5,23 @@ import magic_1 from '../assets/magic_1.jpg'
 import Blog_4 from '../assets/Blog_4.jpg'
 import Blog_5 from '../assets/Blog_5.jpg'
 import experiancefood from '../assets/experiancefood.jpg'
+import Burger from '../assets/Menusimage/Burger.jpg'
+import Frech_Fires from '../assets/Menusimage/French_Fires.jpg'
+import Hotdog from '../assets/Menusimage/Hotdog.jpg'
+import Pizza from '../assets/Menusimage/Pizza.jpg'
+import Salad from '../assets/Menusimage/Salad.jpg'
+import Samosa from '../assets/Menusimage/Samosa.jpg'
+import Sandwich from '../assets/Menusimage/Sandwich.jpg'
+import Tacos from '../assets/Menusimage/Tacos.jpg'
 import Logo from './Logo.jsx'
 import Slider1 from './Slider.jsx';
 
+
+
+// slider 
+import Slider from 'react-slick'
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 
 // button 
@@ -25,48 +39,56 @@ export function Home() {
   const list = [
     {
       title: "Pizza",
-      img: "https://cdn.pixabay.com/photo/2020/05/17/04/22/pizza-5179939_640.jpg",
+      img:Pizza,
       price: "$5.50",
     },
     {
       title: "Burger",
-      img: "https://img.freepik.com/free-photo/delicious-burger-with-fresh-ingredients_23-2150857908.jpg",
+      img:Burger,
       price: "$3.00",
     },
     {
       title: "French Fries",
-      img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUEm2LJ6Qx5Ja-sR5EFhDB7EQBHAhkpvaTIQ&s",
+      img: Frech_Fires,
       price: "$10.00",
     },
     {
       title: "Samosa",
-      img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFIcbbwfphKUEcu53KmnBj8rWE1sgG1r_oLg&s",
+      img: Samosa,
       price: "$5.30",
     },
     {
       title: "Sandwich",
-      img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWG3zMlm9xz_-4G79HGIo7okA4gnMRqrIDrg&s",
+      img: Sandwich,
       price: "$15.70",
     },
     {
       title: "Tacos",
-      img: "https://img.freepik.com/free-photo/fresh-beef-taco-wooden-table-with-sauce-generative-ai_188544-8042.jpg",
+      img: Tacos,
       price: "$8.00",
     },
     {
       title: "Salad",
-      img: "https://img.freepik.com/free-photo/dietary-salad-with-tomatoes-feta-lettuce-spinach-pine-nuts_2829-20128.jpg",
+      img: Salad,
       price: "$7.50",
     },
     {
       title: "Hot Dog",
-      img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRdard4Vfd4Lm02gFOCcTbKGwisCVE0rrZWw&s",
+      img: Hotdog,
       price: "$12.20",
     },
   ];
 
 
-
+  const settings = {
+    infinite: true,
+    slidesToShow: 4 ,
+    slidesToScroll: 4,
+    autoplay: true,
+    speed: 13000,
+    autoplaySpeed: 3000,
+    cssEase: "linear"
+  };
 
   return (
     <>
@@ -92,29 +114,16 @@ export function Home() {
         </div>
 
 
-        <div className="gap-4  grid sm:grid-cols-2 md:grid-cols-3 " style={{ transform: 'translate3d(0px, 0px, 0px)', transition: '0.45s' }}>
-          {list.map((item, index) => (
-            <Card shadow="sm" key={index} isPressable onPress={() => console.log("item pressed")}>
-              <CardBody className="overflow-visible p-0">
-                <Image
-                  shadow="sm"
-                  radius="lg"
-                  width="100%"
-                  alt={item.title}
-                  className="w-full object-cover h-[140px]"
-                  src={item.img}
-                />
-              </CardBody>
-              <CardFooter className="text-small flex md:gap-2 md:flex-col lg:flex-row justify-between">
-                <b>{item.title}</b>
-                <NavLink to={'/Cart'}>
-                  <Button />
-                </NavLink>
-                <p className="text-default-500">{item.price}</p>
-              </CardFooter>
-            </Card>
-          ))}
+        <div className="slider-container">
+          <Slider {...settings}>
+            {list.map((item, index) => {
+              return (
+                <Cartslider key={index} details={item} />
+              )
+            })}
+          </Slider>
         </div>
+
 
 
         {/* Learn More */}
@@ -303,3 +312,30 @@ export function Home() {
 }
 
 export default Home
+
+
+function Cartslider({details}) {
+  return (
+    <div className="w-1/2" style={{ transform: 'translate3d(0px, 0px, 0px)', transition: '0.45s' }}>
+      <Card shadow="sm"  isPressable onPress={() => console.log("item pressed")}>
+        <CardBody className="overflow-visible p-0">
+          <Image
+            shadow="sm"
+            radius="lg"
+            width="full"
+            alt={details.title}
+            className="w-full object-cover h-[140px]"
+            src={details.img}
+          />
+        </CardBody>
+        <CardFooter className="text-small flex md:gap-2 md:flex-col lg:flex-row justify-between">
+          <b>{details.title}</b>
+          <NavLink to={'/Cart'}>
+            <Button />
+          </NavLink>
+          <p className="text-default-500">{details.price}</p>
+        </CardFooter>
+      </Card>
+    </div >
+  )
+}

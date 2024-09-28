@@ -67,7 +67,7 @@ export default Slider1
 function Heroslider({ details }) {
     return (
         <>
-            <div className=" h-screen flex items-end  overflow-hidden w-screen bg-cover bg-center " style={{ backgroundImage: `url(${details.image})` }}>
+            <div className="mb-5 h-screen flex items-end  overflow-hidden w-screen bg-cover bg-center " style={{ backgroundImage: `url(${details.image})` }}>
                 <div className="flex flex-col  space-y-4 ms-10 mb-5">
                     <h1 className='text-white text-2xl'>Highlights</h1>
                     <h1 className='font-bold text-3xl sm:text-6xl text-white '>Where every <br /> <span>ingredient tells</span><br /> <span>a story</span></h1>
