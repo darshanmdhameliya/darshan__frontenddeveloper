@@ -2,8 +2,12 @@ import React from 'react'
 import { Card, CardBody, CardFooter, Image } from "@nextui-org/react";
 import { NavLink } from 'react-router-dom'
 import magic_1 from '../assets/magic_1.jpg'
+import Blog_1 from '../assets/Blog_1.jpg'
+import Blog_2 from '../assets/Blog_2.jpg'
+import Blog_3 from '../assets/Blog_3.jpg'
 import Blog_4 from '../assets/Blog_4.jpg'
 import Blog_5 from '../assets/Blog_5.jpg'
+import Blog_6 from '../assets/Blog_6.jpg'
 import experiancefood from '../assets/experiancefood.jpg'
 import Burger from '../assets/Menusimage/Burger.jpg'
 import Frech_Fires from '../assets/Menusimage/French_Fires.jpg'
@@ -15,6 +19,8 @@ import Sandwich from '../assets/Menusimage/Sandwich.jpg'
 import Tacos from '../assets/Menusimage/Tacos.jpg'
 import Logo from './Logo.jsx'
 import Slider1 from './Slider.jsx';
+
+
 
 
 
@@ -39,12 +45,12 @@ export function Home() {
   const list = [
     {
       title: "Pizza",
-      img:Pizza,
+      img: Pizza,
       price: "$5.50",
     },
     {
       title: "Burger",
-      img:Burger,
+      img: Burger,
       price: "$3.00",
     },
     {
@@ -79,10 +85,73 @@ export function Home() {
     },
   ];
 
+  const latest_news = [
+    {
+      Navlink: '/Click1',
+      image: Blog_1,
+      h1: 29,
+      p: "SEP",
+      Des1: "How a Restaurant Pre-Shift",
+      Des2: "Meeting Improves Expereience"
+    },
+    {
+      Navlink: '/Click2',
+      image: Blog_2,
+      h1: 29,
+      p: "SEP",
+      Des1: "9 Things to Offer to Attract All ",
+      Des2: "Restaurant Positions"
+    },
+    {
+      Navlink: '/Click3',
+      image: Blog_3,
+      h1: 29,
+      p: "SEP",
+      Des1: "When Restaurant Menu Design",
+      Des2: "Can Help Lower Food Cost"
+    },
+    {
+      Navlink: '/Click4',
+      image: Blog_4,
+      h1: 29,
+      p: "SEP",
+      Des1: "A farm-to-table restaurant that",
+      Des2: "uses all-natural ingredients"
+    },
+    {
+      Navlink: '/Click5',
+      image: Blog_5,
+      h1: 29,
+      p: "SEP",
+      Des1: "Flavour so good you’ll try to eat",
+      Des2: "with your eyes"
+    },
+    {
+      Navlink: '/Click6',
+      image: Blog_6,
+      h1: 29,
+      p: "SEP",
+      Des1: "Flavour so good you’ll try to eat",
+      Des2: "with your eyes"
+    },
 
-  const settings = {
+
+  ]
+
+
+  const settings1 = {
     infinite: true,
-    slidesToShow: 4 ,
+    slidesToShow: 4,
+    slidesToScroll: 4,
+    autoplay: false,
+    speed: 13000,
+    autoplaySpeed: 3000,
+    cssEase: "linear"
+  };
+
+  const settings2 = {
+    infinite: true,
+    slidesToShow: 4,
     slidesToScroll: 4,
     autoplay: true,
     speed: 13000,
@@ -95,12 +164,9 @@ export function Home() {
 
       <div className="w-full sm:container p-5 sm:m-auto sm:px-14 ">
 
-
         <Slider1 />
 
         {/* view all menus */}   {/* card */}
-
-
         <div className="flex justify-between mb-5 ">
           <div className="">
             <h1>New Menu</h1>
@@ -113,18 +179,15 @@ export function Home() {
           </div>
         </div>
 
-
         <div className="slider-container">
-          <Slider {...settings}>
+          <Slider {...settings1}>
             {list.map((item, index) => {
               return (
-                <Cartslider key={index} details={item} />
+                <Cartslider1 key={index} details={item} />
               )
             })}
           </Slider>
         </div>
-
-
 
         {/* Learn More */}
         <div className=" h-screen object-cover mt-10 bg-[url(./assets/asset_4.jpeg)] bg-gray-600 rounded-2xl mb-5 ">
@@ -144,94 +207,15 @@ export function Home() {
           <h1 className='font-bold  text-5xl'>Check Our <br /> <span>Blog</span> </h1>
         </div>
 
+        <div className="slider-container">
 
-        <div className="mb-10 mt-5 grid sm:grid-cols-2  lg:grid-cols-3 gap-5">
-          <NavLink to={'/Click1'}>
-            <div className="">
-              <div className="bg-cover sm:bg-cover relative h-64 w-full border rounded-2xl bg-[url('./assets/Blog_1.jpg')]">
-                <div className="absolute bg-[#E6FF55] px-3 py rounded-xl m-5">
-                  <h1 className='font-bold'>29</h1>
-                  <p>SEP</p>
-                </div>
-              </div>
-              <div className="">
-                <h1 className='font-bold text-xl'>How a Restaurant Pre-Shift <br /> Meeting Improves Expereience</h1>
-              </div>
-            </div>
-          </NavLink>
-
-          <NavLink to={'/Click2'} >
-            <div className="">
-              <div className="bg-cover sm:bg-cover relative h-64 w-full border rounded-2xl bg-[url('./assets/Blog_2.jpg')]">
-                <div className="absolute bg-[#E6FF55] px-3 py-3 rounded-xl m-5">
-                  <h1 className='font-bold'>29</h1>
-                  <p>SEP</p>
-                </div>
-              </div>
-              <div className="">
-                <h1 className='font-bold text-xl'>9 Things to Offer to Attract All <br /> Restaurant Positions</h1>
-              </div>
-            </div>
-          </NavLink>
-
-          <NavLink to={'/Click3'} >
-            <div className="">
-              <div className="bg-cover sm:bg-cover relative h-64 w-full border rounded-2xl bg-[url('./assets/Blog_3.jpg')]">
-                <div className="absolute bg-[#E6FF55] px-3 py-3 rounded-xl m-5">
-                  <h1 className='font-bold'>29</h1>
-                  <p>SEP</p>
-                </div>
-              </div>
-              <div className="">
-                <h1 className='font-bold text-xl'>When Restaurant Menu Design <br /> Can Help Lower Food Cost</h1>
-              </div>
-            </div>
-
-          </NavLink>
-
-          <NavLink to={'/Click4'} >
-            <div className="">
-              <div className="bg-cover sm:bg-cover relative h-64 w-full border rounded-2xl bg-[url('./assets/Blog_4.jpg')]">
-                <div className="absolute bg-[#E6FF55] px-3 py-3 rounded-xl m-5">
-                  <h1 className='font-bold'>29</h1>
-                  <p>SEP</p>
-                </div>
-              </div>
-              <div className="">
-                <h1 className='font-bold text-xl'>A farm-to-table restaurant that <br /> uses all-natural ingredients</h1>
-              </div>
-            </div>
-          </NavLink>
-
-          <NavLink to={'/Click5'} >
-            <div className="">
-              <div className="bg-cover sm:bg-cover relative h-64 w-full border rounded-2xl bg-[url('./assets/Blog_5.jpg')]">
-                <div className="absolute bg-[#E6FF55] px-3 py-3 rounded-xl m-5">
-                  <h1 className='font-bold'>29</h1>
-                  <p>SEP</p>
-                </div>
-              </div>
-              <div className="">
-                <h1 className='font-bold text-xl'>Flavour so good you’ll try to eat <br /> with your eyes</h1>
-              </div>
-            </div>
-          </NavLink>
-
-          <NavLink to={'/Click6'} >
-
-            <div className="">
-              <div className="bg-cover sm:bg-cover relative h-64 w-full border rounded-2xl bg-[url('./assets/Blog_6.jpg')]">
-                <div className="absolute bg-[#E6FF55] px-3 py-3 rounded-xl m-5">
-                  <h1 className='font-bold'>29</h1>
-                  <p>SEP</p>
-                </div>
-              </div>
-              <div className="">
-                <h1 className='font-bold text-xl'>Flavour so good you’ll try to eat <br /> with your eyes</h1>
-              </div>
-            </div>
-          </NavLink>
-
+          <Slider  {...settings2}>
+            {latest_news.map((item, index) => {
+              return (
+                <Latest_news key={index} details={item} />
+              )
+            })}
+          </Slider>
         </div>
 
         {/* The magic of the Kitchen */}
@@ -302,9 +286,6 @@ export function Home() {
         {/* footer  */}
         <Sign_Footer />
 
-
-
-
       </div >
 
     </>
@@ -314,10 +295,10 @@ export function Home() {
 export default Home
 
 
-function Cartslider({details}) {
+function Cartslider1({ details }) {
   return (
     <div className="w-1/2" style={{ transform: 'translate3d(0px, 0px, 0px)', transition: '0.45s' }}>
-      <Card shadow="sm"  isPressable onPress={() => console.log("item pressed")}>
+      <Card shadow="sm" isPressable onPress={() => console.log("item pressed")}>
         <CardBody className="overflow-visible p-0">
           <Image
             shadow="sm"
@@ -336,6 +317,23 @@ function Cartslider({details}) {
           <p className="text-default-500">{details.price}</p>
         </CardFooter>
       </Card>
+    </div >
+  )
+}
+
+function Latest_news({ details }) {
+  return (
+    <div className="">
+      <div className={`bg-cover sm:bg-cover relative h-64 w-full border rounded-2xl 
+        bg-[url('${details.image}')]       `}>
+        <div className="absolute bg-[#E6FF55] px-3 py rounded-xl m-5">
+          <h1 className='font-bold'>{details.h1}</h1>
+          <p>{details.p}</p>
+        </div>
+      </div>
+      <div className="">
+        <h1 className='font-bold text-xl'>{details.Des1} <br />{details.Des2}</h1>
+      </div>
     </div >
   )
 }
