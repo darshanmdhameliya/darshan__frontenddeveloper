@@ -22,19 +22,21 @@ import Sign_Footer from './Sign_Footer.jsx'
 const SaladCard = ({ image, name, description, smallPrice, largePrice }) => {
   return (
     <div className="bg-white rounded-lg shadow-lg p-4 max-w-sm">
-      <img
-        src={image}
-        alt={name}
-        className="w-full h-48 object-cover rounded-t-lg"
-      />
-      <div className="p-4">
-        <h3 className="text-xl font-semibold mb-2">{name}</h3>
-        <p className="text-gray-600 mb-4">{description}</p>
-        <div className="flex justify-between items-center">
-          <span className="text-sm font-semibold">Small ${smallPrice}</span>
-          <span className="text-sm font-semibold">Large ${largePrice}</span>
+      <NavLink to={'/Cart'}>
+        <img
+          src={image}
+          alt={name}
+          className="w-full h-48 object-cover rounded-t-lg"
+        />
+        <div className="p-4">
+          <h3 className="text-xl font-semibold mb-2">{name}</h3>
+          <p className="text-gray-600 mb-4">{description}</p>
+          <div className="flex justify-between items-center">
+            <span className="text-sm font-semibold">Small ${smallPrice}</span>
+            <span className="text-sm font-semibold">Large ${largePrice}</span>
+          </div>
         </div>
-      </div>
+      </NavLink>
     </div>
   );
 };
@@ -153,26 +155,28 @@ export function Ourmenus() {
         {/* Main Dishes  */}
 
         <div className="bg-gray-50 py-8 px-4">
-          <h1 className=" text-3xl font-bold mb-8">Main Dishes</h1>
-          <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-            {dishes.map((dish, index) => (
-              <div key={index} className="bg-white shadow-lg rounded-lg overflow-hidden">
-                <img
-                  src={dish.imageUrl}
-                  alt={dish.name}
-                  className="w-full h-48 object-cover"
-                />
-                <div className="p-6">
-                  <h3 className="text-lg font-bold mb-2">{dish.name}</h3>
-                  <p className="text-gray-600 text-sm mb-4">{dish.description}</p>
-                  <div className="flex justify-between">
-                    <span className="text-sm font-semibold text-green-600">Small {dish.smallPrice}</span>
-                    <span className="text-sm font-semibold text-green-600">Large {dish.largePrice}</span>
+          <NavLink to={'/Cart'}>
+            <h1 className=" text-3xl font-bold mb-8">Main Dishes</h1>
+            <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+              {dishes.map((dish, index) => (
+                <div key={index} className="bg-white shadow-lg rounded-lg overflow-hidden">
+                  <img
+                    src={dish.imageUrl}
+                    alt={dish.name}
+                    className="w-full h-48 object-cover"
+                  />
+                  <div className="p-6">
+                    <h3 className="text-lg font-bold mb-2">{dish.name}</h3>
+                    <p className="text-gray-600 text-sm mb-4">{dish.description}</p>
+                    <div className="flex justify-between">
+                      <span className="text-sm font-semibold text-green-600">Small {dish.smallPrice}</span>
+                      <span className="text-sm font-semibold text-green-600">Large {dish.largePrice}</span>
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
-          </div>
+              ))}
+            </div>
+          </NavLink>
         </div>
 
 

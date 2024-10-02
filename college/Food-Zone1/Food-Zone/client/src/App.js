@@ -3,7 +3,8 @@ import './App.css';
 import Home from './componets/Home';
 import Ouemenus from './componets/OurMenus'
 import AboutUs from './componets/AboutUs';
-import { ContactUs } from './componets/ContactUs';
+import { ContactUs } from './componets/ContactUs.jsx';
+import Offerpage from './componets/Offerpage.jsx'
 import Cart from './componets/Cart';
 import Order from './componets/Order';
 import FAQ from './componets/FAQ';
@@ -39,6 +40,7 @@ function App() {
           <Route path='/OurMenus' element={<Ouemenus />} />
           <Route path='/aboutus' element={<AboutUs />} />
           <Route path='/contactus' element={<ContactUs />} />
+          <Route path='/Offerpage' element={<Offerpage />} />
           <Route path='/Cart' element={<Cart />} />
           <Route path="/order" element={<Order />} />
           <Route path='/FAQ' element={<FAQ />} />

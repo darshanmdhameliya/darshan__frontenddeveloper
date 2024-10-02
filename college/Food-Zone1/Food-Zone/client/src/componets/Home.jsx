@@ -20,9 +20,12 @@ import Tacos from '../assets/Menusimage/Tacos.jpg'
 import Logo from './Logo.jsx'
 import Slider1 from './Slider.jsx';
 
-
-
-
+import Click1 from './Click1.jsx'
+import Click2 from './Click2.jsx'
+import Click3 from './Click3.jsx'
+import Click4 from './Click4.jsx'
+import Click5 from './Click5.jsx'
+import Click6 from './Click6.jsx'
 
 // slider 
 import Slider from 'react-slick'
@@ -87,7 +90,7 @@ export function Home() {
 
   const latest_news = [
     {
-      Navlink: '/Click1',
+      navlink: Click1,
       image: Blog_1,
       h1: 29,
       p: "SEP",
@@ -95,7 +98,7 @@ export function Home() {
       Des2: "Meeting Improves Expereience"
     },
     {
-      Navlink: '/Click2',
+      navlink: Click2,
       image: Blog_2,
       h1: 29,
       p: "SEP",
@@ -103,7 +106,7 @@ export function Home() {
       Des2: "Restaurant Positions"
     },
     {
-      Navlink: '/Click3',
+      navlink: Click3,
       image: Blog_3,
       h1: 29,
       p: "SEP",
@@ -111,7 +114,7 @@ export function Home() {
       Des2: "Can Help Lower Food Cost"
     },
     {
-      Navlink: '/Click4',
+      navlink: Click4,
       image: Blog_4,
       h1: 29,
       p: "SEP",
@@ -119,7 +122,7 @@ export function Home() {
       Des2: "uses all-natural ingredients"
     },
     {
-      Navlink: '/Click5',
+      navlink: Click5,
       image: Blog_5,
       h1: 29,
       p: "SEP",
@@ -127,7 +130,7 @@ export function Home() {
       Des2: "with your eyes"
     },
     {
-      Navlink: '/Click6',
+      navlink: Click6,
       image: Blog_6,
       h1: 29,
       p: "SEP",
@@ -183,7 +186,7 @@ export function Home() {
           <Slider {...settings1}>
             {list.map((item, index) => {
               return (
-                <Cartslider1 key={index} details={item} />
+                <Cartslider1 key={index} details1={item} />
               )
             })}
           </Slider>
@@ -212,7 +215,7 @@ export function Home() {
           <Slider  {...settings2}>
             {latest_news.map((item, index) => {
               return (
-                <Latest_news key={index} details={item} />
+                <Latest_news key={index} details2={item} />
               )
             })}
           </Slider>
@@ -295,7 +298,7 @@ export function Home() {
 export default Home
 
 
-function Cartslider1({ details }) {
+function Cartslider1({ details1 }) {
   return (
     <div className="w-1/2" style={{ transform: 'translate3d(0px, 0px, 0px)', transition: '0.45s' }}>
       <Card shadow="sm" isPressable onPress={() => console.log("item pressed")}>
@@ -304,36 +307,37 @@ function Cartslider1({ details }) {
             shadow="sm"
             radius="lg"
             width="full"
-            alt={details.title}
+            alt={details1.title}
             className="w-full object-cover h-[140px]"
-            src={details.img}
+            src={details1.img}
           />
         </CardBody>
         <CardFooter className="text-small flex md:gap-2 md:flex-col lg:flex-row justify-between">
-          <b>{details.title}</b>
+          <b>{details1.title}</b>
           <NavLink to={'/Cart'}>
             <Button />
           </NavLink>
-          <p className="text-default-500">{details.price}</p>
+          <p className="text-default-500">{details1.price}</p>
         </CardFooter>
       </Card>
     </div >
   )
 }
 
-function Latest_news({ details }) {
+function Latest_news({ details2 }) {
   return (
-    <div className="">
-      <div className={`bg-cover sm:bg-cover relative h-64 w-full border rounded-2xl 
-        bg-[url('${details.image}')]       `}>
-        <div className="absolute bg-[#E6FF55] px-3 py rounded-xl m-5">
-          <h1 className='font-bold'>{details.h1}</h1>
-          <p>{details.p}</p>
-        </div>
-      </div>
+    <NavLink to={'/details2.navlink'} >
       <div className="">
-        <h1 className='font-bold text-xl'>{details.Des1} <br />{details.Des2}</h1>
-      </div>
-    </div >
+        <div className={`bg-cover sm:bg-cover relative h-64 w-full border rounded-2xl`} style={{ backgroundImage: `url(${details2.image})` }}>
+          <div className="absolute bg-[#E6FF55] px-3 py rounded-xl m-5">
+            <h1 className='font-bold'>{details2.h1}</h1>
+            <p>{details2.p}</p>
+          </div>
+        </div>
+        <div className="">
+          <h1 className='font-bold text-xl'>{details2.Des1} <br />{details2.Des2}</h1>
+        </div>
+      </div >
+    </NavLink>
   )
 }

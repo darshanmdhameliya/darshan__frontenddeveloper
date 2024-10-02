@@ -49,7 +49,7 @@ const Sign_Footer = () => {
                                 <a href="/OurMenus" className="hover:underline">Our Menus</a>
                             </li>
                             <li>
-                                <a href="/about" className="hover:underline">About Us</a>
+                                <a href="/aboutUs" className="hover:underline">About Us</a>
                             </li>
                             <li>
                                 <a href="/ContactUs" className="hover:underline">Contact</a>
