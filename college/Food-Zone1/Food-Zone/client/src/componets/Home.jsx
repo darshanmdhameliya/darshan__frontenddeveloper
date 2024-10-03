@@ -156,11 +156,12 @@ export function Home() {
     infinite: true,
     slidesToShow: 4,
     slidesToScroll: 4,
-    autoplay: true,
+    autoplay: false,
     speed: 13000,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 10000,
     cssEase: "linear"
   };
+
 
   return (
     <>
@@ -211,8 +212,7 @@ export function Home() {
         </div>
 
         <div className="slider-container">
-
-          <Slider  {...settings2}>
+          <Slider {...settings2}>
             {latest_news.map((item, index) => {
               return (
                 <Latest_news key={index} details2={item} />
@@ -326,8 +326,8 @@ function Cartslider1({ details1 }) {
 
 function Latest_news({ details2 }) {
   return (
-    <NavLink to={'/details2.navlink'} >
-      <div className="">
+    <NavLink to={details2.navlink}>
+      <div className="mx-2 my-10">
         <div className={`bg-cover sm:bg-cover relative h-64 w-full border rounded-2xl`} style={{ backgroundImage: `url(${details2.image})` }}>
           <div className="absolute bg-[#E6FF55] px-3 py rounded-xl m-5">
             <h1 className='font-bold'>{details2.h1}</h1>
@@ -337,7 +337,8 @@ function Latest_news({ details2 }) {
         <div className="">
           <h1 className='font-bold text-xl'>{details2.Des1} <br />{details2.Des2}</h1>
         </div>
-      </div >
+      </div>
     </NavLink>
-  )
+  );
 }
+

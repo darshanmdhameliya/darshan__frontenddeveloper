@@ -82,7 +82,7 @@ export const ContactUs = () => {
             </h3>
             <iframe
               className="w-full h-64 rounded-lg"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3162.921915041002!2d-122.0842497!3d37.4219999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fba801cf47cbf%3A0xe3f8c0c5c7bfe5b!2sGoogleplex!5e0!3m2!1sen!2sus!4v1635975414790!5m2!1sen!2sus"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d59513.182032906065!2d72.78442243862621!3d21.20908028595022!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04f02397941bd%3A0xf103a23101102563!2sVarachha%2C%20Surat%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1727956192022!5m2!1sen!2sin"
               allowFullScreen=""
               loading="lazy"
               title="Our Location"
