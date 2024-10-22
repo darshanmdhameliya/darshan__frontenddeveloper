@@ -8,7 +8,7 @@ import Logo from './Logo.jsx'
 // icons
 import { FaTripadvisor } from "react-icons/fa";
 
-const Click1 = () => {
+const Click6 = () => {
   return (
     // w-full sm:container sm:m-auto sm:px-14
     <div className=" ">
@@ -263,5 +263,5 @@ const Click1 = () => {
   )
 }
 
-export default Click1
+export default Click6
 

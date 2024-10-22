@@ -6,6 +6,9 @@ export function LikedItems() {
   const navigate = useNavigate();
   const [likedItems, setLikedItems] = useState([]);
 
+
+
+  
   useEffect(() => {
     // Fetch liked items from localStorage when the component mounts
     const storedLikedItems = JSON.parse(localStorage.getItem('likedItems')) || [];

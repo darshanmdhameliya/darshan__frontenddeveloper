@@ -80,7 +80,7 @@ export function SignUp() {
                   </label>
                   <div className="mt-2">
                     <input
-                      className="flex h-10 w-full rounded-md border-2 border-red-500 bg-white px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50"
+                      className="flex h-10 w-full rounded-md border-2 border-red-500 bg-white px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50 text-black"
                       type="text"
                       placeholder="Full Name"
                       name='username' 
@@ -97,7 +97,7 @@ export function SignUp() {
                   </label>
                   <div className="mt-2">
                     <input
-                      className="flex h-10 w-full rounded-md border-2 border-green-500 bg-white px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50"
+                      className="flex h-10 w-full rounded-md border-2 border-green-500 bg-white px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50 text-black"
                       type="email"
                       name='email' 
                       placeholder="Email"
@@ -114,7 +114,7 @@ export function SignUp() {
                   </label>
                   <div className="mt-2">
                     <input
-                      className="flex h-10 w-full rounded-md border-2 border-yellow-500 bg-white px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50"
+                      className="flex h-10 w-full rounded-md border-2 border-yellow-500 bg-white px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50 text-black"
                       type="password"
                       name='password' 
                       placeholder="Password"

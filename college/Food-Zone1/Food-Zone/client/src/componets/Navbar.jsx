@@ -68,11 +68,6 @@ export function Navbar1({ likedItemsCount }) {
             </NavLink>
           </NavbarItem>
           <NavbarItem>
-            <NavLink to="/Offerpage">
-              Offer
-            </NavLink>
-          </NavbarItem>
-          <NavbarItem>
             <NavLink to="/Cart">
               Cart
             </NavLink>
@@ -112,7 +107,7 @@ export function Navbar1({ likedItemsCount }) {
                 color={
                   index === 2 ? "primary" : index === menuItems.length - 1 ? "danger" : "foreground"
                 }
-                className="w-fit "
+                className="w-full "
                 href="#"
                 size="lg"
               >

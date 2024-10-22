@@ -20,12 +20,12 @@ import Tacos from '../assets/Menusimage/Tacos.jpg'
 import Logo from './Logo.jsx'
 import Slider1 from './Slider.jsx';
 
-import Click1 from './Click1.jsx'
-import Click2 from './Click2.jsx'
-import Click3 from './Click3.jsx'
-import Click4 from './Click4.jsx'
-import Click5 from './Click5.jsx'
-import Click6 from './Click6.jsx'
+// import Click1 from './Click1.jsx'
+// import Click2 from './Click2.jsx'
+// import Click3 from './Click3.jsx'
+// import Click4 from './Click4.jsx'
+// import Click5 from './Click5.jsx'
+// import Click6 from './Click6.jsx'
 
 // slider 
 import Slider from 'react-slick'
@@ -90,7 +90,7 @@ export function Home() {
 
   const latest_news = [
     {
-      navlink: Click1,
+      path: "Click1",
       image: Blog_1,
       h1: 29,
       p: "SEP",
@@ -98,7 +98,7 @@ export function Home() {
       Des2: "Meeting Improves Expereience"
     },
     {
-      navlink: Click2,
+      path: "Click2",
       image: Blog_2,
       h1: 29,
       p: "SEP",
@@ -106,7 +106,7 @@ export function Home() {
       Des2: "Restaurant Positions"
     },
     {
-      navlink: Click3,
+      path: "Click3",
       image: Blog_3,
       h1: 29,
       p: "SEP",
@@ -114,7 +114,7 @@ export function Home() {
       Des2: "Can Help Lower Food Cost"
     },
     {
-      navlink: Click4,
+      path: "Click4",
       image: Blog_4,
       h1: 29,
       p: "SEP",
@@ -122,7 +122,7 @@ export function Home() {
       Des2: "uses all-natural ingredients"
     },
     {
-      navlink: Click5,
+      path: "Click5",
       image: Blog_5,
       h1: 29,
       p: "SEP",
@@ -130,7 +130,7 @@ export function Home() {
       Des2: "with your eyes"
     },
     {
-      navlink: Click6,
+      path: "Click6",
       image: Blog_6,
       h1: 29,
       p: "SEP",
@@ -141,27 +141,77 @@ export function Home() {
 
   ]
 
-
   const settings1 = {
     infinite: true,
     slidesToShow: 4,
-    slidesToScroll: 4,
+    slidesToScroll: 1,
     autoplay: false,
-    speed: 13000,
-    autoplaySpeed: 3000,
-    cssEase: "linear"
+    speed: 2000,
+    autoplaySpeed: 2000,
+    cssEase: "linear",
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
   };
 
   const settings2 = {
     infinite: true,
-    slidesToShow: 4,
-    slidesToScroll: 4,
+    slidesToShow: 3,
+    slidesToScroll: 1,
     autoplay: false,
-    speed: 13000,
-    autoplaySpeed: 10000,
-    cssEase: "linear"
+    speed: 2000,
+    autoplaySpeed: 2000,
+    cssEase: "linear",
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
   };
-
 
   return (
     <>
@@ -326,7 +376,7 @@ function Cartslider1({ details1 }) {
 
 function Latest_news({ details2 }) {
   return (
-    <NavLink to={details2.navlink}>
+    <NavLink to={details2.path}>
       <div className="mx-2 my-10">
         <div className={`bg-cover sm:bg-cover relative h-64 w-full border rounded-2xl`} style={{ backgroundImage: `url(${details2.image})` }}>
           <div className="absolute bg-[#E6FF55] px-3 py rounded-xl m-5">

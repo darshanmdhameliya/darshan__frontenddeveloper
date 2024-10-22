@@ -7,11 +7,14 @@ import Blog_9 from '../assets/Blog_9.jpg'
 import Blog_10 from '../assets/Blog_10.jpg'
 import asset_5 from '../assets/asset_5.jpeg'
 
+
+import Click1 from './Click1.jsx'
+import Click2 from './Click2.jsx'
+import Click3 from './Click3.jsx'
+
 // footer 
 import Sign_Footer from './Sign_Footer.jsx'
-
-
-
+import { NavLink } from 'react-router-dom'
 
 export function AboutUs() {
 
@@ -19,25 +22,30 @@ export function AboutUs() {
     {
       image: Blog_9,
       title: "Food Sourcing",
+      path: "/Click2",
     },
     {
       image: Blog_1,
       title: "Menu Development",
+      path: "/Click1",
     },
     {
       image: Blog_10,
       title: "Restaurant",
+      path: "/Click3",
     },
   ];
 
 
-  const Card = ({ image, title }) => {
+  const Card = ({ details }) => {
     return (
       <div className="relative  rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105">
-        <img src={image} alt={title} className=" w-full h-full object-cover" />
-        <div className="p-4 absolute bottom-0">
-          <h3 className="text-white  text-2xl font-bold">{title}</h3>
-        </div>
+        <NavLink to={details.path}>
+          <img src={details.image} alt={details.title} className=" w-full h-full object-cover" />
+          <div className="p-4 absolute bottom-0">
+            <h3 className="text-white  text-2xl font-bold">{details.title}</h3>
+          </div>
+        </NavLink >
       </div>
     );
   };
@@ -124,14 +132,13 @@ export function AboutUs() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {cards.map((card, index) => (
-            <Card key={index} image={card.image} title={card.title} />
+            <Card key={index} details={card} />
           ))}
         </div>
       </div>
 
-     
       {/* footer  */}
-      <Sign_Footer/>
+      <Sign_Footer />
 
     </div>
 
@@ -139,5 +146,5 @@ export function AboutUs() {
   )
 }
 
-
 export default AboutUs
+
