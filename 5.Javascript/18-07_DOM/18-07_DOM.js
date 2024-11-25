@@ -1,53 +1,80 @@
-/* javascript DOM Model */
+// /* javascript DOM Model */
 
-{
-    //innerHTML mens content print kri ne aape
-    let dom1=document.getElementById('heading').innerHTML
-    console.log(dom1);
+// {
+//     //innerHTML mens content print kri ne aape
+//     let dom1=document.getElementById('heading').innerHTML
+//     console.log(dom1);
 
-    //id element id print kre
-    let dom2=document.getElementById('heading').id
-    console.log(dom2);
+//     //id element id print kre
+//     let dom2=document.getElementById('heading').id
+//     console.log(dom2);
 
-    //classname element class print kre
-    let dom3=document.getElementById('heading').className
-    console.log(dom3);
+//     //classname element class print kre
+//     let dom3=document.getElementById('heading').className
+//     console.log(dom3);
 
-    //classlist class ni value print kre
-    let dom4=document.getElementById('heading').classList
-    console.log(dom4);
+//     //classlist class ni value print kre
+//     let dom4=document.getElementById('heading').classList
+//     console.log(dom4);
 
-    //innerHTML means je text tame lakhelo hoy te print kre but new text browser ma change thay file ma no thay
-    // let dom5=document.getElementById('heading').innerHTML = 'hello wold'
-    // console.log(dom5);
+//     //innerHTML means je text tame lakhelo hoy te print kre but new text browser ma change thay file ma no thay
+//     // let dom5=document.getElementById('heading').innerHTML = 'hello wold'
+//     // console.log(dom5);
 
-    //innertext tag ni under no text print kri ne aape
-    let dom6=document.getElementById('heading').innerText
-    console.log(dom6);
+//     //innertext tag ni under no text print kri ne aape
+//     let dom6=document.getElementById('heading').innerText
+//     console.log(dom6);
  
-      //textContent menas under no  tag no print thay but space print thase
-    let dom7=document.getElementById('heading').textContent
-    console.log(dom7);
+//       //textContent menas under no  tag no print thay but space print thase
+//     let dom7=document.getElementById('heading').textContent
+//     console.log(dom7);
 
-     //innerHTML means tame koy  span tag ma write krelu hoy te tag pn print thase
-    let dom8=document.getElementById('heading').innerHTML
-    console.log(dom8);
+//      //innerHTML means tame koy  span tag ma write krelu hoy te tag pn print thase
+//     let dom8=document.getElementById('heading').innerHTML
+//     console.log(dom8);
 
-}
+// }
 
-/* different between innerHTML , textContent , innerText in javascript */
+// /* different between innerHTML , textContent , innerText in javascript */
 
-{
-     //innertext tag ni under no text print kri ne aape space no add thay
-    let dom6=document.getElementById('heading').innerText
-    console.log(dom6);
+// {
+//      //innertext tag ni under no text print kri ne aape space no add thay
+//     let dom6=document.getElementById('heading').innerText
+//     console.log(dom6);
 
-    //textContent menas inside tag no print thay but space print thase
-    let dom7=document.getElementById('heading').textContent 
-    console.log(dom7);
+//     //textContent menas inside tag no print thay but space print thase
+//     let dom7=document.getElementById('heading').textContent 
+//     console.log(dom7);
 
-    //innerHTML means tame koy span tag ma write krelu hoy te tag pn print thase
-    let dom8=document.getElementById('heading').innerHTML
-    console.log(dom8);
+//     //innerHTML means tame koy span tag ma write krelu hoy te tag pn print thase
+//     let dom8=document.getElementById('heading').innerHTML
+//     console.log(dom8);
 
-}
+// }
+
+
+
+// my prectices
+
+// append
+
+// let mydiv = document.querySelector('#mydiv')
+
+// let spantag = document.createElement('span')
+
+// // spantag.textContent = "before-begin the span tag"
+// // spantag.textContent = "after-begin the span tag"
+// spantag.textContent = "before-end the span tag"
+// // spantag.textContent = "after-end the span tag"
+
+// mydiv.insertAdjacentElement('afterend',spantag)
+
+
+
+// remove
+
+let mydiv = document.querySelector('#mydiv');
+let fpara = document.querySelector('#fpara');
+
+mydiv.removeChild(fpara);
+
