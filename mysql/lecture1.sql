@@ -1,3 +1,5 @@
+25-11-2024
+
  show databases;
 +--------------------+
 | Database           |
@@ -23,7 +25,7 @@ Query OK, 0 rows affected (0.05 sec)
 //////////////////////////////////////////////////////////////////////
 
 
- INSERT INTO stud VALUES(1, "Darshan", "Surat", 20, 9712920103);
+INSERT INTO stud VALUES(1, "Darshan", "Surat", 20, 9712920103);
 Query OK, 1 row affected (0.03 sec)
 
 mysql> INSERT INTO stud VALUES(2, "Ravi", "Ahmedabad", 22, 9823456712);
@@ -205,12 +207,33 @@ truncate table stud1;
 Query OK, 0 rows affected (0.07 sec)
 
 
+26-11-2024
+
+//////////////////////////////////////////////////////////////////////
+
+ create table client_master(client_no varchar(10),name varchar(10),address1 varchar(30),address2 varchar(30),city varchar(30),pincode numeric(10),state varchar(10),baldue numeric(10));
+Query OK, 0 rows affected (0.06 sec)
+
+//////////////////////////////////////////////////////////////////////
+
+ create table product_master(productno varchar(10),description varchar(30),profitpercent numeric(5),unitmesure varchar(10),qtyonhand numeric(8),reoderlvl numeric(10),sellprice numeric(10),costprice numeric(10));
+Query OK, 0 rows affected (0.06 sec)
+
+//////////////////////////////////////////////////////////////////////
+
+create table salesman_master(salesmanno varchar(6),salesmanname varchar(20),address1 varchar(30),address2 varchar(30),city varchar(20),pincode numeric(20),state varchar(20),salamt numeric(10),tgttoget numeric(10),ytdsales varchar(10),remarks varchar(60));
+Query OK, 0 rows affected (0.06 sec)
 
 
+//////////////////////////////////////////////////////////////////////
 
+26-11-2024 ( prectice )
 
+drop table person;
+Query OK, 0 rows affected (0.13 sec)
 
+drop table person1;
+Query OK, 0 rows affected (0.05 sec)
 
-
-
-
+drop table person2;
+Query OK, 0 rows affected (0.05 sec)
