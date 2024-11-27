@@ -28,61 +28,61 @@ Query OK, 0 rows affected (0.05 sec)
 INSERT INTO stud VALUES(1, "Darshan", "Surat", 20, 9712920103);
 Query OK, 1 row affected (0.03 sec)
 
-mysql> INSERT INTO stud VALUES(2, "Ravi", "Ahmedabad", 22, 9823456712);
+INSERT INTO stud VALUES(2, "Ravi", "Ahmedabad", 22, 9823456712);
 Query OK, 1 row affected (0.01 sec)
 
-mysql> INSERT INTO stud VALUES(3, "Priya", "Vadodara", 21, 9912345678);
+INSERT INTO stud VALUES(3, "Priya", "Vadodara", 21, 9912345678);
 Query OK, 1 row affected (0.01 sec)
 
-mysql> INSERT INTO stud VALUES(4, "Amit", "Rajkot", 23, 9976543210);
+INSERT INTO stud VALUES(4, "Amit", "Rajkot", 23, 9976543210);
 Query OK, 1 row affected (0.01 sec)
 
-mysql> INSERT INTO stud VALUES(5, "Neha", "Surat", 19, 9734567890);
+INSERT INTO stud VALUES(5, "Neha", "Surat", 19, 9734567890);
 Query OK, 1 row affected (0.01 sec)
 
-mysql> INSERT INTO stud VALUES(6, "Suresh", "Baroda", 24, 9812345678);
+INSERT INTO stud VALUES(6, "Suresh", "Baroda", 24, 9812345678);
 Query OK, 1 row affected (0.01 sec)
 
-mysql> INSERT INTO stud VALUES(7, "Kiran", "Vapi", 25, 9956123456);
+INSERT INTO stud VALUES(7, "Kiran", "Vapi", 25, 9956123456);
 Query OK, 1 row affected (0.01 sec)
 
-mysql> INSERT INTO stud VALUES(8, "Rina", "Bhavnagar", 21, 9876543210);
+INSERT INTO stud VALUES(8, "Rina", "Bhavnagar", 21, 9876543210);
 Query OK, 1 row affected (0.01 sec)
 
-mysql> INSERT INTO stud VALUES(9, "Vijay", "Gandhinagar", 20, 9712345678);
+INSERT INTO stud VALUES(9, "Vijay", "Gandhinagar", 20, 9712345678);
 Query OK, 1 row affected (0.01 sec)
 
-mysql> INSERT INTO stud VALUES(10, "Manoj", "Surat", 23, 9776655443);
+INSERT INTO stud VALUES(10, "Manoj", "Surat", 23, 9776655443);
 Query OK, 1 row affected (0.00 sec)
 
-mysql> INSERT INTO stud VALUES(11, "Simran", "Rajkot", 22, 9819234567);
+INSERT INTO stud VALUES(11, "Simran", "Rajkot", 22, 9819234567);
 Query OK, 1 row affected (0.01 sec)
 
-mysql> INSERT INTO stud VALUES(12, "Sanjay", "Ahmedabad", 21, 9908765432);
+INSERT INTO stud VALUES(12, "Sanjay", "Ahmedabad", 21, 9908765432);
 Query OK, 1 row affected (0.01 sec)
 
-mysql> INSERT INTO stud VALUES(13, "Komal", "Vadodara", 24, 9967456789);
+INSERT INTO stud VALUES(13, "Komal", "Vadodara", 24, 9967456789);
 Query OK, 1 row affected (0.00 sec)
 
-mysql> INSERT INTO stud VALUES(14, "Harsh", "Surat", 20, 9798643021);
+INSERT INTO stud VALUES(14, "Harsh", "Surat", 20, 9798643021);
 Query OK, 1 row affected (0.01 sec)
 
-mysql> INSERT INTO stud VALUES(15, "Meera", "Vapi", 26, 9801234567);
+INSERT INTO stud VALUES(15, "Meera", "Vapi", 26, 9801234567);
 Query OK, 1 row affected (0.01 sec)
 
-mysql> INSERT INTO stud VALUES(16, "Deepak", "Gandhinagar", 23, 9745123456);
+INSERT INTO stud VALUES(16, "Deepak", "Gandhinagar", 23, 9745123456);
 Query OK, 1 row affected (0.01 sec)
 
-mysql> INSERT INTO stud VALUES(17, "Snehal", "Surat", 22, 9716549870);
+INSERT INTO stud VALUES(17, "Snehal", "Surat", 22, 9716549870);
 Query OK, 1 row affected (0.01 sec)
 
-mysql> INSERT INTO stud VALUES(18, "Raj", "Baroda", 20, 9945678901);
+INSERT INTO stud VALUES(18, "Raj", "Baroda", 20, 9945678901);
 Query OK, 1 row affected (0.01 sec)
 
-mysql> INSERT INTO stud VALUES(19, "Anita", "Bhavnagar", 21, 9623456789);
+INSERT INTO stud VALUES(19, "Anita", "Bhavnagar", 21, 9623456789);
 Query OK, 1 row affected (0.01 sec)
 
-mysql> INSERT INTO stud VALUES(20, "Vinay", "Ahmedabad", 24, 9753124567);
+INSERT INTO stud VALUES(20, "Vinay", "Ahmedabad", 24, 9753124567);
 Query OK, 1 row affected (0.01 sec)
 
 
