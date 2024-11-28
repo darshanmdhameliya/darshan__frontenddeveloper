@@ -237,3 +237,102 @@ Query OK, 0 rows affected (0.05 sec)
 
 drop table person2;
 Query OK, 0 rows affected (0.05 sec)
+
+
+//////////////////////////////////////////////////////////////////////
+
+27-11-2024 (prectice)
+
+ show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| sys                |
+| test               |
++--------------------+
+5 rows in set (0.03 sec)
+
+
+use test
+Database changed
+mysql> show tables;
++-----------------+
+| Tables_in_test  |
++-----------------+
+| client_master   |
+| product_master  |
+| salesman_master |
+| stud            |
++-----------------+
+4 rows in set (0.02 sec)
+
+
+drop table client_master;
+Query OK, 0 rows affected (0.12 sec)
+
+mysql> show tables;
++-----------------+
+| Tables_in_test  |
++-----------------+
+| product_master  |
+| salesman_master |
+| stud            |
++-----------------+
+3 rows in set (0.00 sec)
+
+
+ drop table product_master;
+Query OK, 0 rows affected (0.05 sec)
+
+mysql> show tables;
++-----------------+
+| Tables_in_test  |
++-----------------+
+| salesman_master |
+| stud            |
++-----------------+
+2 rows in set (0.00 sec)
+
+
+drop table salesman_master;
+Query OK, 0 rows affected (0.12 sec)
+
+mysql> show tables;
++----------------+
+| Tables_in_test |
++----------------+
+| stud           |
++----------------+
+1 row in set (0.00 sec)
+
+
+ create table client_master(address2 varchar(30),city varchar(15),pincode numeric(8),state varchar(15),baldue numeric(10,2));
+Query OK, 0 rows affected (0.07 sec)
+
+
+
+mysql> insert into client_master values("lakhminager","surat",395010,"gujarat",2);
+Query OK, 1 row affected (0.03 sec)
+
+mysql> insert into client_master values("vitinager","ahemdabad",394010,"rajshthan",5);
+Query OK, 1 row affected (0.03 sec)
+
+mysql> insert into client_master values("shreenathji","jamanger",393010,"delhi",4);
+Query OK, 1 row affected (0.08 sec)
+
+mysql> insert into client_master values("vitinger","bharuch",396010,"mumbai",8);
+Query OK, 1 row affected (0.02 sec)
+
+select * from client_master;
++-------------+-----------+---------+-----------+--------+
+| address2    | city      | pincode | state     | baldue |
++-------------+-----------+---------+-----------+--------+
+| lakhminager | surat     |  395010 | gujarat   |   2.00 |
+| vitinager   | ahemdabad |  394010 | rajshthan |   5.00 |
+| shreenathji | jamanger  |  393010 | delhi     |   4.00 |
+| vitinger    | bharuch   |  396010 | mumbai    |   8.00 |
++-------------+-----------+---------+-----------+--------+
+4 rows in set (0.00 sec)
