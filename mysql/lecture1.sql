@@ -309,9 +309,8 @@ mysql> show tables;
 1 row in set (0.00 sec)
 
 
- create table client_master(address2 varchar(30),city varchar(15),pincode numeric(8),state varchar(15),baldue numeric(10,2));
+create table client_master(address2 varchar(30),city varchar(15),pincode numeric(8),state varchar(15),baldue numeric(10,2));
 Query OK, 0 rows affected (0.07 sec)
-
 
 
 mysql> insert into client_master values("lakhminager","surat",395010,"gujarat",2);
@@ -336,3 +335,88 @@ select * from client_master;
 | vitinger    | bharuch   |  396010 | mumbai    |   8.00 |
 +-------------+-----------+---------+-----------+--------+
 4 rows in set (0.00 sec)
+
+
+
+29-11-2024  friday
+
+create database exercises1;
+
+ create table client_master(clientno varchar(6) primary key,name varchar(20),address1 varchar(30),address2 varchar(30),city varchar(15),pincode numeric(8),state varchar(15),baldue numeric(10,2));
+
+insert into client_master values("C00001","Ivan Bayross","mota varacha","surat","Mumbai","400054","Maharashtra",15000);
+insert into client_master values("C00002","Mamta Muzumdar","vijaybger","yogichok","Madras","780001","Tamil Nadu",0);
+insert into client_master values("C00003","Chhaya Bankar","gitanger","punagam","Mumbai","400057","Maharashtra",5000);
+insert into client_master values("C00004","Ashwini Joshi","shrdha","kamrej","Bangalore","560001","Karnatka",0);
+insert into client_master values("C00005","Hansel Colaco","varj bhumi","katargam","Mumbai","400060","Maharashtra",2000);
+insert into client_master values("C00006","Deepak Sharma","deepmala","bhutbhvani","Mangalore","560050","Karnatka",0);
+
+
+  create table product_master(productno varchar(6) primary key,description varchar(15),profitpercent numeric(4,2),unitmesure varchar(10),qtyonhand numeric(8),reoderlvl numeric(8),sellprice numeric(8,2),costprice numeric(8,2));
+
+  insert into product_master values("P00001","T-Shirt",5,"Piece",200,50,350,250);
+  insert into product_master values("P0345","Shirt",6,"Piece",150,50,500,350);
+  insert into product_master values("P03453","T-Shirt",5,"Piece",250,50,500,350);
+  insert into product_master values("P06734","Cotton Jeans",5,"Piece",100,20,600,450);
+  insert into product_master values("P07865","Jeans",5,"Piece",100,20,750,500);
+  insert into product_master values("P07868","Trousers",2,"Piece",150,50,850,550);
+  insert into product_master values("P07885","Pull Overs",2.5,"Piece",80,30,700,450);
+  insert into product_master values("P07965","Denim Shirts",4,"Piece",100,40,350,250);
+  insert into product_master values("P07975","Lycra Tops",5,"Piece",70,30,300,175);
+  insert into product_master values("P08865","Skirts",5,"Piece",75,30,450,300);
+
+create table salesman_master(salesmanno varchar(6) primary key,salesmanname varchar(20),address1 varchar(30),address2 varchar(30),city varchar(20),pincode numeric(8),state varchar(20),salamt numeric(8,2),tgttoget numeric(6,2),ytdsales numeric(6,2),remarks varchar(60));
+
+
+insert into salesman_master values("S00001","Aman","A/14","Wordi","Mumbai",400002,"Maharashtra",3000,100,50,"Good");
+insert into salesman_master values("S00002","Omkar","65","Nariman","Mumbai",400001,"Maharashtra",3000,100,100,"Good");
+insert into salesman_master values("S00003","Raj","P-7","Bandra","Mumbai",400032,"Maharashtra",3000,200,100,"Good");
+insert into salesman_master values("S00004","Ashish","A/5","Juhu","Mumbai",400044,"Maharashtra",3500,200,150,"Good");
+
+
+create table sales_order(
+    orderno varchar(6) primary key,
+    clientno varchar(6),
+    orderdate date,
+    delyaddr varchar(25),
+    salesmanno varchar(6),
+    delytype char(1),
+    billyn char(1),             
+    delydate date,
+    orderstaus varchar(10),
+foreign key (clientno) references client_master(clientno),
+foreign key (salesmanno) references salesman_master(salesmanno)
+);
+
+insert into sales_order values("O19001","C00001","12-06-04","Mumbai","S00001","F","N","20-07-02","In Process");
+insert into sales_order values("O19002","C00002","25-06-04","Gujarat","S00002","P","N","27-06-02","Cancelled");
+insert into sales_order values("O46865","C00003","18-02-04","Delhi","S00003","F","Y","20-02-02","Fulfilled");
+insert into sales_order values("O19003","C00001","03-04-04","Ahemdabad","S00001","F","Y","27-04-02","Fulfilled");
+insert into sales_order values("O46866","C00004","20-05-04","Rajshthan","S00002","P","N","22-05-02","Cancelled");
+insert into sales_order values("O19008","C00005","24-05-04","Banglore","S00004","F","N","26-07-02","In Process");
+
+create table sales_order_details(
+    orderno varchar(6),
+    productno varchar(6),
+    qtyorderd numeric(8),
+    qtydisp numeric(8),
+    productrate numeric(10,2),
+    foreign key (orderno) references sales_order(orderno),
+    foreign key (productno) references product_master(productno)
+);
+
+
+insert into sales_order_details values("O19001","P00001",4,4,525);
+insert into sales_order_details values("O19001","P07965",2,1,8400);
+insert into sales_order_details values("O19001","P07885",2,1,5250);
+insert into sales_order_details values("O19002","P00001",10,0,525);
+insert into sales_order_details values("O46865","P07868",3,3,3150);
+insert into sales_order_details values("O46865","P07885",3,1,5250);
+insert into sales_order_details values("O46865","P00001",10,10,525);
+insert into sales_order_details values("O46865","P0345",4,4,1050);
+insert into sales_order_details values("O19003","P03453",2,2,1050);
+insert into sales_order_details values("O19003","P06734",1,1,12000);
+insert into sales_order_details values("O46866","P07965",1,0,8400);
+insert into sales_order_details values("O46866","P07975",1,0,1050);
+insert into sales_order_details values("O19008","P00001",10,5,525);
+insert into sales_order_details values("O19008","P07975",5,3,1050);
