@@ -270,7 +270,7 @@ mysql>  select *from product_master;
 | P07975    | Lycra Tops  |          5.00 | Piece      |        70 |        30 |    300.00 |    175.00 |
 | P08865    | Skirts      |          5.00 | Piece      |        75 |        30 |    450.00 |    300.00 |
 +-----------+-------------+---------------+------------+-----------+-----------+-----------+-----------+
-
+ 
 c. Delete from Client Master where the column state holds the value 'Tamil Nadu'.
 
 mysql> delete from client_master where state= "Tamil Nadu";
