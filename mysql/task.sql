@@ -286,3 +286,42 @@ mysql>  select *from client_master;
 | C00005   | Hansel Colaco | varj bhumi   | katargam   | bangalore |  400060 | Maharashtra | 2000.00 |
 | C00006   | Deepak Sharma | deepmala     | bhutbhvani | bangalore |  560050 | Karnatka    |    0.00 |
 +----------+---------------+--------------+------------+-----------+---------+-------------+---------+
+
+//////////////////////////////
+
+02-12-2024 
+
+ create table client_master(
+    clientno varchar(6) NOT NULL,
+    name varchar(20),
+    address1 varchar(30),
+    address2 varchar(30),
+    city varchar(15),
+    pincode numeric(8),
+    state varchar(15),
+    baldue numeric(10,2),
+    constraint pk primary key(clientno),
+    check (clientno like 'C%')
+);
+
+ insert into client_master values("c00001","Ivan Bayross","mota varacha","surat","Mumbai","400054","Maharashtra",15000);
+
+
+ create table client_master1(
+    clientno varchar(6) NOT NULL,
+    name varchar(20)  ,
+    address1 varchar(30),
+    address2 varchar(30),
+    city varchar(15),
+    pincode numeric(8),
+    state varchar(15),
+    baldue numeric(10,2),
+    constraint pk primary key(clientno),
+    check (clientno like 'C%'),
+    check (clientno = upper(clientno))
+);
+
+ insert into client_master1 values("c00001" ,"Ivan Bayross","mota varacha","surat","Mumbai","400054","Maharashtra",15000);
+
+
+
