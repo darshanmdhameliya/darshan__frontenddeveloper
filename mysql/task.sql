@@ -286,3 +286,5 @@ mysql>  select *from client_master;
 | C00005   | Hansel Colaco | varj bhumi   | katargam   | bangalore |  400060 | Maharashtra | 2000.00 |
 | C00006   | Deepak Sharma | deepmala     | bhutbhvani | bangalore |  560050 | Karnatka    |    0.00 |
 +----------+---------------+--------------+------------+-----------+---------+-------------+---------+
+
+
