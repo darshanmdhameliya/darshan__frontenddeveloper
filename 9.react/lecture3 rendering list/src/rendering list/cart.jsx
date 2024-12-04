@@ -21,7 +21,7 @@ const Cart = () => {
   ]
 
   return (
-    <div>
+    <div className="gap-5 grid grid-cols-3 bg-violet-50 ">
       {
         cart.map((item) => (
           <>
@@ -30,11 +30,10 @@ const Cart = () => {
                 <h1 className='font-bold'>{item.name}</h1>
                 <img className='overflow-visible ' src={item.img} alt="" />
               </div>
-              </div> */}
-            <div className=" border-2 border-black rounded w-fit bg-lime-200">
-              <div className="pb-0 pt-2 px-4 flex-col items-start">
+            </div> */}
+            <div className="pb-0   w-fit border-2 border-black rounded">
+              <div className="pb-0 pt-2 px-4 flex-col ">
                 <p className="text-tiny uppercase font-bold">{item.name}</p>
-                <small className="text-default-500">12 Tracks</small>
               </div>
               <div className="overflow-visible py-2">
                 <img
@@ -47,8 +46,7 @@ const Cart = () => {
             </div>
 
           </>
-        )
-        )
+        ))
       }
     </div>
   )
