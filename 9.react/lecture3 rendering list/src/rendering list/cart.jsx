@@ -20,10 +20,12 @@ const Cart = () => {
     }
   ]
 
+  const filter =cart.filter((item) => item.id <= 2)
+
   return (
-    <div className="gap-5 grid grid-cols-3 bg-violet-50 ">
+    <div className="flex justify-center h-screen items-center bg-violet-50 ">
       {
-        cart.map((item) => (
+        filter.map((item) => (
           <>
             {/* <div className="pb-0  items-start w-fit border-2 border-black rounded">
               <div className="">
@@ -31,7 +33,7 @@ const Cart = () => {
                 <img className='overflow-visible ' src={item.img} alt="" />
               </div>
             </div> */}
-            <div className="pb-0   w-fit border-2 border-black rounded">
+            <div className="pb-0 border-2 border-black rounded  w-fit ">
               <div className="pb-0 pt-2 px-4 flex-col ">
                 <p className="text-tiny uppercase font-bold">{item.name}</p>
               </div>
