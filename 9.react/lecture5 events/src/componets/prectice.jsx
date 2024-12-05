@@ -1,8 +1,9 @@
 import React from 'react'
+import { useState } from 'react'
 
-const Cart = () => {
+export const Cart = () => {
 
-  const cart = [
+   const cart = [
     {
       id: 1,
       name: "Electronic item",
@@ -57,6 +58,24 @@ const Cart = () => {
   )
 }
 
-export default Cart
 
 
+const Click = ()=>{
+  const [isclick, setclick] = useState(false)
+
+  const handlechange = () => {
+    if (isclick == false) {
+      setclick(true)
+    } else {
+      setclick(false)
+    }
+  }
+  return (
+    <>
+      <button onClick={handlechange}>click</button>
+      {isclick && <Cart />}
+    </>
+  )
+}
+
+export default Click
