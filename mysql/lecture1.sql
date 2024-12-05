@@ -414,9 +414,145 @@ insert into sales_order_details values("O46865","P07868",3,3,3150);
 insert into sales_order_details values("O46865","P07885",3,1,5250);
 insert into sales_order_details values("O46865","P00001",10,10,525);
 insert into sales_order_details values("O46865","P0345",4,4,1050);
-insert into sales_order_details values("O19003","P03453",2,2,1050);
+insert into sales_order_details values("O19003","P08865",2,2,1050);
 insert into sales_order_details values("O19003","P06734",1,1,12000);
 insert into sales_order_details values("O46866","P07965",1,0,8400);
 insert into sales_order_details values("O46866","P07975",1,0,1050);
 insert into sales_order_details values("O19008","P00001",10,5,525);
 insert into sales_order_details values("O19008","P07975",5,3,1050);
+
+
+
+-- 04-12-2024
+
+-- join Query
+
+theory
+
+-- 05-12-2024
+
+-- ANSI style SYNTAX:-
+
+select <column_name1>,<column_name2>,<column_nameN>
+from <table_name1>,<table_name2>
+where <table_name1>.<column_name1>=<table_name2>.<column_name2>
+and <condition>
+order by <column_name1>,<column_name2>,<column_nameN>
+
+select description,product_rate
+from product_master,sales_order_details
+where product_master.product_no = sales_order_details.product_no; 
+
++--------------+--------------+
+| description  | product_rate |
++--------------+--------------+
+| T-Shirts     |       525.00 |
+| Denim Shirts |      8400.00 |
+| Pull Overs   |      5250.00 |
+| T-Shirts     |       525.00 |
+| Trousers     |      3150.00 |
+| Pull Overs   |      5250.00 |
+| T-Shirts     |       525.00 |
+| Shirts       |      1050.00 |
+| Cotton Jeans |     12000.00 |
+| Denim Shirts |      8400.00 |
+| T-Shirts     |       525.00 |
+| Lycra Tops   |      1050.00 |
+| Skirts       |      1050.00 |
++--------------+--------------+
+13 rows in set (0.00 sec)
+
+
+select pm.description,sod.product_rate
+from product_master pm,sales_order_details sod
+where pm.product_no = sod.product_no; 
+
++--------------+--------------+
+| description  | product_rate |
++--------------+--------------+
+| T-Shirts     |       525.00 |
+| Denim Shirts |      8400.00 |
+| Pull Overs   |      5250.00 |
+| T-Shirts     |       525.00 |
+| Trousers     |      3150.00 |
+| Pull Overs   |      5250.00 |
+| T-Shirts     |       525.00 |
+| Shirts       |      1050.00 |
+| Cotton Jeans |     12000.00 |
+| Denim Shirts |      8400.00 |
+| T-Shirts     |       525.00 |
+| Lycra Tops   |      1050.00 |
+| Skirts       |      1050.00 |
++--------------+--------------+
+13 rows in set (0.00 sec)
+
+
+select sales_order_details.order_no,product_rate,order_date,description
+from sales_order,sales_order_details,product_master
+where sales_order_details.order_no = sales_order.order_no
+and sales_order_details.product_no = product_master.product_no;
+
++----------+--------------+------------+--------------+
+| order_no | product_rate | order_date | description  |
++----------+--------------+------------+--------------+
+| O19001   |       525.00 | 2004-06-12 | T-Shirts     |
+| O19001   |      8400.00 | 2004-06-12 | Denim Shirts |
+| O19001   |      5250.00 | 2004-06-12 | Pull Overs   |
+| O19002   |       525.00 | 2004-06-25 | T-Shirts     |
+| O19003   |     12000.00 | 2004-04-03 | Cotton Jeans |
+| O19003   |      1050.00 | 2004-04-03 | Skirts       |
+| O19008   |       525.00 | 2004-05-24 | T-Shirts     |
+| O19008   |      1050.00 | 2004-05-24 | Lycra Tops   |
+| O46865   |      3150.00 | 2004-02-18 | Trousers     |
+| O46865   |      5250.00 | 2004-02-18 | Pull Overs   |
+| O46865   |       525.00 | 2004-02-18 | T-Shirts     |
+| O46865   |      1050.00 | 2004-02-18 | Shirts       |
+| O46866   |      8400.00 | 2004-05-20 | Denim Shirts |
++----------+--------------+------------+--------------+
+13 rows in set (0.00 sec)
+
+
+
+=> prectise
+select sell_price,dely_date,qty_disp
+from product_master,sales_order,sales_order_details
+where product_master.product_no = sales_order_details.product_no
+and sales_order_details.order_no = sales_order.order_no;
+
++------------+------------+----------+
+| sell_price | dely_date  | qty_disp |
++------------+------------+----------+
+|     350.00 | 2002-07-20 |        4 |
+|     350.00 | 2002-07-20 |        1 |
+|     700.00 | 2002-07-20 |        1 |
+|     350.00 | 2002-06-27 |        0 |
+|     600.00 | 2002-04-07 |        1 |
+|     450.00 | 2002-04-07 |        2 |
+|     350.00 | 2002-07-26 |        5 |
+|     300.00 | 2002-07-26 |        3 |
+|     850.00 | 2002-02-20 |        3 |
+|     700.00 | 2002-02-20 |        1 |
+|     350.00 | 2002-02-20 |       10 |
+|     500.00 | 2002-02-20 |        4 |
+|     350.00 | 2002-05-22 |        0 |
++------------+------------+----------+
+13 rows in set (0.00 sec)
+
+select salesman_name ,sales_order.salesman_no,order_status
+from salesman_master,sales_order
+where salesman_master.salesman_no = sales_order.salesman_no;
+
+mysql> select salesman_name ,sales_order.salesman_no,order_status
+    -> from salesman_master,sales_order
+    -> where salesman_master.salesman_no = sales_order.salesman_no;
++---------------+-------------+--------------+
+| salesman_name | salesman_no | order_status |
++---------------+-------------+--------------+
+| Aman          | S00001      | In Process   |
+| Aman          | S00001      | Fulfilled    |
+| Omkar         | S00002      | Cancelled    |
+| Omkar         | S00002      | Cancelled    |
+| Raj           | S00003      | Fulfilled    |
+| Ashish        | S00004      | In Process   |
++---------------+-------------+--------------+
+6 rows in set (0.02 sec)
