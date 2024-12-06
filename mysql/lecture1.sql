@@ -431,7 +431,7 @@ theory
 
 -- 05-12-2024
 
--- ANSI style SYNTAX:-
+-- THETA style SYNTAX:-
 
 select <column_name1>,<column_name2>,<column_nameN>
 from <table_name1>,<table_name2>
@@ -556,3 +556,37 @@ mysql> select salesman_name ,sales_order.salesman_no,order_status
 | Ashish        | S00004      | In Process   |
 +---------------+-------------+--------------+
 6 rows in set (0.02 sec)
+
+
+-- 06-12-2024 friday
+
+-- ANSIU style 
+
+-- SYNTAX :-
+
+select <column_name1>,<column_name2>,<column_nameN>
+from <table_name1>
+inner join  <table_name2>
+on <table_name1>.<column_name1>=<table_name2>.<column_name2>
+where <condition>
+order by <column_name1>,<column_name2>,<column_nameN>
+
+-- another syntax 
+
+select * 
+from <table_name1> inner join <table_name2> on <expression>;
+
+-- example
+
+select * 
+from product_master pm
+inner join sales_order_details sod on sod.product_no=pm.product_no
+inner join sales_order so on sod.order_no = so.order_no
+inner join client_master cm on so.client_no = cm.client_no
+
+
+select description , product_rate
+from product_master pm
+inner join sales_order_details sod on sod.product_no=pm.product_no;
+-- inner join sales_order so on sod.order_no = so.order_no
+-- inner join client_master cm on so.client_no = cm.client_no;
