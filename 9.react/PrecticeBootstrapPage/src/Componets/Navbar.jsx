@@ -6,29 +6,31 @@ import Cards from './Card';
 function Navbar() {
   return (
     <>
-      <Tabs
-        defaultActiveKey="profile"
-        id="fill-tab-example"
-        className="mb-3"
-        fill
-      >
-        <Tab eventKey="home" title="Home">
+      <div className='m-12'>
+        <Tabs
+          defaultActiveKey="profile"
+          id="fill-tab-example"
+          className="mb-3"
+          fill
+        >
+          <Tab eventKey="home" title="Home">
 
-        </Tab>
-        <Tab eventKey="profile" title="Profile">
+          </Tab>
+          <Tab eventKey="profile" title="Profile">
 
-        </Tab>
-        <Tab eventKey="longer-tab" title="Loooonger Tab">
+          </Tab>
+          <Tab eventKey="longer-tab" title="Loooonger Tab">
 
-        </Tab>
-        <Tab eventKey="contact" title="Contact" disabled>
+          </Tab>
+          <Tab eventKey="contact" title="Contact" disabled>
 
-        </Tab>
-      </Tabs>
+          </Tab>
+        </Tabs>
+      </div>
       <Model />
 
       <Cards />
-     
+
     </>
   );
 }

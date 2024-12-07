@@ -17,7 +17,7 @@ function Cards() {
         'Light',
         'Dark',
       ].map((variant) => (
-        <Container>
+        <Container key={variant}>
           <Row>
             <Col md={2} lg={4}> <Card
               bg={variant.toLowerCase()}

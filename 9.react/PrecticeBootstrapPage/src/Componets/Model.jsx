@@ -15,7 +15,7 @@ function Model() {
         Click to and submit form
       </Button>
 
-      <Modal show={show} onHide={handleClose}>
+      <Modal  show={show} onHide={handleClose}>
         <Forms />
       </Modal>
     </>
