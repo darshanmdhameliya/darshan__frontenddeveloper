@@ -6,16 +6,18 @@ import Cards from './Card';
 function Navbar() {
   return (
     <>
-      <div className='m-12'>
+      <div className='mt-4'>
         <Tabs
           defaultActiveKey="profile"
           id="fill-tab-example"
-          className="mb-3"
+          className=""
           fill
         >
+        
           <Tab eventKey="home" title="Home">
 
           </Tab>
+
           <Tab eventKey="profile" title="Profile">
 
           </Tab>
