@@ -633,4 +633,50 @@ and cm.client_no in("C00001","C00002");
 6 rows in set (0.00 sec)
 
 
+///////////////////////////////////////////////////////////////////////////////////
+3. Exercise on Sub-queries:
+//////////////////////////////////////////////////////////////////////////////////
 
+
+........................................................................
+a. Find the Product No and description of non-moving products i.e. products not being sold.
+........................................................................
+
+==>
+
+--------ANSI style
+
+select pm.product_no , description , order_status
+from product_master pm
+inner join sales_order_details sod on sod.product_no = pm.product_no
+inner join sales_order so on so.order_no = sod.order_no
+where order_status="In Process" || order_status = "Cancelled";
+
++------------+--------------+--------------+
+| product_no | description  | order_status |
++------------+--------------+--------------+
+| P00001     | T-Shirts     | In Process   |
+| P07965     | Denim Shirts | In Process   |
+| P07885     | Pull Overs   | In Process   |
+| P00001     | T-Shirts     | Cancelled    |
+| P00001     | T-Shirts     | In Process   |
+| P07975     | Lycra Tops   | In Process   |
+| P07965     | Denim Shirts | Cancelled    |
++------------+--------------+--------------+
+7 rows in set, 1 warning (0.02 sec)
+
+--------THETA style
+
+select pm.product_no , description , order_status
+from product_master pm
+inner join sales_order_details sod on sod.product_no = pm.product_no
+inner join sales_order so on so.order_no = sod.order_no
+where order_status="In Process" || order_status = "Cancelled";
+
+
+b. List the customer Name, Address 1, Address2, City and PinCode for the client who has placed order no '019001'.
+
+
+c. List the client names that have placed orders before the month of May'02.
+d. List if the product 'Lycra Top' has been ordered by any client and print the Client_no, Name to whom it was sold.
+e. List the names of clients who have placed orders worth Rs. 10000 or more.
