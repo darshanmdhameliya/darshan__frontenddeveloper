@@ -6,13 +6,11 @@ import { AnimalList } from './Data'
 const State = () => {
 
     const [index, setindex] = useState(0)
-    const [btn, setbtn] = useState("hidden")
-    const [desc, setdesc] = useState()
+    const [desc, setdesc] = useState(false)
     const [input, setinput] = useState(index)
 
-
-
     let List = [AnimalList[index]]
+
     const handlechange = (e) => {
         setinput(e.target.value)
     }
@@ -23,25 +21,27 @@ const State = () => {
             setindex(0)
         } else {
             setindex(index + 1)
-            setbtn("")
         }
     }
 
     const previouscard = () => {
         if (index > 0) {
             setindex(index - 1)
-            console.log(setindex);
-        } else {
-            setbtn("hidden")
         }
     }
 
     const descriptiontoggle = () => {
-        if (desc == "hidden") {
-            setdesc("")
+        if (desc) {
+            setdesc(false)
         } else {
-            setdesc("hidden")
+            setdesc(true)
         }
+
+        // if (desc == "hidden") {
+        //     setdesc("")
+        // } else {
+        //     setdesc("hidden")
+        // }
     }
 
     const backgroundimage1 = [
@@ -100,17 +100,17 @@ const State = () => {
     return (
         <>
 
-            < div className={`bg-slate-400 mx-28  rounded-3xl bg-no-repeat bg-cover  bg-gradient-to-r from-purple-500 to-pink-500 `} style={{ backgroundImage: `url(${bcimage})` }}
+            < div className={`bg-slate-400 mx-28  rounded-3xl bg-no-repeat bg-cover  bg-gradient-to-r from-purple-500 to-pink-500  slide-right`} style={{ backgroundImage: `url(${bcimage})` }}
             >
                 <div className="flex justify-between m-10">
-                    <button className={`btn ${btn}`} onClick={previouscard}>Previuos</button>
+                    <button className={`btn `} onClick={previouscard}>Previuos</button>
                     <div className="">
-                        <input className='h-5 mt-5 rounded-2xl' type="text" placeholder='Enter the index' onChange={handlechange} value={input} />
+                        <input className='h-5 mt-5 p-4 rounded-2xl' type="text" placeholder='Enter the index' onChange={handlechange} />
                         <button className='btn' onClick={handleclick} >Click</button>
                     </div>
                     <button className={`btn`} onClick={nextcard} >Next</button>
                 </div>
-                <div className='flex flex-wrap justify-around gap-y-8 '>
+                <div className='flex flex-wrap justify-around gap-y-8 scale-up-center'>
                     {
                         List.map((item) => {
                             return (
@@ -133,7 +133,7 @@ const State = () => {
                                         </p>
                                         <a
                                             href="#"
-                                            className={`inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 ${descriptiontoggle}`}
+                                            className={`inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800`}
                                             onClick={descriptiontoggle}>
                                             Read more
                                         </a>
