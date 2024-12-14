@@ -6,7 +6,7 @@ import { AnimalList } from './Data'
 const State = () => {
 
     const [index, setindex] = useState(0)
-    const [desc, setdesc] = useState(true)
+    const [desc, setdesc] = useState(false)
     const [btn, setbtn] = useState('line-clamp-1')
     const [input, setinput] = useState(index)
     const [sidetoright, setsidetoright] = useState()
@@ -118,7 +118,7 @@ const State = () => {
         <>
 
             < div className={`bg-slate-400  h-screen   bg-no-repeat bg-cover  bg-gradient-to-r from-purple-500 to-pink-500 ${sidetoright}`} style={{ backgroundImage: `url(${bcimage})` }}
-            >
+            >   
                 <div className="flex justify-between ">
                     <button className={`btn `} onClick={previouscard}>Previuos</button>
                     <div className="">
