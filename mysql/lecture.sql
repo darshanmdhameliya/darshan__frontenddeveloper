@@ -590,3 +590,106 @@ from product_master pm
 inner join sales_order_details sod on sod.product_no=pm.product_no;
 -- inner join sales_order so on sod.order_no = so.order_no
 -- inner join client_master cm on so.client_no = cm.client_no;
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+-- 12-12-2024 Thursday Group By and 13-12-2024 Friday Having
+
+-- syntax 
+
+select add-fun (column_name(s))
+from table_name
+where condition
+Group By column_name(s)
+
+
+-- some example for Group by
+
+select city from client_master
+Group by city
+
++-----------+
+| city      |
++-----------+
+| Mumbai    |
+| Madras    |
+| Bangalore |
+| Mangalore |
++-----------+
+4 rows in set (0.02 sec)
+
+
+select city , sum(bal_due) from client_master
+Group by city;
+
++-----------+----------+
+| city      | bal_due  |
++-----------+----------+
+| Mumbai    | 22000.00 |
+| Madras    |     0.00 |
+| Bangalore |     0.00 |
+| Mangalore |     0.00 |
++-----------+----------+
+4 rows in set, 1 warning (0.02 sec)
+
+select city , max(bal_due) " bal_due" from client_master
+Group by city;
+
++-----------+----------+
+| city      | bal_due  |
++-----------+----------+
+| Mumbai    | 15000.00 |
+| Madras    |     0.00 |
+| Bangalore |     0.00 |
+| Mangalore |     0.00 |
++-----------+----------+
+4 rows in set, 1 warning (0.02 sec)
+
+
+
+
+-- Group by and Having 
+
+select city , sum(bal_due) " bal_due" from client_master
+where  city = "mumbai"
+Group by city
+Having max(bal_due);
+
++--------+----------+
+| city   | bal_due  |
++--------+----------+
+| Mumbai | 22000.00 |
++--------+----------+
+1 row in set, 1 warning (0.00 sec)
+
+
+select city , max(bal_due) " bal_due" from client_master
+where  city = "mumbai"
+Group by city
+Having sum(bal_due);
+
++--------+----------+
+| city   | bal_due  |
++--------+----------+
+| Mumbai | 15000.00 |
++--------+----------+
+1 row in set, 1 warning (0.00 sec)
+
+
+ update client_master set bal_due = 9500 where city = 'madras';
+ update client_master set bal_due = 10500 where city = 'Bangalore';
+ update client_master set bal_due = 7000 where city = 'Mangalore';
+
+
+
+select city , sum(bal_due) " bal_due" from client_master
+Group by city
+Having sum(bal_due) > 10000;
+
++-----------+----------+
+| city      | bal_due  |
++-----------+----------+
+| Mumbai    | 22000.00 |
+| Bangalore | 10500.00 |
++-----------+----------+
+2 rows in set, 1 warning (0.00 sec)
