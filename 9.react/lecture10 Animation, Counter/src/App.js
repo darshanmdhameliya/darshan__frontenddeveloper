@@ -10,10 +10,11 @@ const App = () => {
   return (
     <div>
       {/* <UseEffect /> */}
-      {/* <Prectice /> */}
+      <Prectice />
       <Counter/>
     </div>
   )
 }
 
 export default App
+  

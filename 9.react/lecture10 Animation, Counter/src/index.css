@@ -7,9 +7,9 @@
     @apply p-4 bg-purple-600 text-white text-center text-3xl
   }
 
-  /* .btn {
+  .btn {
     @apply p-4  bg-blue-400 text-white text-center m-2 font-bold rounded-lg
-  } */
+  }
 
   
  

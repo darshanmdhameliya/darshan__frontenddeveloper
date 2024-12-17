@@ -9,7 +9,9 @@ const State = () => {
     const [desc, setdesc] = useState(false)
     const [btn, setbtn] = useState('line-clamp-1')
     const [input, setinput] = useState(index)
-    const [add, setAdd] = useState(true)
+    const [add, setAdd] = useState(false)
+    const [nextslide, setnextsilde] = useState()
+    const [prevslide, setprevsilde] = useState('')
 
 
     let List = [AnimalList[index]]
@@ -22,23 +24,22 @@ const State = () => {
     const nextcard = () => {
         if (index == 9) {
             setindex(0)
-            setAdd(true)
         } else {
-            setAdd(true)
-            setTimeout(() => {
-                setAdd(false)
-            }, 1000);
             setindex(index + 1)
-            setbtn('line-clamp-1')
+            setAdd(true)
+            setnextsilde('animate-slideright')
+            setbtn('line-clamp-*')
         }
     }
 
     const previouscard = () => {
-        if (index > 0) {
+        if (index == 0) {
+            setindex(0)
+        } else {
             setindex(index - 1)
-            setbtn('line-clamp-1')
             setAdd(false)
-
+            setprevsilde('animate-slideleft')
+            setbtn('line-clamp-1')
         }
 
     }
@@ -104,7 +105,7 @@ const State = () => {
 
     const handleclick = () => {
         if (input == index) {
-            alert("your value same as index");
+            alert("your value same as index");                          
         } else {
             setindex(input)
             setindex(index + 1)
@@ -113,26 +114,32 @@ const State = () => {
     }
 
 
+    useEffect(() => {
+        setTimeout(() => {
+            index == 0 ? setAdd(true) : setAdd(false)
+        }, 1000);
+    })
+
 
     const bcimage = backgroundimage1[index].img
-
+    
     return (
         <>
-            < div className={`bg-slate-400  h-screen   bg-no-repeat bg-cover  bg-gradient-to-r from-purple-500 to-pink-500 `} style={{ backgroundImage: `url(${bcimage})` }}
-            >
+            < div className={`bg-slate-400  h-screen  bg-no-repeat bg-cover  bg-gradient-to-r from-purple-500 to-pink-500 `} style={{ backgroundImage: `url(${bcimage})` }}
+            > 
                 <div className="flex justify-between ">
                     <button className={`btn `} onClick={previouscard}>Previuos</button>
                     <div className="">
                         <input className='h-5 mt-5 p-4 rounded-2xl' type="text" placeholder='Enter the index' onChange={handlechange} value={input} />
                         <button className={`btn`} onClick={handleclick} >Click</button>
                     </div>
-                    <button className={`btn ${add}`} onClick={nextcard} >Next</button>
+                    <button className={`btn  `} onClick={nextcard} >Next</button>
                 </div>
                 <div className={`flex flex-wrap justify-around gap-y-8 `}>
                     {
                         List.map((item) => {
                             return (
-                                <div className={`max-w-sm  bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 ${add ? 'animate-slideright '  :'animate-slideleft '} `}>
+                                <div className={`max-w-sm  bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 ${add ? nextslide : prevslide} `} key={item.id}>
                                     <a href="#">
                                         <img
                                             className="rounded-t-lg h-52 w-full object-cover object-top"
