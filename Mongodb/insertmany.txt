@@ -1,0 +1,94 @@
+26-12-2024 insertMany 
+ 
+ db.emp.insertMany([
+    {name:"darshan",age:"20",status:"busy",city:"surat"},
+    {name:"vivek",age:"25",status:"online"}
+    ])
+
+
+/////////////////////////////////////////////////////
+Prectise  
+
+ use employee1
+ switched to db employee1
+employee1> db.employee1.insertMany([
+   {name:"darshan",age:20,contact:9712920103},
+   {name:"chetan",age:22,contact:5745126545},
+   {name:"parth",age:20,contact:9923671621}
+   ])
+
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('676d6fa0729488bc064eeb86'),
+    '1': ObjectId('676d6fa0729488bc064eeb87'),
+    '2': ObjectId('676d6fa0729488bc064eeb88')
+  }
+}
+
+ db.employee1.find()
+ [
+  {
+    _id: ObjectId('676d6fa0729488bc064eeb86'),
+    name: 'darshan',
+    age: 20,
+    contact: 9712920103
+  },
+  {
+    _id: ObjectId('676d6fa0729488bc064eeb87'),
+    name: 'chetan',
+    age: 22,
+    contact: 5745126545
+  },
+  {
+    _id: ObjectId('676d6fa0729488bc064eeb88'),
+    name: 'parth',
+    age: 20,
+    contact: 9923671621
+  }
+]
+
+
+
+ db.employee1.find({}).sort("name")
+ [
+  {
+    _id: ObjectId('676d6fa0729488bc064eeb87'),
+    name: 'chetan',
+    age: 22,
+    contact: 5745126545
+  },
+  {
+    _id: ObjectId('676d6fa0729488bc064eeb86'),
+    name: 'darshan',
+    age: 20,
+    contact: 9712920103
+  },
+  {
+    _id: ObjectId('676d6fa0729488bc064eeb88'),
+    name: 'parth',
+    age: 20,
+    contact: 9923671621
+  }
+]
+
+db.employee1.find({}).skip(1)
+[
+  {
+    _id: ObjectId('676d6fa0729488bc064eeb87'),
+    name: 'chetan',
+    age: 22,
+    contact: 5745126545
+  },
+  {
+    _id: ObjectId('676d6fa0729488bc064eeb88'),
+    name: 'parth',
+    age: 20,
+    contact: 9923671621
+  }
+]
+
+ db.employee1.count()
+ DeprecationWarning: Collection.count() is deprecated. Use countDocuments or estimatedDocumentCount.
+3
+
