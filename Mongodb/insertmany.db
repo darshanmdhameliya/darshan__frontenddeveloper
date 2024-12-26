@@ -1,0 +1,4 @@
+ db.emp.insertMany([
+    {name:"darshan",age:"20",status:"busy",city:"surat"},
+    {name:"vivek",age:"25",status:"online"}
+    ])
