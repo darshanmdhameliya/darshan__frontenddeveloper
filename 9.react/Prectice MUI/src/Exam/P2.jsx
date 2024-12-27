@@ -1,16 +1,14 @@
 import React from 'react'
-import { useState } from 'react'
 
 
-const P2 = ({status}) => {
+const P2 = ({ status }) => {
 
-  const [value, setvalue] = useState('offline')
 
   const handleclick = () => {
-    if (value == status) {
-      setvalue(alert("User is online"))
+    if (status == 'offline') {
+      alert("User is offline")
     } else {
-      setvalue(alert("User is offline"))
+      alert("User is online")
     }
   }
 
