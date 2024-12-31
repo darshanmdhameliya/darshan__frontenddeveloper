@@ -1,0 +1,8 @@
+db.books.find({"author.callname":{$eq:"Dan"}})
+db.books.find({tags:{$eq:"database"}})
+db.books.find({tags:{$eq: ["database", "cloud", "nosql"]}})
+db.books.find({"author.profile.books":{$lt:5}})
+db.books.find({"author.profile.books":{$gt:5}})
+db.books.find({languages:{$in:['english']}})
+db.books.find({"author.profile.books":{$in:[2]}})
+ db.books.find({"author.profile.books":{$nin:[2]}})
