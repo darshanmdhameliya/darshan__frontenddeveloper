@@ -1,0 +1,47 @@
+db.books.find({},{title:1,no_of_reviews:1})
+[witched to db sq
+  {
+    _id: ObjectId('677289f28185c47e08678398'),
+    title: 'Linux in simple way',
+    no_of_reviews: 1
+  },
+  {
+    _id: ObjectId('677289f28185c47e08678399'),
+    title: 'Java in simple way',
+    no_of_reviews: 2
+  },
+  {
+    _id: ObjectId('677289f28185c47e0867839a'),
+    title: 'Python in simple way',
+    no_of_reviews: 5
+  },
+  {
+    _id: ObjectId('677289f28185c47e0867839b'),
+    title: 'Devops in simple way',
+    no_of_reviews: 3
+  },
+  {
+    _id: ObjectId('677289f28185c47e0867839c'),
+    title: 'MongoDB in simple way',
+    no_of_reviews: 4
+  },
+  {
+    _id: ObjectId('677289f28185c47e0867839d'),
+    title: 'Oracle in simple way',
+    no_of_reviews: 3
+  },
+  {
+    _id: ObjectId('677289f28185c47e0867839e'),
+    title: 'Shell Scripting in simple way',
+    no_of_reviews: 1
+  }
+]
+
+
+ db.books.find({no_of_reviews:{$gte:3}},{title:1,no_of_reviews:1,isbn:1,_id:0})
+[
+  { title: 'Python in simple way', isbn: 1234, no_of_reviews: 5 },
+  { title: 'Devops in simple way', isbn: 6677, no_of_reviews: 3 },
+  { title: 'MongoDB in simple way', isbn: 6677, no_of_reviews: 4 },
+  { title: 'Oracle in simple way', isbn: 6677, no_of_reviews: 3 }
+]
