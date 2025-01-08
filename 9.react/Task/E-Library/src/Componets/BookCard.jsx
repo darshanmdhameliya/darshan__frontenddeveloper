@@ -6,7 +6,7 @@ const BookCard = () => {
 
   const handleDelete = (title) => {
   
-    const updatedBooklist = booklist.filter((book) => book.title !== title);
+    const updatedBooklist = book.filter((book) => book.title !== title);
     setBook(updatedBooklist); 
   };
 

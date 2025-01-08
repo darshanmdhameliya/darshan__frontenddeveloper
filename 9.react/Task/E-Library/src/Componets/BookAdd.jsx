@@ -11,14 +11,14 @@ const BookAdd = () => {
 
 
     const { setBook } = useContext(BookContext)
-    const { booklist } = useContext(BookContext)
+    const { book } = useContext(BookContext)
 
     const handleButton = (e) => {
         if ((title && author && status) == '') {
             alert("please enter a value")
         } else {
             e.preventDefault()
-            setBook([...booklist, { title, author, status }])
+            setBook([...book, { title, author, status }])
             alert("Your book is added in Book Card!!!")
         }
     }
