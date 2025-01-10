@@ -18,7 +18,7 @@ const BookAdd = () => {
     const handleButton = (e) => {
         if ((title && author && status) == '') {
             alert("please enter a value")
-        } else {
+        } else {     
             e.preventDefault()
             setBook([...book, {id, title, author, status }])
             setTitle('');
