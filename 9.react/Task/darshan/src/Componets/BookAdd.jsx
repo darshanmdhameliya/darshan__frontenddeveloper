@@ -21,9 +21,6 @@ const BookAdd = () => {
         } else {
             e.preventDefault()
             setBook([...book, {id, title, author, status }])
-            setTitle('');
-            setAuthor('');
-            setStatus('');
             
             // alert("Your book is added in Book Card!!!")
         }
@@ -32,8 +29,8 @@ const BookAdd = () => {
 
     return (
         <div className='bg-black'>
-            <div className='container mx-auto flex flex-col justify-center items-start pl-40 gap-6 h-screen ' >
-                <div className='flex flex-col justify-center items-start gap-6 border-2 border-yellow-200 p-10 rounded-3xl '>
+            <div className='container mx-auto flex flex-col justify-center items-start pl-40 gap-6 h-screen' >
+                <div className='flex flex-col justify-center items-start gap-6 '>
                     <label htmlFor="title" className='flex gap-5 items-center'>
                         <p className='text-white mr-5'> Title </p>
                         <input type="text" className='p-2' id='title' value={title} onChange={(e) => setTitle(e.target.value)} placeholder='Book Title' />
@@ -48,11 +45,11 @@ const BookAdd = () => {
                         <p className='text-white mr-1'> Status </p>
                         <input type="text" className='p-2' id='status' value={status} onChange={(e) => setStatus(e.target.value)} placeholder='Status' />
                     </label>
-                    <button className='bg-blue-600 px-5 py-1 rounded border hover:border-blue-800 text-white hover:text-black hover:bg-white ' onClick={handleButton}>Add</button>
                 </div>
 
-              
+                <button className='bg-blue-600 px-5 py-1 rounded border hover:border-blue-800 text-white hover:text-black hover:bg-white ' onClick={handleButton}>Add</button>
             </div>
+
         </div>
     )
 }

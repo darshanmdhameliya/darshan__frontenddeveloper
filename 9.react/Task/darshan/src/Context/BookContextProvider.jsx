@@ -4,8 +4,7 @@ import BookContext from './BookContext';
 const BookContextProvider = ({ children }) => {
 
     const [book, setBook] = useState([])
-
-  
+  let booklist = [...book]
 
     return (
         <div>
