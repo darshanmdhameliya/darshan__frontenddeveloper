@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components{
+    .heading{
+      @apply p-2 bg-purple-600 text-white text-center text-2xl
+    }
+    .btn{
+      @apply p-4 bg-purple-600 text-white text-center m-2 font-bold
+    }
+  }
+  
