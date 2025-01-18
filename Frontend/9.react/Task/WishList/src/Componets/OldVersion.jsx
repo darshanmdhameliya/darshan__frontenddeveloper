@@ -17,5 +17,4 @@ const OldVersion = () => {
         </>
     )
 }
-
 export default OldVersion
