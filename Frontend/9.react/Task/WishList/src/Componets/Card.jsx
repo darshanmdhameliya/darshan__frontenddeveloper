@@ -15,14 +15,14 @@ const Card = () => {
         });
     };
 
-    const goToWishList = () => {
-        navigate('/wishlist', { state: { likedItems } });
+    const goToWishList = (event) => {
+        event.stopPropagation(); // Prevent event bubbling to other elements
+        navigate('/WishList', { state: { likedItems } });
     };
 
     return (
         <>
-            
-            <div className="sticky top-14  bg-white z-10 p-4 shadow-md text-center">
+            <div className="sticky top-14 bg-white z-10 p-4 shadow-md text-center">
                 <button
                     className="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-700"
                     onClick={goToWishList}
@@ -36,8 +36,15 @@ const Card = () => {
                     const isLiked = likedItems.some((likedItem) => likedItem.title === item.title);
 
                     return (
-                        <div key={index} className="relative max-w-sm mx-auto bg-white shadow-lg rounded-lg overflow-hidden">
-                            <img className="rounded-t-lg w-full object-cover object-top" src={item.image} alt={item.title} />
+                        <div
+                            key={index}
+                            className="relative max-w-sm mx-auto bg-white shadow-lg rounded-lg overflow-hidden"
+                        >
+                            <img
+                                className="rounded-t-lg w-full object-cover object-top"
+                                src={item.image}
+                                alt={item.title}
+                            />
                             <div
                                 className={`absolute top-4 right-4 cursor-pointer ${isLiked ? 'text-red-500' : 'text-gray-400'}`}
                                 onClick={() => handleLike(item)}

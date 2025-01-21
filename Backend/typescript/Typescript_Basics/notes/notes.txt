@@ -1,0 +1,29 @@
+TypeScript = Types + JavaScript 
+-------------------------------
+-> Microsoft
+-> 5.7.3
+-> .ts 
+-> Browser
+
+-> .ts -> compile -> .js -> Browser 
+
+1. developer -> .js -> Browser  
+2. developer -> .ts -> tsc -> .js -> Browser
+
+-> tsconfig.json -> tsc --init
+
+-> install typescript -> npm install --global typescript 
+-> install typescript -> npm install -g typescript 
+-> tsc --version
+
+-> npm install -g ts-node 
+
+-> Running TypeScript 
+---------------------
+1. app.ts -> tsc app.ts -> app.js -> node app.js 
+2. app.ts -> ts-node app.ts 
+
+Typescript superset of javascript
+
+
+
