@@ -1,11 +1,5 @@
 import React from 'react'
 
-const ExpenseContext = () => {
-  return (
-    <div>
-      
-    </div>
-  )
-}
+const ExpenseContext = React.createContext()
 
 export default ExpenseContext
