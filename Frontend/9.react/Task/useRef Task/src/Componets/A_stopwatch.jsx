@@ -18,7 +18,7 @@ const A_stopwatch = () => {
     setIsRunning(false);
     clearInterval(timeInterval.current);
   };
-
+  
   const handleReset = () => {
     setIsRunning(false);
     clearInterval(timeInterval.current);

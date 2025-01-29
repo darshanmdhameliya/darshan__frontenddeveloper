@@ -69,7 +69,7 @@ const Pagination = () => {
                 </button>
                 {/* <span className="btn">{pageIndex}</span> */}
                 {
-                    Array(darshan).fill(null).map((item,index)=> <div className='btn'>{index+1}</div>)
+                    Array(darshan).fill(null).map((_,index)=> <div className='btn' onClick={()=>setPageIndex(index+1)}>{index+1}</div>)
                 }
                 <button
                     className="btn"

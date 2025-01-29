@@ -21,7 +21,7 @@ const Focus_on_text = () => {
     return (
         <div className=' '>
             <div className="">
-                <input type="text" ref={inputRef} className='border-2' value={value1} onChange={(e) => setvalue1(e.target.value)}/>
+                <input type="text" ref={inputRef} id='myText' className='border-2' value={value1} onChange={(e) => setvalue1(e.target.value)}/>
             </div>
             <button className='p-4 bg-green-400 font-bold rounded-2xl' onClick={handleinput}>
                 Focus on Input

@@ -1,8 +1,10 @@
 import { useLocation } from 'react-router-dom';
+import { ProductContext } from '../context/ProductContext';
+import { useContext } from 'react';
 
 const WishList = () => {
-    const { state } = useLocation();
-    const likedItems = state?.likedItems || [];
+
+    const {likedItems} = useContext(ProductContext)
 
     return (
         <div className="container mx-auto mt-5">

@@ -1,40 +1,33 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { CardData } from './data';
 import { useNavigate } from 'react-router-dom';
+import { ProductContext } from '../context/ProductContext';
+import { useContext } from 'react';
 
 const Card = () => {
-    const [likedItems, setLikedItems] = useState([]);
+
+    const { likedItems, setLikedItems } = useContext(ProductContext)
+
+    console.log('likedItems', likedItems);
+
     const navigate = useNavigate();
 
     const handleLike = (item) => {
+
         setLikedItems((prevLikedItems) => {
             if (prevLikedItems.some(likedItem => likedItem.title === item.title)) {
                 return prevLikedItems;
             }
             return [...prevLikedItems, item];
         });
-    };
 
-    const goToWishList = (event) => {
-        event.stopPropagation(); // Prevent event bubbling to other elements
-        navigate('/WishList', { state: { likedItems } });
     };
 
     return (
         <>
-            <div className="sticky top-14 bg-white z-10 p-4 shadow-md text-center">
-                <button
-                    className="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-700"
-                    onClick={goToWishList}
-                >
-                    Go to WishList
-                </button>
-            </div>
-
             <div className="container mx-auto flex flex-wrap justify-around gap-y-8 mt-5">
                 {CardData.map((item, index) => {
                     const isLiked = likedItems.some((likedItem) => likedItem.title === item.title);
-
                     return (
                         <div
                             key={index}

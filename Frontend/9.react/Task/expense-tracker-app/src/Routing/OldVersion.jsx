@@ -2,18 +2,24 @@ import React from 'react'
 import Navbar from './Navbar'
 import AddExpense from '../components/AddExpense'
 import ExpenseList from '../components/ExpenseList'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import {  Route, createBrowserRouter, createRoutesFromElements, RouterProvider } from 'react-router-dom'
+import EditExpense from '../components/EditExpense'
+
+
+const router = createBrowserRouter(
+    createRoutesFromElements(
+        <Route path='/' element={<Navbar />}>
+            <Route path='/' element={<AddExpense />} />
+            <Route path="/ExpenseList" element={<ExpenseList />} />
+            <Route path="/EditExpense" element={<EditExpense/>} />
+        </Route>
+    )
+)
 
 const OldVersion = () => {
     return (
         <>
-            <BrowserRouter>
-                <Navbar />
-                <Routes>
-                    <Route path="/" element={<AddExpense />} />
-                    <Route path="/ExpenseList" element={<ExpenseList />} />
-                </Routes>
-            </BrowserRouter>
+           <RouterProvider router={router}></RouterProvider>
         </>
     )
 }
