@@ -16,6 +16,7 @@ userRouter.get("/", (request: Request, response: Response) => {
         response.json(obj)
     })
 
+    
 })
 
 export default userRouter;
