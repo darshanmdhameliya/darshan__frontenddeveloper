@@ -1,26 +1,20 @@
-import express, { Application, Request, Response } from 'express';
-import userRouter from './routes/userRouter';
-// import darshanRouter from './routes/darshanRouter';
+import express, { Application, Response, Request } from "express";
+import userRouter from "./routes/userRouter"
 
 const hostName: string = "127.0.0.1";
-const port: number = 8866;
+const port: number = 9999;
 
 const app: Application = express();
 
+
 app.get("/", (request: Request, response: Response) => {
-    response.status(200);
     response.json({
-        msg: "Welcome to Express Server"
-    }); 
-});
+        msg: "Server is Started",
+    })
+})
 
-
-//router Configuration
-app.use("/api/users",userRouter);
-// app.use("/api/users",darshanRouter);
+app.use("/api/users", userRouter)
 
 app.listen(port, hostName, () => {
-    console.log(`Express Server is started at http://${hostName}:${port}`);
-});
-
- 
+    console.log(`Express Server Started at http://${hostName}:${port}`);
+})

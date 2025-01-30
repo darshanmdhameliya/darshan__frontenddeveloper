@@ -1,20 +1,20 @@
-import path, { resolve } from "path";
-import { IBooks } from "../models/IBooks";
-const jsonfile = require('jsonfile')
+import path from "path"
+import { IBooks } from "../models/IBooks"
+const jsonfile = require("jsonfile")
 
-export class UserUtil{
+export class UserUtil {
+    private static userJsonPath = path.join(__dirname, "..", "db", "books.json")
 
-    private static userJsonPath = path.join(__dirname,"..","db","IBook.json")
-
-    public static getAllUserFromDB():Promise<IBooks[]>{
-            return new Promise((resolve,rejects)=>{
-                jsonfile.readFile(this.userJsonPath,(err:any,data:any)=>{
-                    if(err){
-                        rejects(err);
-                    }else{
-                        resolve(data);
-                    }
-                })
+    public static getAllUserFromDB(): Promise<IBooks[]> {
+        return new Promise((resolve, rejects) => {
+            jsonfile.readFile(this.userJsonPath, (err: any, data: any) => {
+                if (err) {
+                    rejects(err)
+                } else {
+                    resolve(data)
+                }
             })
+        })
     }
+
 }
