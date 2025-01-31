@@ -1,20 +1,20 @@
-import express, { Application, Request, Response } from "express"
-import userRouter from "./routes/userRouter"
+import express, {Application , Request ,Response} from "express";
+import userRouter from "./router/userRouter";
 
-const hostName: string = "127.0.0.1"
-const port: number = 8888
+const hostName : string = "127.0.0.1"
+const port :number= 9999
 
-const app: Application = express()
+const app:Application = express()
 
-app.get("/", (request: Request, response: Response) => {
+
+app.get("/" , (request:Request,response: Response)=>{
     response.json({
-        msg: "Server is started"
+        msg:"Server is started"
     })
 })
-
-app.use("/api/users", userRouter)
-
-app.listen(port, hostName, () => {
-    console.log(`Express Server Started at http://${hostName}:${port}`);
-
+ 
+app.listen(port ,hostName ,()=>{
+    console.log(`Express Server is started at http://${hostName}:${port}`);
 })
+
+app.use("/api/users",userRouter)
