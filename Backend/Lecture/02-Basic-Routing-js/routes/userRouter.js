@@ -1,4 +1,5 @@
-import express, {  Router } from 'express';
+const express = require('express');
+const { Router } = require('express');
 
 const userRouter = express.Router()
 
@@ -16,4 +17,4 @@ userRouter.post("/insertuser", (request, response) => {
     })
 })
 
-export default userRouter;
+module.exports = userRouter;
