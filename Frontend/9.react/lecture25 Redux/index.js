@@ -10,7 +10,6 @@ const {createStore, combineReducers} = redux
 const buy_item = () => {
   return {
     type: 'BUY_ITEM',
-    info: 'first redux action'
   }
 }
 
