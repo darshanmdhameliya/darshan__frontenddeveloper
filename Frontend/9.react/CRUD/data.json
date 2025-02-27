@@ -1,0 +1,18 @@
+{
+  "data": [
+    {
+      "id": "40d1",
+      "name": "darshan",
+      "email": "darshan@gmail.com",
+      "contact": "09712920103",
+      "address": "Yogi-Chowk"
+    },
+    {
+      "id": "b2e4",
+      "name": "chetan ",
+      "email": "chetan@gmail.com",
+      "contact": "543455456",
+      "address": "Yogi-Chowk"
+    }
+  ]
+}
